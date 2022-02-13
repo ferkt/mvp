@@ -49,20 +49,6 @@
 					<i data-feather="align-left"></i>
 			    </a>
 			</li>
-			<li class="btn-group d-lg-inline-flex d-none">
-				<div class="app-menu">
-					<div class="search-bx mx-5">
-						<form>
-							<div class="input-group">
-							  <input type="search" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="button-addon2">
-							  <div class="input-group-append">
-								<button class="btn" type="submit" id="button-addon3"><i data-feather="search"></i></button>
-							  </div>
-							</div>
-						</form>
-					</div>
-				</div>
-			</li>
 		</ul> 
 	  </div>
 		
@@ -146,10 +132,10 @@
             <a href="#" class="waves-effect waves-light dropdown-toggle w-auto l-h-12 bg-transparent py-0 no-shadow" data-bs-toggle="dropdown" title="User">
 				<div class="d-flex pt-5">
 					<div class="text-end me-10">
-						<p class="pt-5 fs-14 mb-0 fw-700 text-primary">Johen Doe</p>
-						<small class="fs-10 mb-0 text-uppercase text-mute">Admin</small>
+						<p class="pt-5 fs-14 mb-0 fw-700 text-primary">Dr. Fernando Nasena</p>
+						<small class="fs-10 mb-0 text-uppercase text-mute">Profissional</small>
 					</div>
-					<img src="../../images/avatar/avatar-1.png" class="avatar rounded-10 bg-primary-light h-40 w-40" alt="" />
+					<img src="../../images/avatar/nasena.jpg" class="avatar rounded-10 bg-primary-light h-40 w-40" alt="" />
 				</div>
             </a>
             <ul class="dropdown-menu animated flipInX">
@@ -240,15 +226,64 @@
 		<!-- Main content -->
 		<section class="content">
 			<!-- Aqui fica o conteúdoooo!!!!! -->
-			<h1>Dr. Fernando Nasena</h1>
+			<h1>Busca de Pacientes</h1>
 			<form>
-				<div class="input-group">
-					<input type="search" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="button-addon2">
-					<div class="input-group-append">
-						<button class="btn" type="submit" id="button-addon3"><i data-feather="search"></i></button>
+				<div class="controls">
+					<div class="input-group">
+						<input type="text" class="form-control" placeholder="Nome, CPF, Nº do SUS ou Prontuário" required> 
+						<button class="btn btn-primary btn-sm" type="button"><i data-feather="search"></i></button> 
 					</div>
 				</div>
 			</form>
+			<br>
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="box">
+						<div class="box-body">
+							<div class="table-responsive">
+								<table class="table b-1 border-primary">
+									<thead class="bg-primary">
+										<tr>
+											<th>#</th>
+											<th>Nome</th>
+											<th>CPF</th>
+											<th>Nº do SUS</th>
+											<th>Prontuário</th>
+											<th>+ Detalhes</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>1</td>
+											<td>Fernando Tokovoip</td>
+											<td>012.239.244-80</td>
+											<td>234.4254.2393.7960</td>
+											<td>CE-2614288</td>
+											<td><a title="Detalhes" href="#" class="btn btn-primary"><i class="fa fa-address-card"></i></a></td>
+										</tr>
+										<tr>
+											<td>2</td>
+											<td>Mozilla Coelho</td>
+											<td>132.321.214-34</td>
+											<td>425.5323.4536.1104</td>
+											<td>PA-9412228</td>
+											<td><a title="Detalhes" href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-center"><i class="fa fa-address-card"></i></a></td>
+										</tr>
+										<tr>
+											<td>3</td>
+											<td>Fergod Nasena</td>
+											<td>543.123.532-99</td>
+											<td>454.2934.0394.9328</td>
+											<td>SP-3236419</td>
+											<td><a title="Detalhes" href="#" class="btn btn-primary"><i class="fa fa-address-card"></i></a></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</section>
 		<!-- /.content -->
 	  </div>
@@ -642,6 +677,40 @@
             </div>
 		</div>
 	</div>
+	<!-- Modal -->
+	<div class="modal center-modal fade" id="modal-center" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Informações do Paciente</h4>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div class="img-modal">
+						<img src="../../images/avatar/nasena.jpg" alt="Foto" width="100px" height="100px">
+					</div>
+					<div class="modal-infos-top">
+						<h3>Luiz Fernando Coelho Barroso</h3>
+						<p>Data de Nascimento: 21/02/2003</p>
+						<p>Sexo: Masculino</p>
+					</div>
+					<hr>
+					<div class="modal-infos">
+						<p>Naturalidade: Capanema-PA</p>
+						<p>Cidade: Sobral</p>
+						<p>Estado: Ceará</p>
+						<p>Endereço: Rua Tancredo Neves, 216</p>
+						<p>Telefone: (88) 99224-6983</p>
+					</div>
+				</div>
+				<div class="modal-footer modal-footer-uniform">
+					<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+					<button type="button" class="btn btn-primary float-end">Iniciar Consulta</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /.modal -->
 	
 	<!-- Page Content overlay -->
 	
