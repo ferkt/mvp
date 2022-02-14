@@ -32044,3 +32044,25 @@ img.away, img.busy, img.offline, img.online {
   flex-wrap: wrap;
   column-gap: 20px;
 }
+
+.top-pac{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.top-pac p {
+  font-size: 16px;
+}
+
+.conteudo-pac {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 40px;
+}
