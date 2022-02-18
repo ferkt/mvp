@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
+html {
+  scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -12,11 +16,9 @@ a {
     text-decoration: none;
     transition: 0.3s;
 }
-  
+
 .logo {
-    font-size: 24px;
-    text-transform: uppercase;
-    letter-spacing: 4px;
+  margin-bottom: 1px;
 }
   
 nav {
@@ -131,13 +133,13 @@ nav {
   text-align: center;
 }
 
-.uniframe{
+.uniframe {
   position: relative;
   width: 500px;
   height: 300px;
 }
 
-.uniframe iframe{
+.uniframe iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -147,7 +149,7 @@ nav {
 }
 
 @media (max-width: 999px) {
-  .uniframe{
+  .uniframe {
     position: relative;
     width: 420px;
     height: 250px;
@@ -156,18 +158,20 @@ nav {
 }
 
 @media (max-width: 500px) {
-  .uniframe{
+  .uniframe {
     position: relative;
     width: 250px;
     height: 150px;
   }
 }
 
-.p2{
+/* style p2 */
+
+.p2 {
   color: #2F2E2E;
 }
 
-.top-p2{
+.top-p2 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -175,44 +179,50 @@ nav {
   gap: 30px;
 }
 
-.title-p2{
+.title-p2 {
   font-size: 42px;
   padding-top: 50px;
 }
 
-.subtitle-p2{
+.subtitle-p2 {
   font-size: 18px;
   font-style: bold;
 }
 
-.cont{
+/* alguns styles gerais*/
+
+.cont {
   padding-top: 50px;
   padding-left: 180px;
   padding-right: 180px;
   padding-bottom: 50px;
 }
 
-.cont-p2{
+/* styles p2*/
+
+.cont-p2 {
   display: flex;
   flex-direction: column;
   align-items: inherit;
   justify-content: space-around;
 }
 
-.paragraph-p2{
+.paragraph-p2 {
   font-size: 16px;
 }
 
-.list-p2{
+.list-p2 {
   padding: 20px;
 }
 
-.p3{
+/* styls p3 */
+
+.p3, .p6 {
   background: #B1D0E0;
   color:#406882;
 }
 
-.top-p3{
+.top-p3 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -220,7 +230,7 @@ nav {
   gap: 30px;
 }
 
-.cont-p3{
+.cont-p3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -231,7 +241,7 @@ nav {
   padding-bottom: 120px;
 }
 
-.item{
+.item {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -242,6 +252,8 @@ nav {
   width: 200px;
   text-align: center;
 }
+
+/* alguns styles p4 */
 
 .sec-cta {
   display: flex;
@@ -273,8 +285,128 @@ nav {
   border: solid 2px #1A374D;
 }
 
-.equip{
+/* styles p6*/
+
+.cont-p6 {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  column-gap: 70px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer-sociais {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 60px;
+  color:#406882;
+}
+
+/* styles p7*/
+
+.p7 {
+  background: #fff;
+}
+
+.linha {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  gap: 20px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.p7 img {
+  width: 256px;
+  height: 256px;
+}
+
+.btn-login {
+  border: solid 2px white;
+  color: white;
+  padding: 12px;
+  border-radius: 5px;
+  background-color: #6998AB;
+  cursor: pointer;
+}
+
+.btn-login:hover {
+  background-color: #fff;
+  color: #1A374D;
+  box-shadow: 0 2px 20px rgba(26, 55, 77, 0.3);
+  border: solid 1px #1A374d;
+}
+
+/* styles footer*/
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: #1A374D;
+  color: #fff;
+}
+
+/* modal */
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: rgba(0,0,0,0.4);
+  z-index: 99999;
+  opacity:0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+
+.modal:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal > div {
+  width: 400px;
+  position: relative;
+  margin: 10% auto;
+  padding: 15px 20px;
+  background: #fff;
+}
+
+.fechar {
+  position: absolute;
+  width: 30px;
+  right: -15px;
+  top: -20px;
+  text-align: center;
+  line-height: 30px;
+  margin-top: 5px;
+  background: #ff4545;
+  border-radius: 50%;
+  font-size: 16px;
+  color: #8d0000;
 }
