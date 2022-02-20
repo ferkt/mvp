@@ -7,57 +7,57 @@ html {
 /* reset css */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
 }
 
 /* styles navbar*/
   
 a {
-    color: #f5f5f5;
-    text-decoration: none;
-    transition: 0.3s;
+  color: #f5f5f5;
+  text-decoration: none;
+  transition: 0.3s;
 }
   
 nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background: #406882;
-    height: 10vh;
-    text-transform: uppercase;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #406882;
+  height: 10vh;
+  text-transform: uppercase;
 }
   
 .nav-list {
-    list-style: none;
-    display: flex;
+  list-style: none;
+  display: flex;
 }
   
 .nav-list li {
-    letter-spacing: 1px;
-    margin-left: 22px;
+  letter-spacing: 1px;
+  margin-left: 22px;
 }
 
 .nav-list li a:hover {
-    color: #1A374D;
-    background-color: #B1D0E0;
-    border-radius: 5px;
-    padding: 5px;
+  color: #1A374D;
+  background-color: #B1D0E0;
+  border-radius: 5px;
+  padding: 5px;
 }
   
 .mobile-menu {
-    display: none;
-    cursor: pointer;
+  display: none;
+  cursor: pointer;
 }
   
 .mobile-menu div {
-    width: 32px;
-    height: 2px;
-    background: #fff;
-    margin: 8px;
-    transition: 0.3s;
+  width: 32px;
+  height: 2px;
+  background: #fff;
+  margin: 8px;
+  transition: 0.3s;
 }
   
 @media (max-width: 999px) {
@@ -65,12 +65,13 @@ nav {
     overflow-x: hidden;
   }
   .nav-list {
+    overflow-x: hidden;
     position: absolute;
     top: 10vh;
     right: 0;
     width: 50vw;
     height: 45vh;
-    background: rgba(64, 104, 130, 0.9);
+    /*background: rgba(64, 104, 130, 0.9);*/
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
@@ -78,6 +79,7 @@ nav {
     transition: transform 0.3s ease-in;
     font-size: 12px;
     z-index: 1;
+    visibility: hidden;
   }
   .nav-list li {
     margin-left: 0;
@@ -90,6 +92,8 @@ nav {
   
 .nav-list.active {
   transform: translateX(0);
+  background: rgba(64, 104, 130, 0.9);
+  visibility: visible;
 }
   
 @keyframes navLinkFade {
@@ -241,7 +245,6 @@ nav {
   align-items: center;
   flex-direction: column;
   gap: 10px;
-  border: solid 1px blueviolet;
   height: 200px;
   width: 200px;
   text-align: center;
@@ -362,6 +365,10 @@ footer {
 }
 
 @media (max-width: 500px) {
+
+  body {
+    overflow-x: hidden;
+  }
   
   /* responsividade p1 */
 
@@ -457,4 +464,5 @@ footer {
   footer {
     font-size: 12px;
   }
+
 }
