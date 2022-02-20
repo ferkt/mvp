@@ -223,17 +223,17 @@
           <div class="card">
             <p>Paciente</p>
             <img src="img/pat.png" alt="">
-            <a href="loginPac.html" class="btn-login"> Acessar </a>
+            <a href="loginPac.php" class="btn-login"> Acessar </a>
           </div>
           <div class="card">
             <p>Profissional</p>
             <img src="img/doc.png" alt="">
-            <a href="loginPro.html" class="btn-login"> Acessar </a>
+            <a href="loginPro.php" class="btn-login"> Acessar </a>
           </div>
           <div class="card">
             <p>Administração</p>
             <img src="img/hos.png" alt="">
-            <a href="loginAdm.html" class="btn-login"> Acessar </a>
+            <a href="loginAdm.php" class="btn-login"> Acessar </a>
           </div>
         </div>
       </section>
