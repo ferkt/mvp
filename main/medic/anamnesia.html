@@ -226,63 +226,54 @@
 		<!-- Main content -->
 		<section class="content">
 			<!-- Aqui fica o conteúdoooo!!!!! -->
-			<h1>Busca de Pacientes</h1>
-			<form>
-				<div class="controls">
-					<div class="input-group">
-						<input type="text" class="form-control" placeholder="Nome, CPF, Nº do SUS ou Prontuário" required> 
-						<button class="btn btn-primary btn-sm" type="button"><i data-feather="search"></i></button> 
-					</div>
-				</div>
-			</form>
-			<br>
 			<div class="row">
-				<div class="col-lg-12">
+				<div class="col-12">
 					<div class="box">
-						<div class="box-body">
-							<div class="table-responsive">
-								<table class="table b-1 border-primary">
-									<thead class="bg-primary">
-										<tr>
-											<th>#</th>
-											<th>Nome</th>
-											<th>CPF</th>
-											<th>Nº do SUS</th>
-											<th>Prontuário</th>
-											<th>+ Detalhes</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>1</td>
-											<td>Fernando Tokovoip</td>
-											<td>012.239.244-80</td>
-											<td>234.4254.2393.7960</td>
-											<td>CE-2614288</td>
-											<td><a title="Detalhes" href="#" class="btn btn-primary"><i class="fa fa-address-card"></i></a></td>
-										</tr>
-										<tr>
-											<td>2</td>
-											<td>Mozilla Coelho</td>
-											<td>132.321.214-34</td>
-											<td>425.5323.4536.1104</td>
-											<td>PA-9412228</td>
-											<td><a title="Detalhes" href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-center"><i class="fa fa-address-card"></i></a></td>
-										</tr>
-										<tr>
-											<td>3</td>
-											<td>Fergod Nasena</td>
-											<td>543.123.532-99</td>
-											<td>454.2934.0394.9328</td>
-											<td>SP-3236419</td>
-											<td><a title="Detalhes" href="#" class="btn btn-primary"><i class="fa fa-address-card"></i></a></td>
-										</tr>
-									</tbody>
-								</table>
+						
+					  <div class="box-header">
+						  <h2 class="box-title" _msthash="2689323" _msttexthash="240565">Nova Consulta</h2>  
+					  </div>
+					  <div class="box-body">
+						  <div class="form-group row">
+							  <label class="col-form-label col-md-2" _msthash="3450473" _msttexthash="58058">Titulo Consulta</label>
+							  <div class="col-md-10">
+								  <input class="form-control" type="email" name="email">
+								  <span class="form-text text-muted" _msthash="3274713" _msttexthash="589823">Usando <code _istranslated="1">tipo de entrada="Titulo"</code></span>
+							  </div>
+						  </div>
+	  
+						  <div class="form-group row">
+							  <label class="col-form-label col-md-2" _msthash="3450720" _msttexthash="25155">Descrição</label>
+							  <div class="col-md-10">
+								  <input class="form-control" type="url" name="url">
+								  <span class="form-text text-muted" _msthash="3274713" _msttexthash="589823">Usando <code _istranslated="1">tipo de entrada="descrição"</code></span>
+							  </div>
+						  </div>
+						  
+						  <div class="form-group row">
+							<label class="col-form-label col-md-2" _msthash="3449238" _msttexthash="42458">Data</label>
+							<div class="col-md-10">
+								<input class="form-control" type="date" name="date">
+								<span class="form-text text-muted" _msthash="3273387" _msttexthash="619879">Usando <code _istranslated="1">tipo de entrada="data"</code></span>
 							</div>
 						</div>
+
+						<div class="d-flex align-items-end justify-content-between" col-lg-2" style="margin-top: 12px;">
+							<button type="button" class="waves-effect waves-light btn btn-primary mb-6" _msthash="3547583" _msttexthash="133497"><i class="fa fa-fw fa-save"></i> Salvar</button>
+							<button type="button" class="waves-effect waves-light btn btn-danger mb-6" _msthash="3547583" _msttexthash="133497"><i class="fa fa-trash" aria-hidden="true"></i> Excluir</button>
+						  </div>
+					  </div>
+						<!-- Date and time range -->
+	  
+					  </div>
+					  <!-- /.box-header -->
+					  <!-- /.box-header -->
+					  <!-- /.box-body -->
+					  <!-- /.box-header -->
+					  <!-- /.box-body -->
 					</div>
-				</div>
+					<!-- /.box -->
+				  </div>
 			</div>
 		</section>
 		<!-- /.content -->
@@ -704,35 +695,8 @@
 					</div>
 				</div>
 				<div class="modal-footer modal-footer-uniform">
-					<a href="prontuário.php" type="button" class="btn btn-dark float-start">Histórico</a>
-					<a href="#" type="button" class="btn btn-success float-end" data-bs-toggle="modal" data-bs-target="#modal-center1">Iniciar Atendimento</a>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- /.modal -->
-	<!-- Modal -->
-	<div class="modal center-modal fade" id="modal-center1" tabindex="-1">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h4 class="modal-title">Escolha o procedimento</h4>
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-				</div>
-				<div class="modal-body">
-					<div class="row show-grid">
-						<a href="anamnesia.html" type="button" class="btn btn-primary">Anamnesia</a>
-						<a href="prontuário.html" type="button" class="btn btn-primary">Exame Físico</a>
-						<a href="prontuário.html" type="button" class="btn btn-primary">Hipótese Diagnóstica</a>
-						<a href="prontuário.html" type="button" class="btn btn-primary">Conduta</a>
-						<a href="prontuário.html" type="button" class="btn btn-primary">Prescrição</a>
-						<a href="prontuário.html" type="button" class="btn btn-primary">Atestado</a>
-						<a href="prontuário.html" type="button" class="btn btn-primary">Exames e Procedimentos</a>
-						<a href="prontuário.html" type="button" class="btn btn-primary">Imagens e Anexos</a>
-					</div>
-				</div>
-				<div class="modal-footer modal-footer-uniform">
 					<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
+					<button type="button" class="btn btn-primary float-end">Iniciar Consulta</button>
 				</div>
 			</div>
 		</div>
@@ -747,6 +711,7 @@
 	<script src="../js/pages/chat-popup.js"></script>
     <script src="../../assets/icons/feather-icons/feather.min.js"></script>
 	
+	<script src="../../assets/vendor_components/ckeditor/ckeditor.js"></script>
 	<script src="../../assets/vendor_components/apexcharts-bundle/dist/apexcharts.js"></script>
 	<script src="../../assets/vendor_components/OwlCarousel2/dist/owl.carousel.js"></script>
 	
@@ -754,6 +719,7 @@
 	<!-- Rhythm Admin App -->
 	<script src="../js/template.js"></script>
 	<script src="../js/pages/dashboard2.js"></script>
+	<script src="../js/pages/editor.js"></script>
 	
 </body>
 </html>
