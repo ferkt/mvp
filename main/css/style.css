@@ -32066,3 +32066,7 @@ img.away, img.busy, img.offline, img.online {
   flex-wrap: wrap;
   gap: 40px;
 }
+
+.show-grid a {
+  margin-bottom: 10px;
+}

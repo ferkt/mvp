@@ -704,8 +704,35 @@
 					</div>
 				</div>
 				<div class="modal-footer modal-footer-uniform">
+					<a href="prontuário.html" type="button" class="btn btn-dark float-start" data-bs-toggle="modal" data-bs-target="#modal-center1">Histórico</a>
+					<a href="prontuário.html" type="button" class="btn btn-success float-end" data-bs-toggle="modal" data-bs-target="#modal-center1">Iniciar Atendimento</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /.modal -->
+	<!-- Modal -->
+	<div class="modal center-modal fade" id="modal-center1" tabindex="-1">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title">Escolha o procedimento</h4>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div class="row show-grid">
+						<a href="prontuário.html" type="button" class="btn btn-primary">Anamnesia</a>
+						<a href="prontuário.html" type="button" class="btn btn-primary">Exame Físico</a>
+						<a href="prontuário.html" type="button" class="btn btn-primary">Hipótese Diagnóstica</a>
+						<a href="prontuário.html" type="button" class="btn btn-primary">Conduta</a>
+						<a href="prontuário.html" type="button" class="btn btn-primary">Prescrição</a>
+						<a href="prontuário.html" type="button" class="btn btn-primary">Atestado</a>
+						<a href="prontuário.html" type="button" class="btn btn-primary">Exames e Procedimentos</a>
+						<a href="prontuário.html" type="button" class="btn btn-primary">Imagens e Anexos</a>
+					</div>
+				</div>
+				<div class="modal-footer modal-footer-uniform">
 					<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
-					<a href="prontuário.html" type="button" class="btn btn-primary float-end">Iniciar Consulta</a>
 				</div>
 			</div>
 		</div>
