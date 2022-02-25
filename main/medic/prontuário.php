@@ -1,5 +1,8 @@
+<?php
+	include("../php/testasessao.php");
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -201,7 +204,7 @@
 				  </ul>
 				</li>														 	 	 	     
 			  </ul>
-			  <!--<div class="sidebar-widgets">
+			  <div class="sidebar-widgets">
 				  <div class="mx-25 mb-30 pb-20 side-bx bg-primary-light rounded20">
 					<div class="text-center">
 						<img src="../../images/svg-icon/color-svg/custom-17.svg" class="sideimg p-5" alt="">
@@ -213,7 +216,7 @@
 				  </div>
 				<div class="copyright text-center m-25">
 					<p><strong class="d-block">HubSaúde Painel</strong> © <script>document.write(new Date().getFullYear())</script> All Rights Reserved</p>
-				</div>-->
+				</div>
 			  </div>
 		  </div>
 		</div>
@@ -225,60 +228,69 @@
 	  <div class="container-full">
 		<!-- Main content -->
 		<section class="content">
-			<!-- Aqui fica o conteúdoooo!!!!! -->
-			<h1>Busca de Pacientes</h1>
-			<form>
-				<div class="controls">
-					<div class="input-group">
-						<input type="text" class="form-control" placeholder="Nome, CPF, Nº do SUS ou Prontuário" required> 
-						<button class="btn btn-primary btn-sm" type="button"><i data-feather="search"></i></button> 
+			<div class="box-header">
+				<div style="display: flex; flex-direction: row; justify-content: space-between;">
+					<div class="d-flex align-items-center">
+						<img src="../../images/avatar/nasena.jpg" class="w-100 bg-primary-light rounded10 me-15" alt="">
+						<div>
+							<h4 class="mb">Fernando Alvarenga</h4>
+							<p class="text-muted">Paciente</p>
+						</div>
 					</div>
+					<!--<div class="d-flex align-items-end">
+						<a href="nova_consulta.html" type="button" class="waves-effect waves-light btn btn-primary mb-5"><i class="fa fa-plus"></i> consulta</i></a>
+					</div> -->
 				</div>
-			</form>
-			<br>
+			</div><br><br>
+			<!-- Aqui fica o conteúdoooo!!!!! -->
 			<div class="row">
-				<div class="col-lg-12">
+				<div class="col-xl-12 col-12">						
 					<div class="box">
-						<div class="box-body">
-							<div class="table-responsive">
-								<table class="table b-1 border-primary">
-									<thead class="bg-primary">
-										<tr>
-											<th>#</th>
-											<th>Nome</th>
-											<th>CPF</th>
-											<th>Nº do SUS</th>
-											<th>Prontuário</th>
-											<th>+ Detalhes</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>1</td>
-											<td>Fernando Tokovoip</td>
-											<td>012.239.244-80</td>
-											<td>234.4254.2393.7960</td>
-											<td>CE-2614288</td>
-											<td><a title="Detalhes" href="#" class="btn btn-primary"><i class="fa fa-address-card"></i></a></td>
-										</tr>
-										<tr>
-											<td>2</td>
-											<td>Mozilla Coelho</td>
-											<td>132.321.214-34</td>
-											<td>425.5323.4536.1104</td>
-											<td>PA-9412228</td>
-											<td><a title="Detalhes" href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-center"><i class="fa fa-address-card"></i></a></td>
-										</tr>
-										<tr>
-											<td>3</td>
-											<td>Fergod Nasena</td>
-											<td>543.123.532-99</td>
-											<td>454.2934.0394.9328</td>
-											<td>SP-3236419</td>
-											<td><a title="Detalhes" href="#" class="btn btn-primary"><i class="fa fa-address-card"></i></a></td>
-										</tr>
-									</tbody>
-								</table>
+						<div class="box-header">
+							<h2 class="box-title">Histórico de Consultas</h2>
+						</div>
+						<div class="box-body">	
+							<div class="inner-user-div2">
+								<div>
+									<div class="d-flex justify-content-between align-items-start">
+										<div>
+											<a class="text-muted hover-primary"><i class="fa fa-link"></i> Dr. Alexandre Magno</a>
+											<h5 class="my-5">Covid-19</h5>
+											<p class="my-5">O paciente estava tendo sintomas de como: febre alta, tosse, falta de ar.</p>
+										</div>
+										<div>
+											<button title="Detalhes" href="#" class="waves-effect waves-light btn btn-info mb-5" data-bs-toggle="modal" data-bs-target="#modal-center"><i class="fa fa-eye" aria-hidden="true"></i> Detalhes</button>
+										</div>
+									</div>
+									<div class="d-flex justify-content-between align-items-end mb-15 py-10 bb-dashed border-bottom">
+										<div>
+											<p class="mb-0 text-muted"><i class="fa fa-clock-o"></i> Segunda-Feira, 16 de Maio</p>
+										</div>
+										<div>
+											
+										</div>
+									</div>
+								</div>
+								<div>
+									<div class="d-flex justify-content-between align-items-start">
+										<div>
+											<a class="text-muted hover-primary"><i class="fa fa-link"></i> Dr. Alexandre Magno</a>
+											<h5 class="my-5">Alergia</h5>
+											<p class="my-5">Sintomas: coceira ao redor dos olhos, irritação na pele..,</p>
+										</div>
+										<div>
+											<button title="Detalhes" href="#" class="waves-effect waves-light btn btn-info mb-5" data-bs-toggle="modal" data-bs-target="#modal-center"><i class="fa fa-eye" aria-hidden="true"></i> Detalhes</button>
+										</div>
+									</div>
+									<div class="d-flex justify-content-between align-items-end mb-15 py-10 bb-dashed border-bottom">
+										<div>
+											<p class="mb-0 text-muted"><i class="fa fa-clock-o"></i> Segunda-Feira, 16 de Maio</p>
+										</div>
+										<div>
+											
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -678,63 +690,24 @@
 		</div>
 	</div>
 	<!-- Modal -->
-	<div class="modal center-modal fade" id="modal-center" tabindex="-1">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h4 class="modal-title">Informações do Paciente</h4>
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+	<div class="modal fade bs-example-modal-lg show" id="modal-center" tabindex="-1">
+		<div class="modal-dialog modal-lg" _mstvisible="1">
+			<div class="modal-content" _mstvisible="2">
+				<div class="modal-header" _mstvisible="3">
+					<h4 class="modal-title" id="myLargeModalLabel" _msthash="328536" _msttexthash="175864" _mstvisible="4">Segunda-Feira, 16 de Maio, Dr.Alexandre Magno</h4>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar" _mstaria-label="73632" _mstvisible="4"></button>
 				</div>
-				<div class="modal-body">
-					<div class="img-modal">
-						<img src="../../images/avatar/nasena.jpg" alt="Foto" width="100px" height="100px">
-					</div>
-					<div class="modal-infos-top">
-						<h3>Luiz Fernando Coelho Barroso</h3>
-						<p>Data de Nascimento: 21/02/2003</p>
-						<p>Sexo: Masculino</p>
-					</div>
-					<hr>
-					<div class="modal-infos">
-						<p>Naturalidade: Capanema-PA</p>
-						<p>Cidade: Sobral</p>
-						<p>Estado: Ceará</p>
-						<p>Endereço: Rua Tancredo Neves, 216</p>
-						<p>Telefone: (88) 99224-6983</p>
-					</div>
+				<div class="modal-body" _mstvisible="3">
+					<h4 _msthash="1252134" _msttexthash="2622334" _mstvisible="4">Covid-19</h4>
+					<p _msthash="1204333" _msttexthash="11071203" _mstvisible="4">O paciente estava tendo sintomas de como: febre alta, tosse, falta de ar. COVID-19 é uma doença causada por um vírus da família dos coronavírus. Registros da doença iniciaram-se no ano de 2019, mas a identificação do agente causador e as consequências dessa infecção só ocorreram no ano de 2020.</p>
 				</div>
-				<div class="modal-footer modal-footer-uniform">
-					<a href="prontuário.php" type="button" class="btn btn-dark float-start">Histórico</a>
-					<a href="#" type="button" class="btn btn-success float-end" data-bs-toggle="modal" data-bs-target="#modal-center1">Iniciar Atendimento</a>
+				<div class="modal-footer" _mstvisible="3">
+					<button type="button" class="btn btn-danger text-start" data-bs-dismiss="modal" _msthash="1493245" _msttexthash="73632" _mstvisible="4">Fechar</button>
 				</div>
 			</div>
+			<!-- /.modal-content -->
 		</div>
-	</div>
-	<!-- /.modal -->
-	<!-- Modal -->
-	<div class="modal center-modal fade" id="modal-center1" tabindex="-1">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h4 class="modal-title">Escolha o procedimento</h4>
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-				</div>
-				<div class="modal-body">
-					<div class="row show-grid">
-						<a href="anamnesia.php" type="button" class="btn btn-primary">Anamnesia</a>
-						<a href="examefisico.php" type="button" class="btn btn-primary">Exame Físico</a>
-						<a href="prontuário.html" type="button" class="btn btn-primary">Hipótese Diagnóstica</a>
-						<a href="conduta.php" type="button" class="btn btn-primary">Conduta</a>
-						<a href="prontuário.html" type="button" class="btn btn-primary">Prescrição</a>
-						<a href="atestado.php" type="button" class="btn btn-primary">Atestado</a>
-						<a href="prontuário.html" type="button" class="btn btn-primary">Exames e Procedimentos</a>
-					</div>
-				</div>
-				<div class="modal-footer modal-footer-uniform">
-					<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
-				</div>
-			</div>
-		</div>
+		<!-- /.modal-dialog -->
 	</div>
 	<!-- /.modal -->
 	
