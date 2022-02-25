@@ -1,3 +1,6 @@
+<?php
+	include("../php/testasessao.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>

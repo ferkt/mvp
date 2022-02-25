@@ -1,30 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
+<head>
+  <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../images/logo-letter.png">
 
-    <title>HubSaúde - Painel</title>
-    
+    <title>Rhythm Admin - Dashboard  Advanced form elements </title>
+  
 	<!-- Vendors Style-->
 	<link rel="stylesheet" href="../css/vendors_css.css">
 	  
 	<!-- Style-->  
 	<link rel="stylesheet" href="../css/style.css">
 	<link rel="stylesheet" href="../css/skin_color.css">
-     
-  </head>
 
+</head>
 <body class="hold-transition light-skin sidebar-mini theme-success fixed">
 	
 <div class="wrapper">
 	<div id="loader"></div>
-	
-  <header class="main-header">
+
+	<header class="main-header">
 	<div class="d-flex align-items-center logo-box justify-content-start">	
 		<!-- Logo -->
 		<a href="index.html" class="logo">
@@ -38,9 +37,9 @@
 			  <span class="dark-logo"><img src="../../images/logo-light-text.png" alt="logo"></span>
 		  </div>
 		</a>	
-	</div>  
+	</div>   
     <!-- Header Navbar -->
-    <nav class="navbar navbar-static-top">
+	<nav class="navbar navbar-static-top">
       <!-- Sidebar toggle button-->
 	  <div class="app-menu">
 		<ul class="header-megamenu nav">
@@ -154,6 +153,7 @@
     </nav>
   </header>
   
+  <!-- Left side column. contains the logo and sidebar -->
   <aside class="main-sidebar">
     <!-- sidebar-->
     <section class="sidebar position-relative">
@@ -201,99 +201,356 @@
 				  </ul>
 				</li>														 	 	 	     
 			  </ul>
-			  <div class="sidebar-widgets">
-				  <div class="mx-25 mb-30 pb-20 side-bx bg-primary-light rounded20">
-					<div class="text-center">
-						<img src="../../images/svg-icon/color-svg/custom-17.svg" class="sideimg p-5" alt="">
-						<h4 class="title-bx text-primary">Faça um agendamento</h4>
-						<a href="#" class="py-10 fs-14 mb-0 text-primary">
-							Best Helth Care here <i class="mdi mdi-arrow-right"></i>
-						</a>
-					</div>
-				  </div>
-				<div class="copyright text-center m-25">
-					<p><strong class="d-block">HubSaúde Painel</strong> © <script>document.write(new Date().getFullYear())</script> All Rights Reserved</p>
-				</div>
-			  </div>
 		  </div>
 		</div>
     </section>
   </aside>
-
+  
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
 	  <div class="container-full">
+		<!-- Content Header (Page header) -->
+		<div class="content-header">
+			<div class="d-flex align-items-center">
+				<div class="me-auto">
+					<h4 class="page-title">Anamnesia</h4>
+					<div class="d-inline-block align-items-center">
+						<nav>
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item"><a href="#"><i class="mdi mdi-home-outline"></i></a></li>
+								<li class="breadcrumb-item" aria-current="page">Iniciar Consulta</li>
+								<li class="breadcrumb-item active" aria-current="page">Anamnesia</li>
+							</ol>
+						</nav>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+
 		<!-- Main content -->
 		<section class="content">
-			<!-- Aqui fica o conteúdoooo!!!!! -->
-			<div class="row">
-				<div class="col-12">
-					<div class="box">
-						
-					  <div class="box-header">
-						  <h2 class="box-title" _msthash="2689323" _msttexthash="240565">Nova Consulta</h2>  
-					  </div>
-					  <div class="box-body">
-						  <div class="form-group row">
-							  <label class="col-form-label col-md-2" _msthash="3450473" _msttexthash="58058">Titulo Consulta</label>
-							  <div class="col-md-10">
-								  <input class="form-control" type="email" name="email">
-								  <span class="form-text text-muted" _msthash="3274713" _msttexthash="589823">Usando <code _istranslated="1">tipo de entrada="Titulo"</code></span>
-							  </div>
-						  </div>
-	  
-						  <div class="form-group row">
-							  <label class="col-form-label col-md-2" _msthash="3450720" _msttexthash="25155">Descrição</label>
-							  <div class="col-md-10">
-								  <input class="form-control" type="url" name="url">
-								  <span class="form-text text-muted" _msthash="3274713" _msttexthash="589823">Usando <code _istranslated="1">tipo de entrada="descrição"</code></span>
-							  </div>
-						  </div>
-						  
-						  <div class="form-group row">
-							<label class="col-form-label col-md-2" _msthash="3449238" _msttexthash="42458">Data</label>
-							<div class="col-md-10">
-								<input class="form-control" type="date" name="date">
-								<span class="form-text text-muted" _msthash="3273387" _msttexthash="619879">Usando <code _istranslated="1">tipo de entrada="data"</code></span>
-							</div>
-						</div>
 
-						<div class="d-flex align-items-end justify-content-between" col-lg-2" style="margin-top: 12px;">
-							<button type="button" class="waves-effect waves-light btn btn-primary mb-6" _msthash="3547583" _msttexthash="133497"><i class="fa fa-fw fa-save"></i> Salvar</button>
-							<button type="button" class="waves-effect waves-light btn btn-danger mb-6" _msthash="3547583" _msttexthash="133497"><i class="fa fa-trash" aria-hidden="true"></i> Excluir</button>
-						  </div>
-					  </div>
-						<!-- Date and time range -->
-	  
-					  </div>
-					  <!-- /.box-header -->
-					  <!-- /.box-header -->
-					  <!-- /.box-body -->
-					  <!-- /.box-header -->
-					  <!-- /.box-body -->
-					</div>
-					<!-- /.box -->
-				  </div>
+		  <div class="row">
+
+			<div class="col-12">
+			  <div class="box">
+			<div class="box-header with-border">
+				<h4 class="box-title">Queixa</h4>
 			</div>
+			<div class="box-body">
+				<!-- Date dd/mm/yyyy -->
+				<div class="form-group">
+				<label class="form-label">Data:</label>
+				<div class="row">
+					<div class="col-md-12">
+						<input class="form-control" type="date" name="date">
+					</div>
+				</div>
+				</div>
+
+				<div class="form-group">
+					<label class="form-label">Descrição:</label>
+					<div class="row">
+						<div class="col-md-12">
+						<textarea name="textarea" id="textarea" class="form-control" required="" placeholder="Texto da área de texto" _mstplaceholder="410475" aria-invalid="false" style="height: 66px;"></textarea>
+						</div>
+					</div>	
+				</div>
+
+			</div>
+
+			<div class="box-header with-border">
+				<h4 class="box-title">Revisão de Sistemas</h4>
+			</div>
+			<div class="box-body">
+				<div class="form-group">
+					<label class="form-label">Tipo:</label>
+					<div class="row">
+						<div class="col-md-12">
+								<select class="form-control select2" style="width: 100%;">
+								<option selected="selected">Alabama</option>
+								<option>Alaska</option>
+								<option>California</option>
+								<option>Delaware</option>
+								<option>Tennessee</option>
+								</select>
+						</div>	
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="form-label">Data:</label>
+					<div class="row">
+						<div class="col-md-12">
+							<input class="form-control" type="date" name="date">
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="form-label">Descrição:</label>
+					<div class="row">
+						<div class="col-md-12">
+						<textarea name="textarea" id="textarea" class="form-control" required="" placeholder="Texto da área de texto" _mstplaceholder="410475" aria-invalid="false" style="height: 66px;"></textarea>
+						</div>
+					</div>	
+				</div>
+
+			</div>
+
+			<div class="box-header with-border">
+				<h4 class="box-title">História da Moléstia</h4>
+			</div>
+			<div class="box-body">
+				<div class="form-group">
+					<label class="form-label">Data:</label>
+					<div class="row">
+						<div class="col-md-12">
+							<input class="form-control" type="date" name="date">
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="form-label">Descrição:</label>
+					<div class="row">
+						<div class="col-md-12">
+						<textarea name="textarea" id="textarea" class="form-control" required="" placeholder="Texto da área de texto" _mstplaceholder="410475" aria-invalid="false" style="height: 66px;"></textarea>
+						</div>
+					</div>	
+				</div>
+
+			</div>
+
+			<div class="box-header with-border">
+				<h4 class="box-title">Histórico de Doenças</h4>
+			</div>
+			<div class="box-body">
+				<div class="form-group">
+					<label class="form-label">Data:</label>
+					<div class="row">
+						<div class="col-md-12">
+							<input class="form-control" type="date" name="date">
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="form-label">Descrição:</label>
+					<div class="row">
+						<div class="col-md-12">
+						<textarea name="textarea" id="textarea" class="form-control" required="" placeholder="Texto da área de texto" _mstplaceholder="410475" aria-invalid="false" style="height: 66px;"></textarea>
+						</div>
+					</div>	
+				</div>
+			</div>
+
+			<div class="box-header with-border">
+				<h4 class="box-title">Medicações em uso</h4>
+			</div>
+			<div class="box-body">
+				<div class="form-group">
+					<label class="form-label">Data:</label>
+					<div class="row">
+						<div class="col-md-12">
+							<input class="form-control" type="date" name="date">
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="form-label">Descrição:</label>
+					<div class="row">
+						<div class="col-md-12">
+						<textarea name="textarea" id="textarea" class="form-control" required="" placeholder="Texto da área de texto" _mstplaceholder="410475" aria-invalid="false" style="height: 66px;"></textarea>
+						</div>
+					</div>	
+				</div>
+			</div>
+
+			<div class="box-header with-border">
+				<h4 class="box-title">Hospitalizações</h4>
+			</div>
+			<div class="box-body">
+				<div class="form-group">
+						<label class="form-label">Tipo:</label>
+						<div class="row">
+							<div class="col-md-12">
+									<select class="form-control select2" style="width: 100%;">
+									<option selected="selected">Alabama</option>
+									<option>Alaska</option>
+									<option>California</option>
+									<option>Delaware</option>
+									<option>Tennessee</option>
+									</select>
+							</div>	
+						</div>
+				</div>
+				<div class="form-group">
+					<label class="form-label">Data:</label>
+					<div class="row">
+						<div class="col-md-12">
+							<input class="form-control" type="date" name="date">
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="form-label">Descrição:</label>
+					<div class="row">
+						<div class="col-md-12">
+						<textarea name="textarea" id="textarea" class="form-control" required="" placeholder="Texto da área de texto" _mstplaceholder="410475" aria-invalid="false" style="height: 66px;"></textarea>
+						</div>
+					</div>	
+				</div>
+			</div>
+
+			<div class="box-header with-border">
+				<h4 class="box-title">Doenças Mentais</h4>
+			</div>
+			<div class="box-body">
+				<div class="form-group">
+					<label class="form-label">Data:</label>
+					<div class="row">
+						<div class="col-md-12">
+							<input class="form-control" type="date" name="date">
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="form-label">Descrição:</label>
+					<div class="row">
+						<div class="col-md-12">
+						<textarea name="textarea" id="textarea" class="form-control" required="" placeholder="Texto da área de texto" _mstplaceholder="410475" aria-invalid="false" style="height: 66px;"></textarea>
+						</div>
+					</div>	
+				</div>
+			</div>
+
+			<div class="box-header with-border">
+				<h4 class="box-title">Alergias, Imunização</h4>
+			</div>
+			<div class="box-body">
+				<div class="form-group">
+						<label class="form-label">Tipo:</label>
+						<div class="row">
+							<div class="col-md-12">
+									<select class="form-control select2" style="width: 100%;">
+									<option selected="selected">Alabama</option>
+									<option>Alaska</option>
+									<option>California</option>
+									<option>Delaware</option>
+									<option>Tennessee</option>
+									</select>
+							</div>	
+						</div>
+				</div>
+				<div class="form-group">
+					<label class="form-label">Data:</label>
+					<div class="row">
+						<div class="col-md-12">
+							<input class="form-control" type="date" name="date">
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="form-label">Descrição:</label>
+					<div class="row">
+						<div class="col-md-12">
+						<textarea name="textarea" id="textarea" class="form-control" required="" placeholder="Texto da área de texto" _mstplaceholder="410475" aria-invalid="false" style="height: 66px;"></textarea>
+						</div>
+					</div>	
+				</div>
+			</div>
+
+			<div class="box-header with-border">
+				<h4 class="box-title">Histórico Familiar</h4>
+			</div>
+			<div class="box-body">
+				<div class="form-group">
+					<label class="form-label">Data:</label>
+					<div class="row">
+						<div class="col-md-12">
+							<input class="form-control" type="date" name="date">
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="form-label">Descrição:</label>
+					<div class="row">
+						<div class="col-md-12">
+						<textarea name="textarea" id="textarea" class="form-control" required="" placeholder="Texto da área de texto" _mstplaceholder="410475" aria-invalid="false" style="height: 66px;"></textarea>
+						</div>
+					</div>	
+				</div>
+			</div>
+
+			<div class="box-header with-border">
+				<h4 class="box-title">Histórico Ocupacional, Hábitos e Estilos de vida</h4>
+			</div>
+			<div class="box-body">
+				<div class="form-group">
+						<label class="form-label">Tipo:</label>
+						<div class="row">
+							<div class="col-md-12">
+									<select class="form-control select2" style="width: 100%;">
+									<option selected="selected">Alabama</option>
+									<option>Alaska</option>
+									<option>California</option>
+									<option>Delaware</option>
+									<option>Tennessee</option>
+									</select>
+							</div>	
+						</div>
+				</div>
+				<div class="form-group">
+					<label class="form-label">Data:</label>
+					<div class="row">
+						<div class="col-md-12">
+							<input class="form-control" type="date" name="date">
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="form-label">Descrição:</label>
+					<div class="row">
+						<div class="col-md-12">
+						<textarea name="textarea" id="textarea" class="form-control" required="" placeholder="Texto da área de texto" _mstplaceholder="410475" aria-invalid="false" style="height: 66px;"></textarea>
+						</div>
+					</div>	
+				</div>
+			</div>
+
+			</div>
+			  
+			</div>
+			<!-- ./col -->
+		  </div>
+		  <!-- /.row -->
 		</section>
 		<!-- /.content -->
 	  </div>
   </div>
   <!-- /.content-wrapper -->
+  
   <footer class="main-footer">
     <div class="pull-right d-none d-sm-inline-block">
         <ul class="nav nav-primary nav-dotted nav-dot-separated justify-content-center justify-content-md-end">
 		  <li class="nav-item">
-			<a class="nav-link" href="javascript:void(0)">FAQ</a>
+			<a class="nav-link" href="javascript:void(0)"></a>
 		  </li>
 		  <li class="nav-item">
-			<a class="nav-link" href="#">Compre agora</a>
+			<a class="nav-link" href="#"></a>
 		  </li>
 		</ul>
     </div>
-	  &copy; <script>document.write(new Date().getFullYear())</script> <a href="https://www.multipurposethemes.com/">Multipurpose Themes</a>. All Rights Reserved.
+	  &copy; <script>document.write(new Date().getFullYear())</script> <a href="https://www.multipurposethemes.com/">HubSaúde</a>. Todos os Direitos reservados.
   </footer>
-
   <!-- Control Sidebar -->
   <aside class="control-sidebar">
 	  
@@ -319,105 +576,105 @@
           <div class="media-list media-list-hover mt-20">
 			<div class="media py-10 px-0">
 			  <a class="avatar avatar-lg status-success" href="#">
-				<img src="../../images/avatar/1.jpg" alt="...">
+				<img src="../images/avatar/1.jpg" alt="...">
 			  </a>
 			  <div class="media-body">
 				<p class="fs-16">
 				  <a class="hover-primary" href="#"><strong>Tyler</strong></a>
 				</p>
 				<p>Praesent tristique diam...</p>
-				  <span>Agora mesmo</span>
+				  <span>Just now</span>
 			  </div>
 			</div>
 
 			<div class="media py-10 px-0">
 			  <a class="avatar avatar-lg status-danger" href="#">
-				<img src="../../images/avatar/2.jpg" alt="...">
+				<img src="../images/avatar/2.jpg" alt="...">
 			  </a>
 			  <div class="media-body">
 				<p class="fs-16">
 				  <a class="hover-primary" href="#"><strong>Luke</strong></a>
 				</p>
 				<p>Cras tempor diam ...</p>
-				  <span>33 minutos atrás</span>
+				  <span>33 min ago</span>
 			  </div>
 			</div>
 
 			<div class="media py-10 px-0">
 			  <a class="avatar avatar-lg status-warning" href="#">
-				<img src="../../images/avatar/3.jpg" alt="...">
+				<img src="../images/avatar/3.jpg" alt="...">
 			  </a>
 			  <div class="media-body">
 				<p class="fs-16">
 				  <a class="hover-primary" href="#"><strong>Evan</strong></a>
 				</p>
 				<p>In posuere tortor vel...</p>
-				  <span>42 minutos atrás</span>
+				  <span>42 min ago</span>
 			  </div>
 			</div>
 
 			<div class="media py-10 px-0">
 			  <a class="avatar avatar-lg status-primary" href="#">
-				<img src="../../images/avatar/4.jpg" alt="...">
+				<img src="../images/avatar/4.jpg" alt="...">
 			  </a>
 			  <div class="media-body">
 				<p class="fs-16">
 				  <a class="hover-primary" href="#"><strong>Evan</strong></a>
 				</p>
 				<p>In posuere tortor vel...</p>
-				  <span>42 minutos atrás</span>
+				  <span>42 min ago</span>
 			  </div>
 			</div>			
 			
 			<div class="media py-10 px-0">
 			  <a class="avatar avatar-lg status-success" href="#">
-				<img src="../../images/avatar/1.jpg" alt="...">
+				<img src="../images/avatar/1.jpg" alt="...">
 			  </a>
 			  <div class="media-body">
 				<p class="fs-16">
 				  <a class="hover-primary" href="#"><strong>Tyler</strong></a>
 				</p>
 				<p>Praesent tristique diam...</p>
-				  <span>Agora mesmo</span>
+				  <span>Just now</span>
 			  </div>
 			</div>
 
 			<div class="media py-10 px-0">
 			  <a class="avatar avatar-lg status-danger" href="#">
-				<img src="../../images/avatar/2.jpg" alt="...">
+				<img src="../images/avatar/2.jpg" alt="...">
 			  </a>
 			  <div class="media-body">
 				<p class="fs-16">
 				  <a class="hover-primary" href="#"><strong>Luke</strong></a>
 				</p>
 				<p>Cras tempor diam ...</p>
-				  <span>33 minutos atrás</span>
+				  <span>33 min ago</span>
 			  </div>
 			</div>
 
 			<div class="media py-10 px-0">
 			  <a class="avatar avatar-lg status-warning" href="#">
-				<img src="../../images/avatar/3.jpg" alt="...">
+				<img src="../images/avatar/3.jpg" alt="...">
 			  </a>
 			  <div class="media-body">
 				<p class="fs-16">
 				  <a class="hover-primary" href="#"><strong>Evan</strong></a>
 				</p>
 				<p>In posuere tortor vel...</p>
-				  <span>42 minutos atrás</span>
+				  <span>42 min ago</span>
 			  </div>
 			</div>
 
 			<div class="media py-10 px-0">
 			  <a class="avatar avatar-lg status-primary" href="#">
-				<img src="../../images/avatar/4.jpg" alt="...">
+				<img src="../images/avatar/4.jpg" alt="...">
 			  </a>
 			  <div class="media-body">
 				<p class="fs-16">
 				  <a class="hover-primary" href="#"><strong>Evan</strong></a>
 				</p>
 				<p>In posuere tortor vel...</p>
-				  <span>42 minutos atrás</span>
+				  <span>42 min ago</span>
 			  </div>
 			</div>
 			  
@@ -431,7 +688,7 @@
 			<a href="javascript:void(0)" class="text-grey">
 				<i class="ti-more"></i>
 			</a>	
-			<p>Lista de afazeres</p>
+			<p>Todo List</p>
 			<a href="javascript:void(0)" class="text-end text-grey"><i class="ti-plus"></i></a>
 		  </div>
         <ul class="todo-list mt-20">
@@ -442,7 +699,7 @@
 			  <!-- todo text -->
 			  <span class="text-line">Nulla vitae purus</span>
 			  <!-- Emphasis label -->
-			  <small class="badge bg-danger"><i class="fa fa-clock-o"></i> 2 minutoss</small>
+			  <small class="badge bg-danger"><i class="fa fa-clock-o"></i> 2 mins</small>
 			  <!-- General tools such as edit or delete-->
 			  <div class="tools">
 				<i class="fa fa-edit"></i>
@@ -454,7 +711,7 @@
 			  <input type="checkbox" id="basic_checkbox_2" class="filled-in">
 			  <label for="basic_checkbox_2" class="mb-0 h-15"></label>
 			  <span class="text-line">Phasellus interdum</span>
-			  <small class="badge bg-info"><i class="fa fa-clock-o"></i> 4 horass</small>
+			  <small class="badge bg-info"><i class="fa fa-clock-o"></i> 4 hours</small>
 			  <div class="tools">
 				<i class="fa fa-edit"></i>
 				<i class="fa fa-trash-o"></i>
@@ -465,7 +722,7 @@
 			  <input type="checkbox" id="basic_checkbox_3" class="filled-in">
 			  <label for="basic_checkbox_3" class="mb-0 h-15"></label>
 			  <span class="text-line">Quisque sodales</span>
-			  <small class="badge bg-warning"><i class="fa fa-clock-o"></i> 1 dia</small>
+			  <small class="badge bg-warning"><i class="fa fa-clock-o"></i> 1 day</small>
 			  <div class="tools">
 				<i class="fa fa-edit"></i>
 				<i class="fa fa-trash-o"></i>
@@ -476,7 +733,7 @@
 			  <input type="checkbox" id="basic_checkbox_4" class="filled-in">
 			  <label for="basic_checkbox_4" class="mb-0 h-15"></label>
 			  <span class="text-line">Proin nec mi porta</span>
-			  <small class="badge bg-success"><i class="fa fa-clock-o"></i> 3 dias</small>
+			  <small class="badge bg-success"><i class="fa fa-clock-o"></i> 3 days</small>
 			  <div class="tools">
 				<i class="fa fa-edit"></i>
 				<i class="fa fa-trash-o"></i>
@@ -487,7 +744,7 @@
 			  <input type="checkbox" id="basic_checkbox_5" class="filled-in">
 			  <label for="basic_checkbox_5" class="mb-0 h-15"></label>
 			  <span class="text-line">Maecenas scelerisque</span>
-			  <small class="badge bg-primary"><i class="fa fa-clock-o"></i> 1 semana</small>
+			  <small class="badge bg-primary"><i class="fa fa-clock-o"></i> 1 week</small>
 			  <div class="tools">
 				<i class="fa fa-edit"></i>
 				<i class="fa fa-trash-o"></i>
@@ -498,7 +755,7 @@
 			  <input type="checkbox" id="basic_checkbox_6" class="filled-in">
 			  <label for="basic_checkbox_6" class="mb-0 h-15"></label>
 			  <span class="text-line">Vivamus nec orci</span>
-			  <small class="badge bg-info"><i class="fa fa-clock-o"></i> 1 mês</small>
+			  <small class="badge bg-info"><i class="fa fa-clock-o"></i> 1 month</small>
 			  <div class="tools">
 				<i class="fa fa-edit"></i>
 				<i class="fa fa-trash-o"></i>
@@ -511,7 +768,7 @@
 			  <!-- todo text -->
 			  <span class="text-line">Nulla vitae purus</span>
 			  <!-- Emphasis label -->
-			  <small class="badge bg-danger"><i class="fa fa-clock-o"></i> 2 minutos</small>
+			  <small class="badge bg-danger"><i class="fa fa-clock-o"></i> 2 mins</small>
 			  <!-- General tools such as edit or delete-->
 			  <div class="tools">
 				<i class="fa fa-edit"></i>
@@ -523,7 +780,7 @@
 			  <input type="checkbox" id="basic_checkbox_8" class="filled-in">
 			  <label for="basic_checkbox_8" class="mb-0 h-15"></label>
 			  <span class="text-line">Phasellus interdum</span>
-			  <small class="badge bg-info"><i class="fa fa-clock-o"></i> 4 horas</small>
+			  <small class="badge bg-info"><i class="fa fa-clock-o"></i> 4 hours</small>
 			  <div class="tools">
 				<i class="fa fa-edit"></i>
 				<i class="fa fa-trash-o"></i>
@@ -534,7 +791,7 @@
 			  <input type="checkbox" id="basic_checkbox_9" class="filled-in">
 			  <label for="basic_checkbox_9" class="mb-0 h-15"></label>
 			  <span class="text-line">Quisque sodales</span>
-			  <small class="badge bg-warning"><i class="fa fa-clock-o"></i> 1 dia</small>
+			  <small class="badge bg-warning"><i class="fa fa-clock-o"></i> 1 day</small>
 			  <div class="tools">
 				<i class="fa fa-edit"></i>
 				<i class="fa fa-trash-o"></i>
@@ -545,7 +802,7 @@
 			  <input type="checkbox" id="basic_checkbox_10" class="filled-in">
 			  <label for="basic_checkbox_10" class="mb-0 h-15"></label>
 			  <span class="text-line">Proin nec mi porta</span>
-			  <small class="badge bg-success"><i class="fa fa-clock-o"></i> 3 dias</small>
+			  <small class="badge bg-success"><i class="fa fa-clock-o"></i> 3 days</small>
 			  <div class="tools">
 				<i class="fa fa-edit"></i>
 				<i class="fa fa-trash-o"></i>
@@ -560,166 +817,38 @@
   
   <!-- Add the sidebar's background. This div must be placed immediately after the control sidebar -->
   <div class="control-sidebar-bg"></div>
-  
 </div>
 <!-- ./wrapper -->
-		
-	<div id="chat-box-body">
-
-		<div class="chat-box">
-            <div class="chat-box-header p-15 d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button class="waves-effect waves-circle btn btn-circle btn-primary-light h-40 w-40 rounded-circle l-h-45" type="button" data-bs-toggle="dropdown">
-                      <span class="icon-Add-user fs-22"><span class="path1"></span><span class="path2"></span></span>
-                  </button>
-                  <div class="dropdown-menu min-w-200">
-                    <a class="dropdown-item fs-16" href="#">
-                        <span class="icon-Color me-15"></span>
-                        Novo grupo</a>
-                    <a class="dropdown-item fs-16" href="#">
-                        <span class="icon-Clipboard me-15"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span></span>
-                        Contatos</a>
-                    <a class="dropdown-item fs-16" href="#">
-                        <span class="icon-Group me-15"><span class="path1"></span><span class="path2"></span></span>
-                        Grupos</a>
-                    <a class="dropdown-item fs-16" href="#">
-                        <span class="icon-Active-call me-15"><span class="path1"></span><span class="path2"></span></span>
-                        Chamadas</a>
-                    <a class="dropdown-item fs-16" href="#">
-                        <span class="icon-Settings1 me-15"><span class="path1"></span><span class="path2"></span></span>
-                        Configurações</a>
-                    <div class="dropdown-divider"></div>
-					<a class="dropdown-item fs-16" href="#">
-                        <span class="icon-Question-circle me-15"><span class="path1"></span><span class="path2"></span></span>
-                        Ajuda</a>
-					<a class="dropdown-item fs-16" href="#">
-                        <span class="icon-Notifications me-15"><span class="path1"></span><span class="path2"></span></span> 
-                        Privacidade</a>
-                  </div>
-                </div>
-                <div class="text-center flex-grow-1">
-                    <div class="text-dark fs-18">Mayra Sibley</div>
-                    <div>
-                        <span class="badge badge-sm badge-dot badge-primary"></span>
-                        <span class="text-muted fs-12">Ativo</span>
-                    </div>
-                </div>
-                <div class="chat-box-toggle">
-                    <button id="chat-box-toggle" class="waves-effect waves-circle btn btn-circle btn-danger-light h-40 w-40 rounded-circle l-h-45" type="button">
-                      <span class="icon-Close fs-22"><span class="path1"></span><span class="path2"></span></span>
-                    </button>                    
-                </div>
-            </div>
-            <div class="chat-box-body">
-                <div class="chat-box-overlay">   
-                </div>
-                <div class="chat-logs">
-                    <div class="chat-msg user">
-                        <div class="d-flex align-items-center">
-                            <span class="msg-avatar">
-                                <img src="../../images/avatar/2.jpg" class="avatar avatar-lg">
-                            </span>
-                            <div class="mx-10">
-                                <a href="#" class="text-dark hover-primary fw-bold">Mayra Sibley</a>
-                                <p class="text-muted fs-12 mb-0">2 Horas</p>
-                            </div>
-                        </div>
-                        <div class="cm-msg-text">
-                            Olá, sou Jesse e você?
-                        </div>
-                    </div>
-                    <div class="chat-msg self">
-                        <div class="d-flex align-items-center justify-content-end">
-                            <div class="mx-10">
-                                <a href="#" class="text-dark hover-primary fw-bold">Você</a>
-                                <p class="text-muted fs-12 mb-0">3 minutos</p>
-                            </div>
-                            <span class="msg-avatar">
-                                <img src="../../images/avatar/3.jpg" class="avatar avatar-lg">
-                            </span>
-                        </div>
-                        <div class="cm-msg-text">
-                           Meu nome é Anne Clarc.         
-                        </div>        
-                    </div>
-                    <div class="chat-msg user">
-                        <div class="d-flex align-items-center">
-                            <span class="msg-avatar">
-                                <img src="../../images/avatar/2.jpg" class="avatar avatar-lg">
-                            </span>
-                            <div class="mx-10">
-                                <a href="#" class="text-dark hover-primary fw-bold">Mayra Sibley</a>
-                                <p class="text-muted fs-12 mb-0">40 segundos</p>
-                            </div>
-                        </div>
-                        <div class="cm-msg-text">
-                            Prazer em conhecê-la Anne.<br>Em que posso ajudar?
-                        </div>
-                    </div>
-                </div><!--chat-log -->
-            </div>
-            <div class="chat-input">      
-                <form>
-                    <input type="text" id="chat-input" placeholder="Send a message..."/>
-                    <button type="submit" class="chat-submit" id="chat-submit">
-                        <span class="icon-Send fs-22"></span>
-                    </button>
-                </form>      
-            </div>
-		</div>
-	</div>
-	<!-- Modal -->
-	<div class="modal center-modal fade" id="modal-center" tabindex="-1">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h4 class="modal-title">Informações do Paciente</h4>
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-				</div>
-				<div class="modal-body">
-					<div class="img-modal">
-						<img src="../../images/avatar/nasena.jpg" alt="Foto" width="100px" height="100px">
-					</div>
-					<div class="modal-infos-top">
-						<h3>Luiz Fernando Coelho Barroso</h3>
-						<p>Data de Nascimento: 21/02/2003</p>
-						<p>Sexo: Masculino</p>
-					</div>
-					<hr>
-					<div class="modal-infos">
-						<p>Naturalidade: Capanema-PA</p>
-						<p>Cidade: Sobral</p>
-						<p>Estado: Ceará</p>
-						<p>Endereço: Rua Tancredo Neves, 216</p>
-						<p>Telefone: (88) 99224-6983</p>
-					</div>
-				</div>
-				<div class="modal-footer modal-footer-uniform">
-					<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
-					<button type="button" class="btn btn-primary float-end">Iniciar Consulta</button>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- /.modal -->
 	
+	<!-- ./side demo panel --
+	<!-- Sidebar -->
 	<!-- Page Content overlay -->
 	
 	
 	<!-- Vendor JS -->
 	<script src="../js/vendors.min.js"></script>
 	<script src="../js/pages/chat-popup.js"></script>
-    <script src="../../assets/icons/feather-icons/feather.min.js"></script>
-	
-	<script src="../../assets/vendor_components/ckeditor/ckeditor.js"></script>
-	<script src="../../assets/vendor_components/apexcharts-bundle/dist/apexcharts.js"></script>
-	<script src="../../assets/vendor_components/OwlCarousel2/dist/owl.carousel.js"></script>
-	
+    <script src="../../assets/icons/feather-icons/feather.min.js"></script>	
+	<script src="../../assets/vendor_components/bootstrap-select/dist/js/bootstrap-select.js"></script>
+	<script src="../../assets/vendor_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.js"></script>
+	<script src="../../assets/vendor_components/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
+	<script src="../../assets/vendor_components/select2/dist/js/select2.full.js"></script>
+	<script src="../../assets/vendor_plugins/input-mask/jquery.inputmask.js"></script>
+	<script src="../../assets/vendor_plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
+	<script src="../../assets/vendor_plugins/input-mask/jquery.inputmask.extensions.js"></script>
+	<script src="../../assets/vendor_components/moment/min/moment.min.js"></script>
+	<script src="../../assets/vendor_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+	<script src="../../assets/vendor_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+	<script src="../../assets/vendor_components/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
+	<script src="../../assets/vendor_plugins/timepicker/bootstrap-timepicker.min.js"></script>
+	<script src="../../assets/vendor_plugins/iCheck/icheck.min.js"></script>
 	
 	<!-- Rhythm Admin App -->
 	<script src="../js/template.js"></script>
-	<script src="../js/pages/dashboard2.js"></script>
-	<script src="../js/pages/editor.js"></script>
 	
+	<script src="../js/pages/advanced-form-element.js"></script>
+	
+
+
 </body>
 </html>

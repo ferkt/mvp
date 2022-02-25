@@ -27,36 +27,33 @@
 				<div class="col-lg-5 col-md-5 col-12">
 					<div class="box box-body">
 						<div class="content-top-agile pb-0 pt-20">
+							<?php
+								if(isset($_GET['erro'])){
+									if($_GET['Mess'] == 'erro'):
+										alert("erro");
+									endif;
+
+								}
+							
+							?>
 							<h2 class="text-primary">Médico Login</h2>
 							<p class="mb-0">Faça login para continuar no Hub Saúde.</p>							
 						</div>
 						<div class="p-40">
-							<form action="index.html" method="post">
+							<form action="../php/loginPro.php" method="POST" name="form1">
 								<div class="form-group">
 									<div class="input-group mb-15">
 										<span class="input-group-text bg-transparent"><i class="ti-user"></i></span>
-										<input type="text" class="form-control ps-15 bg-transparent" placeholder="CRM">
+										<input type="text" class="form-control ps-15 bg-transparent" name="crm" placeholder="CRM">
 									</div>
 								</div>
 								<div class="form-group">
 									<div class="input-group mb-15">
 										<span class="input-group-text  bg-transparent"><i class="ti-lock"></i></span>
-										<input type="password" class="form-control ps-15 bg-transparent" placeholder="Senha">
+										<input type="password" class="form-control ps-15 bg-transparent" name="senha" placeholder="Senha">
 									</div>
 								</div>
 								  <div class="row">
-									<div class="col-6">
-									  <div class="checkbox ms-5">
-										<input type="checkbox" id="basic_checkbox_1">
-										<label for="basic_checkbox_1" class="form-label">Lembrar-me</label>
-									  </div>
-									</div>
-									<!-- /.col -->
-									<div class="col-6">
-									 <div class="fog-pwd text-end">
-										<a href="javascript:void(0)" class="hover-warning"><i class="ion ion-locked"></i> Esqueceu sua senha?</a><br>
-									  </div>
-									</div>
 									<!-- /.col -->
 									<div class="col-12 text-center">
 									  <button type="submit" class="btn btn-info w-p100 mt-15">ENTRAR</button>
