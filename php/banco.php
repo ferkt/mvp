@@ -1,5 +1,5 @@
 <?php
-  $conexao = new mysqli('localhost','root','','mvp');
+  $conexao = new mysqli('localhost','root','','bd_alpha');
    
    //verificando conexão com a base de dados
    if(mysqli_connect_errno()) 

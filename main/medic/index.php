@@ -1,3 +1,6 @@
+<?php
+	include('../../php/testasessao.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -144,7 +147,7 @@
 				 <a class="dropdown-item" href="#"><i class="ti-wallet text-muted me-2"></i>Minha carteira</a>
 				 <a class="dropdown-item" href="#"><i class="ti-settings text-muted me-2"></i> Configurações</a>
 				 <div class="dropdown-divider"></div>
-				 <a class="dropdown-item" href="#"><i class="ti-lock text-muted me-2"></i> Sair</a>
+				 <a class="dropdown-item" href="../../php/sair.php"><i class="ti-lock text-muted me-2"></i> Sair</a>
               </li>
             </ul>
           </li>	
@@ -226,6 +229,16 @@
 		<!-- Main content -->
 		<section class="content">
 			<!-- Aqui fica o conteúdoooo!!!!! -->
+			<?php
+				if(isset($_GET['mess'])){
+					if($_GET['mess'] == 'ok'){
+						echo '<div class="alert alert-primary alert-dismissible">
+						<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fechar" _mstaria-label="73632"></button><font _mstmutation="1" _msthash="3810508" _msttexthash="2131662"> Logado com Sucesso! </font></div>';
+					}
+
+				}
+					
+			?>
 			<h1>Busca de Pacientes</h1>
 			<form>
 				<div class="controls">
@@ -721,13 +734,13 @@
 				</div>
 				<div class="modal-body">
 					<div class="row show-grid">
-						<a href="anamnesia.php" type="button" class="btn btn-primary">Anamnesia</a>
-						<a href="examefisico.php" type="button" class="btn btn-primary">Exame Físico</a>
-						<a href="prontuário.html" type="button" class="btn btn-primary">Hipótese Diagnóstica</a>
-						<a href="conduta.php" type="button" class="btn btn-primary">Conduta</a>
-						<a href="prontuário.html" type="button" class="btn btn-primary">Prescrição</a>
-						<a href="atestado.php" type="button" class="btn btn-primary">Atestado</a>
-						<a href="prontuário.html" type="button" class="btn btn-primary">Exames e Procedimentos</a>
+						<a href="anamnesia.php?id=<?php echo $nome;?>" type="button" class="btn btn-primary">Anamnesia</a>
+						<a href="examefisico.php?id=<?php echo $nome;?>" type="button" class="btn btn-primary">Exame Físico</a>
+						<a href="prontuário.html?id=<?php echo $nome;?>" type="button" class="btn btn-primary">Hipótese Diagnóstica</a>
+						<a href="conduta.php?id=<?php echo $nome;?>" type="button" class="btn btn-primary">Conduta</a>
+						<a href="prontuário.html?id=<?php echo $nome;?>" type="button" class="btn btn-primary">Prescrição</a>
+						<a href="atestado.php?id=<?php echo $nome;?>" type="button" class="btn btn-primary">Atestado</a>
+						<a href="prontuário.php?id=<?php echo $nome;?>" type="button" class="btn btn-primary">Exames e Procedimentos</a>
 					</div>
 				</div>
 				<div class="modal-footer modal-footer-uniform">

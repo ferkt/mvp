@@ -4,14 +4,14 @@
     
    //criando uma variável para
    //receber o valor do email   
-   $crm = $_POST['crm'];
+   $cpf = $_POST['cpf'];
    $senha = $_POST['senha'];
       
      
    //criando consulta para verificar a existencia 	  
    //do usuário
-   $sql = "select * from medicos where crm = '$crm'
-		   and senha = '$senha'";
+   $sql = "select * from prof_saude where cpf = '$cpf'
+		   and password = '$senha'";
    
    //executando a consulta no banco
    $consulta = $conexao->query($sql);
@@ -22,8 +22,8 @@
 		   $linha = $consulta->fetch_array(MYSQLI_ASSOC);
 		   session_start();
 		   $_SESSION['login'] = 'ok';
-		   //header('Location: ../main/medico/index.php');
-		   echo'entrou';
+		   $_SESSION['id_prof'] = $linha['id_prof_saude'];
+		   header('Location: ../main/medic/index.php?mess=ok');
 	   }else{
 		   header('Location: ../landing/loginPro.php?mess=erro');
 	   }

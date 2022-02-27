@@ -1,5 +1,8 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿<?php
+	include('../php/banco.php');
+?>
+<!DOCTYPE html>
+<html lang="PT-BR">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,23 +31,29 @@
 					<div class="box box-body">
 						<div class="content-top-agile pb-0 pt-20">
 							<?php
-								if(isset($_GET['erro'])){
-									if($_GET['Mess'] == 'erro'):
-										alert("erro");
-									endif;
+								if(isset($_GET['mess'])){
+									if($_GET['mess'] == 'erro'){
+										echo '<div class="alert alert-danger alert-dismissible">
+											<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fechar" _mstaria-label="73632"></button>
+											<h4><i class="icon fa fa-ban"></i><font _mstmutation="1" _msthash="4280822" _msttexthash="81081"> Alerta!</font></h4><font _mstmutation="1" _msthash="3811340" _msttexthash="20575217"> Cpf/Crm ou Senha errados! </font></div>';
+									}
+									if($_GET['mess'] == 'logout'){
+										echo '<div class="alert alert-warning alert-dismissible">
+										<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fechar" _mstaria-label="73632"></button>
+										<h4><i class="icon fa fa-warning"></i><font _mstmutation="1" _msthash="4281238" _msttexthash="81081"> Alerta!</font></h4><font _mstmutation="1" _msthash="3811626" _msttexthash="2817633">Você está deslogado! </font></div>';
+									}
 
-								}
-							
+								}	
 							?>
-							<h2 class="text-primary">Médico Login</h2>
-							<p class="mb-0">Faça login para continuar no Hub Saúde.</p>							
+							<h2 class="text-primary">Médico Login</h2>	
+							<p class="mb-0">Faça login para continuar no Hub Saúde.</p>						
 						</div>
 						<div class="p-40">
 							<form action="../php/loginPro.php" method="POST" name="form1">
 								<div class="form-group">
 									<div class="input-group mb-15">
 										<span class="input-group-text bg-transparent"><i class="ti-user"></i></span>
-										<input type="text" class="form-control ps-15 bg-transparent" name="crm" placeholder="CRM">
+										<input type="text" class="form-control ps-15 bg-transparent" name="cpf" placeholder="cpf">
 									</div>
 								</div>
 								<div class="form-group">
@@ -61,9 +70,6 @@
 									<!-- /.col -->
 								  </div>
 							</form>	
-							<div class="text-center">
-								<p class="mt-15 mb-0">Não tem conta? <a href="register.html" class="text-warning ms-5">Registrar-se</a></p>
-							</div>	
 						</div>
 					</div>								
 

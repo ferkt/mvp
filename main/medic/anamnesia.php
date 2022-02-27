@@ -1,5 +1,8 @@
+<?php
+	include('../../php/testasessao.php');
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="PT-BR">
 <head>
   <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -143,7 +146,7 @@
 				 <a class="dropdown-item" href="#"><i class="ti-wallet text-muted me-2"></i>Minha carteira</a>
 				 <a class="dropdown-item" href="#"><i class="ti-settings text-muted me-2"></i> Configurações</a>
 				 <div class="dropdown-divider"></div>
-				 <a class="dropdown-item" href="#"><i class="ti-lock text-muted me-2"></i> Sair</a>
+				 <a class="dropdown-item" href="../../php/sair.php"><i class="ti-lock text-muted me-2"></i> Sair</a>
               </li>
             </ul>
           </li>	
@@ -234,7 +237,9 @@
 		  <div class="row">
 
 			<div class="col-12">
-			  <div class="box">
+		<form action="conduta.php" method="POST" name="formAdd">
+			<input type="hidden" name="id_prof" value='<?php echo $_GET['id']?>'>
+			<div class="box">
 			<div class="box-header with-border">
 				<h4 class="box-title">Queixa</h4>
 			</div>
@@ -244,7 +249,7 @@
 				<label class="form-label">Data:</label>
 				<div class="row">
 					<div class="col-md-12">
-						<input class="form-control" type="date" name="date">
+						<input class="form-control" type="date" name="dataQ">
 					</div>
 				</div>
 				</div>
@@ -253,7 +258,7 @@
 					<label class="form-label">Descrição:</label>
 					<div class="row">
 						<div class="col-md-12">
-						<textarea name="textarea" id="textarea" class="form-control" required="" placeholder="Texto da área de texto" _mstplaceholder="410475" aria-invalid="false" style="height: 66px;"></textarea>
+						<textarea name="descQ" id="textarea" class="form-control" required="" placeholder="Texto da área de texto" _mstplaceholder="410475" aria-invalid="false" style="height: 66px;"></textarea>
 						</div>
 					</div>	
 				</div>
@@ -268,7 +273,7 @@
 					<label class="form-label">Tipo:</label>
 					<div class="row">
 						<div class="col-md-12">
-								<select class="form-control select2" style="width: 100%;">
+								<select class="form-control select2" name="tipoS"style="width: 100%;">
 								<option selected="selected">Alabama</option>
 								<option>Alaska</option>
 								<option>California</option>
@@ -283,7 +288,7 @@
 					<label class="form-label">Data:</label>
 					<div class="row">
 						<div class="col-md-12">
-							<input class="form-control" type="date" name="date">
+							<input class="form-control" type="date" name="dataS">
 						</div>
 					</div>
 				</div>
@@ -292,7 +297,7 @@
 					<label class="form-label">Descrição:</label>
 					<div class="row">
 						<div class="col-md-12">
-						<textarea name="textarea" id="textarea" class="form-control" required="" placeholder="Texto da área de texto" _mstplaceholder="410475" aria-invalid="false" style="height: 66px;"></textarea>
+						<textarea name="descS" id="textarea" class="form-control" required="" placeholder="Texto da área de texto" _mstplaceholder="410475" aria-invalid="false" style="height: 66px;"></textarea>
 						</div>
 					</div>	
 				</div>
@@ -307,7 +312,7 @@
 					<label class="form-label">Data:</label>
 					<div class="row">
 						<div class="col-md-12">
-							<input class="form-control" type="date" name="date">
+						<input class="form-control" type="date" name="dataM">
 						</div>
 					</div>
 				</div>
@@ -316,7 +321,7 @@
 					<label class="form-label">Descrição:</label>
 					<div class="row">
 						<div class="col-md-12">
-						<textarea name="textarea" id="textarea" class="form-control" required="" placeholder="Texto da área de texto" _mstplaceholder="410475" aria-invalid="false" style="height: 66px;"></textarea>
+						<textarea name="descM" id="textarea" class="form-control" required="" placeholder="Texto da área de texto" _mstplaceholder="410475" aria-invalid="false" style="height: 66px;"></textarea>
 						</div>
 					</div>	
 				</div>
@@ -331,7 +336,7 @@
 					<label class="form-label">Data:</label>
 					<div class="row">
 						<div class="col-md-12">
-							<input class="form-control" type="date" name="date">
+							<input class="form-control" type="date" name="dataD">
 						</div>
 					</div>
 				</div>
@@ -340,7 +345,7 @@
 					<label class="form-label">Descrição:</label>
 					<div class="row">
 						<div class="col-md-12">
-						<textarea name="textarea" id="textarea" class="form-control" required="" placeholder="Texto da área de texto" _mstplaceholder="410475" aria-invalid="false" style="height: 66px;"></textarea>
+						<textarea name="descD" id="textarea" class="form-control" required="" placeholder="Texto da área de texto" _mstplaceholder="410475" aria-invalid="false" style="height: 66px;"></textarea>
 						</div>
 					</div>	
 				</div>
@@ -354,7 +359,7 @@
 					<label class="form-label">Data:</label>
 					<div class="row">
 						<div class="col-md-12">
-							<input class="form-control" type="date" name="date">
+							<input class="form-control" type="date" name="dataMed">
 						</div>
 					</div>
 				</div>
@@ -363,7 +368,7 @@
 					<label class="form-label">Descrição:</label>
 					<div class="row">
 						<div class="col-md-12">
-						<textarea name="textarea" id="textarea" class="form-control" required="" placeholder="Texto da área de texto" _mstplaceholder="410475" aria-invalid="false" style="height: 66px;"></textarea>
+						<textarea name="descMed" id="textarea" class="form-control" required="" placeholder="Texto da área de texto" _mstplaceholder="410475" aria-invalid="false" style="height: 66px;"></textarea>
 						</div>
 					</div>	
 				</div>
@@ -377,7 +382,7 @@
 						<label class="form-label">Tipo:</label>
 						<div class="row">
 							<div class="col-md-12">
-									<select class="form-control select2" style="width: 100%;">
+									<select class="form-control select2" name="tipoH" style="width: 100%;">
 									<option selected="selected">Alabama</option>
 									<option>Alaska</option>
 									<option>California</option>
@@ -391,7 +396,7 @@
 					<label class="form-label">Data:</label>
 					<div class="row">
 						<div class="col-md-12">
-							<input class="form-control" type="date" name="date">
+							<input class="form-control" type="date" name="dataH">
 						</div>
 					</div>
 				</div>
@@ -400,7 +405,7 @@
 					<label class="form-label">Descrição:</label>
 					<div class="row">
 						<div class="col-md-12">
-						<textarea name="textarea" id="textarea" class="form-control" required="" placeholder="Texto da área de texto" _mstplaceholder="410475" aria-invalid="false" style="height: 66px;"></textarea>
+						<textarea name="descH" id="textarea" class="form-control" required="" placeholder="Texto da área de texto" _mstplaceholder="410475" aria-invalid="false" style="height: 66px;"></textarea>
 						</div>
 					</div>	
 				</div>
@@ -414,7 +419,7 @@
 					<label class="form-label">Data:</label>
 					<div class="row">
 						<div class="col-md-12">
-							<input class="form-control" type="date" name="date">
+							<input class="form-control" type="date" name="dataDm">
 						</div>
 					</div>
 				</div>
@@ -423,7 +428,7 @@
 					<label class="form-label">Descrição:</label>
 					<div class="row">
 						<div class="col-md-12">
-						<textarea name="textarea" id="textarea" class="form-control" required="" placeholder="Texto da área de texto" _mstplaceholder="410475" aria-invalid="false" style="height: 66px;"></textarea>
+						<textarea name="descDm" id="textarea" class="form-control" required="" placeholder="Texto da área de texto" _mstplaceholder="410475" aria-invalid="false" style="height: 66px;"></textarea>
 						</div>
 					</div>	
 				</div>
@@ -437,7 +442,7 @@
 						<label class="form-label">Tipo:</label>
 						<div class="row">
 							<div class="col-md-12">
-									<select class="form-control select2" style="width: 100%;">
+									<select class="form-control select2" name="tipoAi" style="width: 100%;">
 									<option selected="selected">Alabama</option>
 									<option>Alaska</option>
 									<option>California</option>
@@ -451,7 +456,7 @@
 					<label class="form-label">Data:</label>
 					<div class="row">
 						<div class="col-md-12">
-							<input class="form-control" type="date" name="date">
+							<input class="form-control" type="date" name="dataAi">
 						</div>
 					</div>
 				</div>
@@ -460,7 +465,7 @@
 					<label class="form-label">Descrição:</label>
 					<div class="row">
 						<div class="col-md-12">
-						<textarea name="textarea" id="textarea" class="form-control" required="" placeholder="Texto da área de texto" _mstplaceholder="410475" aria-invalid="false" style="height: 66px;"></textarea>
+						<textarea name="descAi" id="textarea" class="form-control" required="" placeholder="Texto da área de texto" _mstplaceholder="410475" aria-invalid="false" style="height: 66px;"></textarea>
 						</div>
 					</div>	
 				</div>
@@ -474,7 +479,7 @@
 					<label class="form-label">Data:</label>
 					<div class="row">
 						<div class="col-md-12">
-							<input class="form-control" type="date" name="date">
+							<input class="form-control" type="date" name="dataHf">
 						</div>
 					</div>
 				</div>
@@ -483,7 +488,7 @@
 					<label class="form-label">Descrição:</label>
 					<div class="row">
 						<div class="col-md-12">
-						<textarea name="textarea" id="textarea" class="form-control" required="" placeholder="Texto da área de texto" _mstplaceholder="410475" aria-invalid="false" style="height: 66px;"></textarea>
+						<textarea name="descHf" id="textarea" class="form-control" required="" placeholder="Texto da área de texto" _mstplaceholder="410475" aria-invalid="false" style="height: 66px;"></textarea>
 						</div>
 					</div>	
 				</div>
@@ -497,7 +502,7 @@
 						<label class="form-label">Tipo:</label>
 						<div class="row">
 							<div class="col-md-12">
-									<select class="form-control select2" style="width: 100%;">
+									<select class="form-control select2" name="tipoHo" style="width: 100%;">
 									<option selected="selected">Alabama</option>
 									<option>Alaska</option>
 									<option>California</option>
@@ -511,7 +516,7 @@
 					<label class="form-label">Data:</label>
 					<div class="row">
 						<div class="col-md-12">
-							<input class="form-control" type="date" name="date">
+							<input class="form-control" type="date" name="dataHo">
 						</div>
 					</div>
 				</div>
@@ -520,13 +525,20 @@
 					<label class="form-label">Descrição:</label>
 					<div class="row">
 						<div class="col-md-12">
-						<textarea name="textarea" id="textarea" class="form-control" required="" placeholder="Texto da área de texto" _mstplaceholder="410475" aria-invalid="false" style="height: 66px;"></textarea>
+						<textarea name="descHo" id="textarea" class="form-control" required="" placeholder="Texto da área de texto" _mstplaceholder="410475" aria-invalid="false" style="height: 66px;"></textarea>
 						</div>
 					</div>	
 				</div>
+
+				<div class="d-flex align-items-end justify-content-between" style="margin-top: 12px;">
+					<button type="submit" class="waves-effect waves-light btn btn-primary mb-6" _msthash="3547583" _msttexthash="133497"><i class="fa fa-fw fa-save"></i> Salvar</button>
+					<button type="button" class="waves-effect waves-light btn btn-danger mb-6" _msthash="3547583" _msttexthash="133497"><i class="fa fa-trash" aria-hidden="true"></i> Excluir</button>
+				</div>
+				
 			</div>
 
-			</div>
+			</div> <!-- box -->
+		</form>
 			  
 			</div>
 			<!-- ./col -->
