@@ -1,5 +1,6 @@
 <?php
 	include('../../php/testasessao.php');
+	$nome = $_SESSION['id_prof'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -240,11 +241,11 @@
 					
 			?>
 			<h1>Busca de Pacientes</h1>
-			<form>
+			<form  name="form_table" method="POST" action="index.php">
 				<div class="controls">
 					<div class="input-group">
-						<input type="text" class="form-control" placeholder="Nome, CPF, Nº do SUS ou Prontuário" required> 
-						<button class="btn btn-primary btn-sm" type="button"><i data-feather="search"></i></button> 
+						<input type="text" name="texto" class="form-control" placeholder="Nome, CPF, Nº do SUS ou Prontuário" required> 
+						<button class="btn btn-primary btn-sm" type="submit"><i data-feather="search"></i></button> 
 					</div>
 				</div>
 			</form>
@@ -266,30 +267,33 @@
 										</tr>
 									</thead>
 									<tbody>
-										<tr>
-											<td>1</td>
-											<td>Fernando Tokovoip</td>
-											<td>012.239.244-80</td>
-											<td>234.4254.2393.7960</td>
-											<td>CE-2614288</td>
-											<td><a title="Detalhes" href="#" class="btn btn-primary"><i class="fa fa-address-card"></i></a></td>
-										</tr>
-										<tr>
-											<td>2</td>
-											<td>Mozilla Coelho</td>
-											<td>132.321.214-34</td>
-											<td>425.5323.4536.1104</td>
-											<td>PA-9412228</td>
-											<td><a title="Detalhes" href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-center"><i class="fa fa-address-card"></i></a></td>
-										</tr>
-										<tr>
-											<td>3</td>
-											<td>Fergod Nasena</td>
-											<td>543.123.532-99</td>
-											<td>454.2934.0394.9328</td>
-											<td>SP-3236419</td>
-											<td><a title="Detalhes" href="#" class="btn btn-primary"><i class="fa fa-address-card"></i></a></td>
-										</tr>
+									<?php
+										if(isset($_POST['texto'])){
+										//conexão com o banco
+										include('../../php/banco.php');
+												
+										$texto = $_POST['texto'];
+												
+										$sql = "SELECT * FROM paciente WHERE nome_paciente like '%$texto%'";
+												
+										$consulta = $conexao->query($sql);
+												
+											if($consulta == true){
+												if($consulta->num_rows>0){
+													while($linha=$consulta->fetch_array(MYSQLI_ASSOC)){
+														echo '<tr>
+																<td>'.$linha['id_paciente'].'</td>
+																<td>'.$linha['nome_paciente'].'</td>
+																<td>'.$linha['cpf'].'</td>
+																<td>'.$linha['sus'].'</td>
+																<td>'.$linha['profissao'].'</td>
+																<td><a title="Detalhes" href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-center"><i class="fa fa-address-card"></i></a></td>
+															  </tr>';
+													}
+												}
+											}
+										}
+									?>
 									</tbody>
 								</table>
 							</div>
