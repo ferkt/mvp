@@ -237,7 +237,7 @@
 		  <div class="row">
 
 			<div class="col-12">
-		<form action="conduta.php" method="POST" name="formAdd">
+		<form action="anamAdd.php" method="POST" name="formAdd">
 			<input type="hidden" name="id_prof" value='<?php echo $_GET['id']?>'>
 			<div class="box">
 			<div class="box-header with-border">
