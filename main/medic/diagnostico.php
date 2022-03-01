@@ -10,6 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="../../images/logo-letter.png">
+	<script src="../js/jquery.min.js"></script>
 
     <title> Atestado </title>
   
@@ -216,13 +217,13 @@
 		<div class="content-header">
 			<div class="d-flex align-items-center">
 				<div class="me-auto">
-					<h4 class="page-title">Atestado</h4>
+					<h4 class="page-title">Hipótese Diagnóstica</h4>
 					<div class="d-inline-block align-items-center">
 						<nav>
 							<ol class="breadcrumb">
 								<li class="breadcrumb-item"><a href="#"><i class="mdi mdi-home-outline"></i></a></li>
 								<li class="breadcrumb-item" aria-current="page">Iniciar Consulta</li>
-								<li class="breadcrumb-item active" aria-current="page">Atestado</li>
+								<li class="breadcrumb-item active" aria-current="page">Hipótese Diagnóstica</li>
 							</ol>
 						</nav>
 					</div>
@@ -235,7 +236,7 @@
 		<section class="content">
 		  	<div class="row">
 				<div class="col-12">
-				<form action="atestAdd.php" method="POST" name="formAdd">
+				<form action="#.php" method="POST" name="formAdd">
 					<input type="hidden" name="id_prof" value='<?php echo $_GET['id']?>'>
 					<div class="box">
 						<div class="box-body">
@@ -243,8 +244,8 @@
 								<label class="form-label">Tipo:</label>
 								<div class="row">
 									<div class="col-md-12">
-										<select name="tipoAtest"class="form-control select2" style="width: 100%;">
-											<option selected="selected">Aparelho Locomotor</option>
+										<select id="tipo" name="tipoDiag" class="form-control select2" style="width: 100%;">
+											<option value="1" selected>Aparelho Locomotor</option>
 											<option>Cabeça e Pescoço</option>
 											<option>Sistema Nervoso</option>
 											<option>Aparelho Respiratório</option>
@@ -260,7 +261,7 @@
 								<label class="form-label">Data:</label>
 								<div class="row">
 									<div class="col-md-12">
-										<input class="form-control" type="date" name="dataAtest">
+										<input class="form-control" type="date" name="dataDiag">
 									</div>
 								</div>
 							</div>
@@ -269,7 +270,7 @@
 								<label class="form-label">Descrição:</label>
 								<div class="row">
 									<div class="col-md-12">
-										<textarea name="descAtest" id="textarea" value=""class="form-control" required="" placeholder="Texto da área de texto" _mstplaceholder="410475" aria-invalid="false" style="height: 96px;">Atesto para os devidos fins a pedido do interessado que Nome_Paciente_PHP, portador do documento de identidade rg_ou_cpf_paciente, foi submetido à consulta médica nesta data.
+										<textarea name="descDiag" id="textarea" value=""class="form-control" required="" placeholder="Texto da área de texto" _mstplaceholder="410475" aria-invalid="false" style="height: 96px;">Atesto para os devidos fins a pedido do interessado que Nome_Paciente_PHP, portador do documento de identidade rg_ou_cpf_paciente, foi submetido à consulta médica nesta data.
 
 Em decorrência, deverá permanecer afastado de suas atividades laborativas por um período de _ dias a partir desta data.</textarea>
 									</div>
@@ -580,9 +581,8 @@ Em decorrência, deverá permanecer afastado de suas atividades laborativas por 
 	<!-- ./side demo panel --
 	<!-- Sidebar -->
 	<!-- Page Content overlay -->
-	
-	
 	<!-- Vendor JS -->
+
 	<script src="../js/vendors.min.js"></script>
 	<script src="../js/pages/chat-popup.js"></script>
     <script src="../../assets/icons/feather-icons/feather.min.js"></script>	

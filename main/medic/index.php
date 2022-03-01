@@ -282,7 +282,6 @@
 												if($consulta->num_rows>0){
 													while($linha=$consulta->fetch_array(MYSQLI_ASSOC)){
 														echo '<tr>
-																<td>'.$linha['id_paciente'].'</td>
 																<td>'.$linha['nome_paciente'].'</td>
 																<td>'.$linha['cpf'].'</td>
 																<td>'.$linha['sus'].'</td>
@@ -738,7 +737,7 @@
 				</div>
 				<div class="modal-body">
 					<div class="row show-grid">
-						<a href="anamnesia.php?id=<?php echo $nome;?>" type="button" class="btn btn-primary">Anamnesia</a>
+						<a href="anamnesia.php?id=<?php echo $nome."&".$linha['id_paciente'];?>" type="button" class="btn btn-primary">Anamnesia</a>
 						<a href="examefisico.php?id=<?php echo $nome;?>" type="button" class="btn btn-primary">Exame Físico</a>
 						<a href="prontuário.html?id=<?php echo $nome;?>" type="button" class="btn btn-primary">Hipótese Diagnóstica</a>
 						<a href="conduta.php?id=<?php echo $nome;?>" type="button" class="btn btn-primary">Conduta</a>

@@ -532,7 +532,7 @@
 
 				<div class="d-flex align-items-end justify-content-between" style="margin-top: 12px;">
 					<button type="submit" class="waves-effect waves-light btn btn-primary mb-6" _msthash="3547583" _msttexthash="133497"><i class="fa fa-fw fa-save"></i> Salvar</button>
-					<button type="button" class="waves-effect waves-light btn btn-danger mb-6" _msthash="3547583" _msttexthash="133497"><i class="fa fa-trash" aria-hidden="true"></i> Excluir</button>
+					<a type="button" href="infopac.php?mess=cancel"class="waves-effect waves-light btn btn-danger mb-6" _msthash="3547583" _msttexthash="133497"><i class="fa fa-trash" aria-hidden="true"></i> Excluir</a>
 				</div>
 				
 			</div>

@@ -235,13 +235,15 @@
 		<section class="content">
 		  	<div class="row">
 				<div class="col-12">
+				<form action="condAdd.php" method="POST" name="formAdd">
+			<input type="hidden" name="id_prof" value='<?php echo $_GET['id']?>'>
 					<div class="box">
 						<div class="box-body">
 							<div class="form-group">
 								<label class="form-label">Data:</label>
 								<div class="row">
 									<div class="col-md-12">
-										<input class="form-control" type="date" name="date">
+										<input class="form-control" type="date" name="dataCond">
 									</div>
 								</div>
 							</div>
@@ -250,14 +252,14 @@
 								<label class="form-label">Descrição:</label>
 								<div class="row">
 									<div class="col-md-12">
-										<textarea name="textarea" id="textarea" class="form-control" required="" placeholder="Texto da área de texto" _mstplaceholder="410475" aria-invalid="false" style="height: 66px;"></textarea>
+										<textarea name="descCond" id="textarea" class="form-control" required="" placeholder="Texto da área de texto" _mstplaceholder="410475" aria-invalid="false" style="height: 66px;"></textarea>
 									</div>
 								</div>	
 							</div>
 
 							<div class="d-flex align-items-end justify-content-between" col-lg-2" style="margin-top: 12px;">
-								<button type="button" class="waves-effect waves-light btn btn-primary mb-6" _msthash="3547583" _msttexthash="133497"><i class="fa fa-fw fa-save"></i> Salvar</button>
-								<button type="button" class="waves-effect waves-light btn btn-danger mb-6" _msthash="3547583" _msttexthash="133497"><i class="fa fa-trash" aria-hidden="true"></i> Excluir</button>
+								<button type="submit" class="waves-effect waves-light btn btn-primary mb-6" _msthash="3547583" _msttexthash="133497"><i class="fa fa-fw fa-save"></i> Salvar</button>
+								<a type="button" href="infopac.php?mess=cancel"class="waves-effect waves-light btn btn-danger mb-6" _msthash="3547583" _msttexthash="133497"><i class="fa fa-trash" aria-hidden="true"></i> Excluir</a>
 						  	</div>
 						</div>
 						<!-- ./box-body -->
@@ -265,6 +267,7 @@
 					<!-- ./box -->
 				</div>
 				<!-- ./col -->
+			<form>
 		  	</div>
 		 	 <!-- /.row -->
 		</section>
