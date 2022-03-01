@@ -1,8 +1,5 @@
-<?php
-	include("../../php/testasessao.php");
-?>
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../images/logo-letter.png">
 
-    <title> HubSaúde - Painel </title>
+    <title>HubSaúde - Painel</title>
     
 	<!-- Vendors Style-->
 	<link rel="stylesheet" href="../css/vendors_css.css">
@@ -135,8 +132,8 @@
             <a href="#" class="waves-effect waves-light dropdown-toggle w-auto l-h-12 bg-transparent py-0 no-shadow" data-bs-toggle="dropdown" title="User">
 				<div class="d-flex pt-5">
 					<div class="text-end me-10">
-						<p class="pt-5 fs-14 mb-0 fw-700 text-primary">Dr. Fernando Nasena</p>
-						<small class="fs-10 mb-0 text-uppercase text-mute">Profissional</small>
+						<p class="pt-5 fs-14 mb-0 fw-700 text-primary">Fernando Coelho</p>
+						<small class="fs-10 mb-0 text-uppercase text-mute">Paciente</small>
 					</div>
 					<img src="../../images/avatar/nasena.jpg" class="avatar rounded-10 bg-primary-light h-40 w-40" alt="" />
 				</div>
@@ -147,7 +144,7 @@
 				 <a class="dropdown-item" href="#"><i class="ti-wallet text-muted me-2"></i>Minha carteira</a>
 				 <a class="dropdown-item" href="#"><i class="ti-settings text-muted me-2"></i> Configurações</a>
 				 <div class="dropdown-divider"></div>
-				 <a class="dropdown-item" href="../../php/sair.php"><i class="ti-lock text-muted me-2"></i> Sair</a>
+				 <a class="dropdown-item" href="#"><i class="ti-lock text-muted me-2"></i> Sair</a>
               </li>
             </ul>
           </li>	
@@ -199,11 +196,25 @@
 					</span>
 				  </a>
 				  <ul class="treeview-menu">
-					<li><a href="../patients.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Pacientes</a></li>
-					<li><a href="../patient_details.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Pacientes detalhes</a></li>
+					<li><a href="patients.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Pacientes</a></li>
+					<li><a href="patient_details.html"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Pacientes detalhes</a></li>
 				  </ul>
 				</li>														 	 	 	     
 			  </ul>
+			  <div class="sidebar-widgets">
+				  <div class="mx-25 mb-30 pb-20 side-bx bg-primary-light rounded20">
+					<div class="text-center">
+						<img src="../../images/svg-icon/color-svg/custom-17.svg" class="sideimg p-5" alt="">
+						<h4 class="title-bx text-primary">Faça um agendamento</h4>
+						<a href="#" class="py-10 fs-14 mb-0 text-primary">
+							Best Helth Care here <i class="mdi mdi-arrow-right"></i>
+						</a>
+					</div>
+				  </div>
+				<div class="copyright text-center m-25">
+					<p><strong class="d-block">HubSaúde Painel</strong> © <script>document.write(new Date().getFullYear())</script> All Rights Reserved</p>
+				</div>
+			  </div>
 		  </div>
 		</div>
     </section>
@@ -214,86 +225,22 @@
 	  <div class="container-full">
 		<!-- Main content -->
 		<section class="content">
-			<div class="box-header">
-				<h2>Informações do Paciente</h2>
-				<input type="hidden" name="id_pac" value='<?php echo $_GET['id_pac']?>'>
-				<div class="infopac-body">
-				<?php
-					//conexão com o banco
-					include('../../php/banco.php');
-					$id_pac = $_GET['id_pac'];
-					$id_prof = $_SESSION['id_prof'];
-							
-					$sql = "SELECT * FROM paciente WHERE id_paciente = $id_pac";
-							
-					$consulta = $conexao->query($sql);
-							
-					if($consulta == true){
-						if($consulta->num_rows>0){
-							while($linha=$consulta->fetch_array(MYSQLI_ASSOC)){
-								echo '
-									<h4>'.$linha['nome_paciente'].'</h4>
-									<p>Data de Nascimento: '.$linha['data_nascimento'].'</p>
-									<p>Sexo: '.$linha['sexo'].'</p>
-									<p>Raça: '.$linha['raça'].'</p>
-									<p>Profissão: '.$linha['profissao'].'</p>
-								';
-							}
-						}
-					}					
-				?>
-				</div>
-			<!-- Aqui fica o conteúdoooo!!!!! -->
-			</div><br>
-			<div class="row">
-				<div class="col-xl-12 col-12">						
-					<div class="box">
-						<div class="box-header">
-							<h2 class="box-title">Histórico de Consultas</h2>
+			<h2>Dados do Paciente</h2>
+			<div class="box">
+				<div class="box-body">
+					<div class="d-flex align-items-start">
+						<img src="../../images/avatar/nasena.jpg" class="w-250 bg-primary-light rounded10 me-15" alt="">
+						<div class="box">
+							<h4 class="mb-2">Fernando</h4>
+							<p class="text-muted">Data de Nascimento: 21/02/2003</p>
+							<p class="text-muted">Sexo: Masculino</p>
+							<p class="text-muted">Naturalidade: Capanema-PA</p>
+							<p class="text-muted">Cidade: Sobral</p>
+							<p class="text-muted">Estado: Ceará</p>
+							<p class="text-muted">CPF: 487.894.543-16</p>
 						</div>
-						<div class="box-body">	
-							<div class="inner-user-div2">
-								<div>
-									<div class="d-flex justify-content-between align-items-start">
-										<div>
-											<a class="text-muted hover-primary"><i class="fa fa-link"></i> Dr. Alexandre Magno</a>
-											<h5 class="my-5">Covid-19</h5>
-											<p class="my-5">O paciente estava tendo sintomas de como: febre alta, tosse, falta de ar.</p>
-										</div>
-										<div>
-											<button title="Detalhes" href="#" class="waves-effect waves-light btn btn-info mb-5" data-bs-toggle="modal" data-bs-target="#modal-center"><i class="fa fa-eye" aria-hidden="true"></i> Detalhes</button>
-										</div>
-									</div>
-									<div class="d-flex justify-content-between align-items-end mb-15 py-10 bb-dashed border-bottom">
-										<div>
-											<p class="mb-0 text-muted"><i class="fa fa-clock-o"></i> Segunda-Feira, 16 de Maio</p>
-										</div>
-										<div>
-											
-										</div>
-									</div>
-								</div>
-								<div>
-									<div class="d-flex justify-content-between align-items-start">
-										<div>
-											<a class="text-muted hover-primary"><i class="fa fa-link"></i> Dr. Alexandre Magno</a>
-											<h5 class="my-5">Alergia</h5>
-											<p class="my-5">Sintomas: coceira ao redor dos olhos, irritação na pele..,</p>
-										</div>
-										<div>
-											<button title="Detalhes" href="#" class="waves-effect waves-light btn btn-info mb-5" data-bs-toggle="modal" data-bs-target="#modal-center"><i class="fa fa-eye" aria-hidden="true"></i> Detalhes</button>
-										</div>
-									</div>
-									<div class="d-flex justify-content-between align-items-end mb-15 py-10 bb-dashed border-bottom">
-										<div>
-											<p class="mb-0 text-muted"><i class="fa fa-clock-o"></i> Segunda-Feira, 16 de Maio</p>
-										</div>
-										<div>
-											
-										</div>
-									</div>
-								</div>
-							</div>
+						<div class="d-flex-column">
+							<a href="prontuário.html" type="button" class="waves-effect waves-light btn btn-primary mb-1">Visualizar Prontuário</a>								
 						</div>
 					</div>
 				</div>
@@ -691,54 +638,6 @@
             </div>
 		</div>
 	</div>
-	<!-- Modal -->
-	<div class="modal fade bs-example-modal-lg show" id="modal-center" tabindex="-1">
-		<div class="modal-dialog modal-lg" _mstvisible="1">
-			<div class="modal-content" _mstvisible="2">
-				<div class="modal-header" _mstvisible="3">
-					<h4 class="modal-title" id="myLargeModalLabel" _msthash="328536" _msttexthash="175864" _mstvisible="4">Segunda-Feira, 16 de Maio, Dr.Alexandre Magno</h4>
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar" _mstaria-label="73632" _mstvisible="4"></button>
-				</div>
-				<div class="modal-body" _mstvisible="3">
-					<h4 _msthash="1252134" _msttexthash="2622334" _mstvisible="4">Covid-19</h4>
-					<p _msthash="1204333" _msttexthash="11071203" _mstvisible="4">O paciente estava tendo sintomas de como: febre alta, tosse, falta de ar. COVID-19 é uma doença causada por um vírus da família dos coronavírus. Registros da doença iniciaram-se no ano de 2019, mas a identificação do agente causador e as consequências dessa infecção só ocorreram no ano de 2020.</p>
-				</div>
-				<div class="modal-footer" _mstvisible="3">
-					<button type="button" class="btn btn-danger text-start" data-bs-dismiss="modal" _msthash="1493245" _msttexthash="73632" _mstvisible="4">Fechar</button>
-				</div>
-			</div>
-			<!-- /.modal-content -->
-		</div>
-		<!-- /.modal-dialog -->
-	</div>
-	<!-- /.modal -->
-
-	<!-- Modal -->
-	<div class="modal center-modal fade" id="modal-center1" tabindex="-1">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h4 class="modal-title">Escolha o procedimento</h4>
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-				</div>
-				<div class="modal-body">
-					<div class="row show-grid">
-						<a href="anamnesia.php?id_prof=<?php echo $id_prof;?>&id_pac=<?php echo $id_pac;?>" type="button" class="btn btn-primary">Anamnesia</a>
-						<a href="examefisico.php?id_prof=<?php echo $id_prof;?>&id_pac=<?php echo $id_pac;?>" type="button" class="btn btn-primary">Exame Físico</a>
-						<a href="diagnostico.php?id_prof=<?php echo $id_prof;?>&id_pac=<?php echo $id_pac;?>" type="button" class="btn btn-primary">Hipótese Diagnóstica</a>
-						<a href="conduta.php?id_prof=<?php echo $id_prof;?>&id_pac=<?php echo $id_pac;?>" type="button" class="btn btn-primary">Conduta</a>
-						<a href="prescricao.php?id_prof=<?php echo $id_prof;?>&id_pac=<?php echo $id_pac;?>" type="button" class="btn btn-primary">Prescrição</a>
-						<a href="atestado.php?id_prof=<?php echo $id_prof;?>&id_pac=<?php echo $id_pac;?>" type="button" class="btn btn-primary">Atestado</a>
-						<a href="exameseproced.php?id_prof=<?php echo $id_prof;?>&id_pac=<?php echo $id_pac;?>" type="button" class="btn btn-primary">Exames e Procedimentos</a>
-					</div>
-				</div>
-				<div class="modal-footer modal-footer-uniform">
-					<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fechar</button>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- /.modal -->
 	
 	<!-- Page Content overlay -->
 	
