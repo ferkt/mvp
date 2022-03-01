@@ -53,13 +53,13 @@
 								<div class="form-group">
 									<div class="input-group mb-15">
 										<span class="input-group-text bg-transparent"><i class="ti-user"></i></span>
-										<input type="text" class="form-control ps-15 bg-transparent" name="cpf" placeholder="cpf">
+										<input type="text" class="form-control ps-15 bg-transparent" name="CPF" placeholder="cpf">
 									</div>
 								</div>
 								<div class="form-group">
 									<div class="input-group mb-15">
 										<span class="input-group-text  bg-transparent"><i class="ti-lock"></i></span>
-										<input type="password" class="form-control ps-15 bg-transparent" name="senha" placeholder="Senha">
+										<input type="password" class="form-control ps-15 bg-transparent" name="Senha" placeholder="Senha">
 									</div>
 								</div>
 								  <div class="row">

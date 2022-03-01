@@ -11,7 +11,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../images/logo-letter.png">
 
-    <title>Rhythm Admin - Dashboard  Advanced form elements </title>
+    <title> Anamnese </title>
   
 	<!-- Vendors Style-->
 	<link rel="stylesheet" href="../css/vendors_css.css">
@@ -238,7 +238,8 @@
 
 			<div class="col-12">
 		<form action="anamAdd.php" method="POST" name="formAdd">
-			<input type="hidden" name="id_prof" value='<?php echo $_GET['id']?>'>
+			<input type="hidden" name="id_prof" value='<?php echo $_GET['id_prof']?>'>
+			<input type="hidden" name="id_pac" value='<?php echo $_GET['id_pac']?>'>
 			<div class="box">
 			<div class="box-header with-border">
 				<h4 class="box-title">Queixa</h4>
@@ -273,13 +274,13 @@
 					<label class="form-label">Tipo:</label>
 					<div class="row">
 						<div class="col-md-12">
-								<select class="form-control select2" name="tipoS"style="width: 100%;">
-								<option selected="selected">Alabama</option>
-								<option>Alaska</option>
-								<option>California</option>
-								<option>Delaware</option>
-								<option>Tennessee</option>
-								</select>
+							<select class="form-control select2" name="tipoS"style="width: 100%;">
+							<option selected="selected">Alabama</option>
+							<option>Alaska</option>
+							<option>California</option>
+							<option>Delaware</option>
+							<option>Tennessee</option>
+							</select>
 						</div>	
 					</div>
 				</div>
@@ -532,7 +533,7 @@
 
 				<div class="d-flex align-items-end justify-content-between" style="margin-top: 12px;">
 					<button type="submit" class="waves-effect waves-light btn btn-primary mb-6" _msthash="3547583" _msttexthash="133497"><i class="fa fa-fw fa-save"></i> Salvar</button>
-					<button type="button" class="waves-effect waves-light btn btn-danger mb-6" _msthash="3547583" _msttexthash="133497"><i class="fa fa-trash" aria-hidden="true"></i> Excluir</button>
+					<button type="reset" class="waves-effect waves-light btn btn-danger mb-6" _msthash="3547583" _msttexthash="133497"><i class="fa fa-trash" aria-hidden="true"></i> Excluir</button>
 				</div>
 				
 			</div>

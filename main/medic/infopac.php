@@ -1,9 +1,8 @@
 <?php
-	include('../../php/testasessao.php');
-	$nome = $_SESSION['id_prof'];
+	include("../../php/testasessao.php");
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -205,20 +204,6 @@
 				  </ul>
 				</li>														 	 	 	     
 			  </ul>
-			  <!--<div class="sidebar-widgets">
-				  <div class="mx-25 mb-30 pb-20 side-bx bg-primary-light rounded20">
-					<div class="text-center">
-						<img src="../../images/svg-icon/color-svg/custom-17.svg" class="sideimg p-5" alt="">
-						<h4 class="title-bx text-primary">Faça um agendamento</h4>
-						<a href="#" class="py-10 fs-14 mb-0 text-primary">
-							Best Helth Care here <i class="mdi mdi-arrow-right"></i>
-						</a>
-					</div>
-				  </div>
-				<div class="copyright text-center m-25">
-					<p><strong class="d-block">HubSaúde Painel</strong> © <script>document.write(new Date().getFullYear())</script> All Rights Reserved</p>
-				</div>-->
-			  </div>
 		  </div>
 		</div>
     </section>
@@ -229,73 +214,88 @@
 	  <div class="container-full">
 		<!-- Main content -->
 		<section class="content">
-			<!-- Aqui fica o conteúdoooo!!!!! -->
-			<?php
-				if(isset($_GET['mess'])){
-					if($_GET['mess'] == 'ok'){
-						echo '<div class="alert alert-primary alert-dismissible">
-						<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fechar" _mstaria-label="73632"></button><font _mstmutation="1" _msthash="3810508" _msttexthash="2131662"> Logado com Sucesso! </font></div>';
-					}
-
-				}
-					
-			?>
-			<h1>Busca de Pacientes</h1>
-			<form  name="form_table" method="POST" action="index.php">
-				<div class="controls">
-					<div class="input-group">
-						<input type="text" name="texto" class="form-control" placeholder="Nome, CPF, Nº do SUS ou Prontuário" required> 
-						<button class="btn btn-primary btn-sm" type="submit"><i data-feather="search"></i></button> 
+			<div class="box-header">
+				<h2>Informações do Paciente</h2>
+				<input type="hidden" name="id_pac" value='<?php echo $_GET['id_pac']?>'>
+				<div class="infopac-body">
+				<?php
+					//conexão com o banco
+					include('../../php/banco.php');
+					$id_pac = $_GET['id_pac'];
+					$id_prof = $_SESSION['id_prof'];
+							
+					$sql = "SELECT * FROM paciente WHERE id_paciente = $id_pac";
+							
+					$consulta = $conexao->query($sql);
+							
+					if($consulta == true){
+						if($consulta->num_rows>0){
+							while($linha=$consulta->fetch_array(MYSQLI_ASSOC)){
+								echo '
+									<h4>'.$linha['nome_paciente'].'</h4>
+									<p>Data de Nascimento: '.$linha['data_nascimento'].'</p>
+									<p>Sexo: '.$linha['sexo'].'</p>
+									<p>Raça: '.$linha['raça'].'</p>
+									<p>Profissão: '.$linha['profissao'].'</p>
+								';
+							}
+						}
+					}					
+				?>
+					<div>
+						<a href="#"  type="button" class="waves-effect waves-light btn btn-success mb-5"  data-bs-toggle="modal" data-bs-target="#modal-center1"><i class="fa fa-plus"></i> Iniciar consulta</i></a>
 					</div>
 				</div>
-			</form>
-			<br>
+			<!-- Aqui fica o conteúdoooo!!!!! -->
+			</div><br>
 			<div class="row">
-				<div class="col-lg-12">
+				<div class="col-xl-12 col-12">						
 					<div class="box">
-						<div class="box-body">
-							<div class="table-responsive">
-								<table class="table b-1 border-primary">
-									<thead class="bg-primary">
-										<tr>
-											<th>#</th>
-											<th>Nome</th>
-											<th>CPF</th>
-											<th>Nº do SUS</th>
-											<th>Profissão</th><!--antigo prontuario-->
-											<th>+ Detalhes</th>
-										</tr>
-									</thead>
-									<tbody>
-									<?php
-										if(isset($_POST['texto'])){
-										//conexão com o banco
-										include('../../php/banco.php');
-												
-										$texto = $_POST['texto'];
-												
-										$sql = "SELECT * FROM paciente WHERE nome_paciente like '%$texto%'";
-												
-										$consulta = $conexao->query($sql);
-												
-											if($consulta == true){
-												if($consulta->num_rows>0){
-													while($linha=$consulta->fetch_array(MYSQLI_ASSOC)){
-														echo '<tr>
-																<td>'.$linha['id_paciente'].'</td>
-																<td>'.$linha['nome_paciente'].'</td>
-																<td>'.$linha['cpf'].'</td>
-																<td>'.$linha['sus'].'</td>
-																<td>'.$linha['profissao'].'</td>
-																<td><a title="Detalhes" href="infopac.php?id_pac='.$linha['id_paciente'].'" class="btn btn-primary"><i class="fa fa-address-card"></i></a></td>
-															  </tr>';
-													}
-												}
-											}
-										}
-									?>
-									</tbody>
-								</table>
+						<div class="box-header">
+							<h2 class="box-title">Histórico de Consultas</h2>
+						</div>
+						<div class="box-body">	
+							<div class="inner-user-div2">
+								<div>
+									<div class="d-flex justify-content-between align-items-start">
+										<div>
+											<a class="text-muted hover-primary"><i class="fa fa-link"></i> Dr. Alexandre Magno</a>
+											<h5 class="my-5">Covid-19</h5>
+											<p class="my-5">O paciente estava tendo sintomas de como: febre alta, tosse, falta de ar.</p>
+										</div>
+										<div>
+											<button title="Detalhes" href="#" class="waves-effect waves-light btn btn-info mb-5" data-bs-toggle="modal" data-bs-target="#modal-center"><i class="fa fa-eye" aria-hidden="true"></i> Detalhes</button>
+										</div>
+									</div>
+									<div class="d-flex justify-content-between align-items-end mb-15 py-10 bb-dashed border-bottom">
+										<div>
+											<p class="mb-0 text-muted"><i class="fa fa-clock-o"></i> Segunda-Feira, 16 de Maio</p>
+										</div>
+										<div>
+											
+										</div>
+									</div>
+								</div>
+								<div>
+									<div class="d-flex justify-content-between align-items-start">
+										<div>
+											<a class="text-muted hover-primary"><i class="fa fa-link"></i> Dr. Alexandre Magno</a>
+											<h5 class="my-5">Alergia</h5>
+											<p class="my-5">Sintomas: coceira ao redor dos olhos, irritação na pele..,</p>
+										</div>
+										<div>
+											<button title="Detalhes" href="#" class="waves-effect waves-light btn btn-info mb-5" data-bs-toggle="modal" data-bs-target="#modal-center"><i class="fa fa-eye" aria-hidden="true"></i> Detalhes</button>
+										</div>
+									</div>
+									<div class="d-flex justify-content-between align-items-end mb-15 py-10 bb-dashed border-bottom">
+										<div>
+											<p class="mb-0 text-muted"><i class="fa fa-clock-o"></i> Segunda-Feira, 16 de Maio</p>
+										</div>
+										<div>
+											
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -695,39 +695,27 @@
 		</div>
 	</div>
 	<!-- Modal -->
-	<div class="modal center-modal fade" id="modal-center" tabindex="-1">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h4 class="modal-title">Informações do Paciente</h4>
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+	<div class="modal fade bs-example-modal-lg show" id="modal-center" tabindex="-1">
+		<div class="modal-dialog modal-lg" _mstvisible="1">
+			<div class="modal-content" _mstvisible="2">
+				<div class="modal-header" _mstvisible="3">
+					<h4 class="modal-title" id="myLargeModalLabel" _msthash="328536" _msttexthash="175864" _mstvisible="4">Segunda-Feira, 16 de Maio, Dr.Alexandre Magno</h4>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar" _mstaria-label="73632" _mstvisible="4"></button>
 				</div>
-				<div class="modal-body">
-					<div class="img-modal">
-						<img src="../../images/avatar/nasena.jpg" alt="Foto" width="100px" height="100px">
-					</div>
-					<div class="modal-infos-top">
-						<h3>Luiz Fernando Coelho Barroso</h3>
-						<p>Data de Nascimento: 21/02/2003</p>
-						<p>Sexo: Masculino</p>
-					</div>
-					<hr>
-					<div class="modal-infos">
-						<p>Naturalidade: Capanema-PA</p>
-						<p>Cidade: Sobral</p>
-						<p>Estado: Ceará</p>
-						<p>Endereço: Rua Tancredo Neves, 216</p>
-						<p>Telefone: (88) 99224-6983</p>
-					</div>
+				<div class="modal-body" _mstvisible="3">
+					<h4 _msthash="1252134" _msttexthash="2622334" _mstvisible="4">Covid-19</h4>
+					<p _msthash="1204333" _msttexthash="11071203" _mstvisible="4">O paciente estava tendo sintomas de como: febre alta, tosse, falta de ar. COVID-19 é uma doença causada por um vírus da família dos coronavírus. Registros da doença iniciaram-se no ano de 2019, mas a identificação do agente causador e as consequências dessa infecção só ocorreram no ano de 2020.</p>
 				</div>
-				<div class="modal-footer modal-footer-uniform">
-					<a href="prontuário.php" type="button" class="btn btn-dark float-start">Histórico</a>
-					<a href="#" type="button" class="btn btn-success float-end" data-bs-toggle="modal" data-bs-target="#modal-center1">Iniciar Atendimento</a>
+				<div class="modal-footer" _mstvisible="3">
+					<button type="button" class="btn btn-danger text-start" data-bs-dismiss="modal" _msthash="1493245" _msttexthash="73632" _mstvisible="4">Fechar</button>
 				</div>
 			</div>
+			<!-- /.modal-content -->
 		</div>
+		<!-- /.modal-dialog -->
 	</div>
 	<!-- /.modal -->
+
 	<!-- Modal -->
 	<div class="modal center-modal fade" id="modal-center1" tabindex="-1">
 		<div class="modal-dialog">
@@ -738,13 +726,13 @@
 				</div>
 				<div class="modal-body">
 					<div class="row show-grid">
-						<a href="anamnesia.php?id=<?php echo $nome;?>" type="button" class="btn btn-primary">Anamnesia</a>
-						<a href="examefisico.php?id=<?php echo $nome;?>" type="button" class="btn btn-primary">Exame Físico</a>
-						<a href="prontuário.html?id=<?php echo $nome;?>" type="button" class="btn btn-primary">Hipótese Diagnóstica</a>
-						<a href="conduta.php?id=<?php echo $nome;?>" type="button" class="btn btn-primary">Conduta</a>
-						<a href="prontuário.html?id=<?php echo $nome;?>" type="button" class="btn btn-primary">Prescrição</a>
-						<a href="atestado.php?id=<?php echo $nome;?>" type="button" class="btn btn-primary">Atestado</a>
-						<a href="prontuário.php?id=<?php echo $nome;?>" type="button" class="btn btn-primary">Exames e Procedimentos</a>
+						<a href="anamnesia.php?id_prof=<?php echo $id_prof;?>&id_pac=<?php echo $id_pac;?>" type="button" class="btn btn-primary">Anamnesia</a>
+						<a href="examefisico.php?id_prof=<?php echo $id_prof;?>&id_pac=<?php echo $id_pac;?>" type="button" class="btn btn-primary">Exame Físico</a>
+						<a href="prontuário.html?id_prof=<?php echo $id_prof;?>&id_pac=<?php echo $id_pac;?>" type="button" class="btn btn-primary">Hipótese Diagnóstica</a>
+						<a href="conduta.php?id_prof=<?php echo $id_prof;?>&id_pac=<?php echo $id_pac;?>" type="button" class="btn btn-primary">Conduta</a>
+						<a href="prontuário.html?id_prof=<?php echo $id_prof;?>&id_pac=<?php echo $id_pac;?>" type="button" class="btn btn-primary">Prescrição</a>
+						<a href="atestado.php?id_prof=<?php echo $id_prof;?>&id_pac=<?php echo $id_pac;?>" type="button" class="btn btn-primary">Atestado</a>
+						<a href="prontuário.php?id_prof=<?php echo $id_prof;?>&id_pac=<?php echo $id_pac;?>" type="button" class="btn btn-primary">Exames e Procedimentos</a>
 					</div>
 				</div>
 				<div class="modal-footer modal-footer-uniform">
