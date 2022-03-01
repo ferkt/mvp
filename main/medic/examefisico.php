@@ -235,13 +235,15 @@
 		<section class="content">
 		  	<div class="row">
 				<div class="col-12">
+				<form action="exAdd.php" method="POST" name="formAdd">
+			<input type="hidden" name="id_prof" value='<?php echo $_GET['id']?>'>
 					<div class="box">
 						<div class="box-body">
 							<div class="form-group">
 								<label class="form-label">Tipo:</label>
 								<div class="row">
 									<div class="col-md-12">
-										<select class="form-control select2" style="width: 100%;">
+										<select name="tipoEx" class="form-control select2" style="width: 100%;">
 											<option selected="selected">Aparelho Locomotor</option>
 											<option>Cabeça e Pescoço</option>
 											<option>Sistema Nervoso</option>
@@ -258,7 +260,7 @@
 								<label class="form-label">Data:</label>
 								<div class="row">
 									<div class="col-md-12">
-										<input class="form-control" type="date" name="date">
+										<input class="form-control" type="date" name="dataEx">
 									</div>
 								</div>
 							</div>
@@ -267,19 +269,25 @@
 								<label class="form-label">Descrição:</label>
 								<div class="row">
 									<div class="col-md-12">
-										<textarea name="textarea" id="textarea" class="form-control" required="" placeholder="Texto da área de texto" _mstplaceholder="410475" aria-invalid="false" style="height: 66px;"></textarea>
+										<textarea name="descEx" id="textarea" class="form-control" required="" placeholder="Texto da área de texto" _mstplaceholder="410475" aria-invalid="false" style="height: 66px;"></textarea>
 									</div>
 								</div>	
 							</div>
 
 							<div class="d-flex align-items-end justify-content-between" col-lg-2" style="margin-top: 12px;">
+<<<<<<< HEAD
 								<button type="button" class="waves-effect waves-light btn btn-primary mb-6" _msthash="3547583" _msttexthash="133497"><i class="fa fa-fw fa-save"></i> Salvar</button>
 								<button type="reset" class="waves-effect waves-light btn btn-danger mb-6" _msthash="3547583" _msttexthash="133497"><i class="fa fa-trash" aria-hidden="true"></i> Excluir</button>
+=======
+								<button type="submit" class="waves-effect waves-light btn btn-primary mb-6" _msthash="3547583" _msttexthash="133497"><i class="fa fa-fw fa-save"></i> Salvar</button>
+								<a type="button" href="infopac.php?mess=cancel"class="waves-effect waves-light btn btn-danger mb-6" _msthash="3547583" _msttexthash="133497"><i class="fa fa-trash" aria-hidden="true"></i> Excluir</a>
+>>>>>>> 76bdab293d67d809e4a813acf57462c8c106d5f9
 						  	</div>
 						</div>
 						<!-- ./box-body -->
 					</div>
 					<!-- ./box -->
+					</form>
 				</div>
 				<!-- ./col -->
 		  	</div>

@@ -80,9 +80,9 @@
 
   if($controle == true){
     echo 'ok';
-    //header('Location: index.php?mess=addOk');
+    //header('Location: infopac.php?mess=addOk');
   }else{
     echo 'erro';
-    //header('Location: index.php?mess=addErro');
+    //header('Location: infopac.php?mess=addErro');
   }
 ?>
