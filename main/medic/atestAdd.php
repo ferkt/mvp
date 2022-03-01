@@ -15,8 +15,8 @@
   $consulta = $conexao->query($sql);
   
   if($consulta == true){
-	  header('Location: infopac.php?mess=atestAddOk');
+    header('Location: infopac.php?mess=atestAddOk&id_pac='.$id_pac.'');
   }else{
-	  header('Location: infopac.php?mess=atestAddErro');
+    header('Location: infopac.php?mess=atestAddErro&id_pac='.$id_pac.'');
   }
 ?>

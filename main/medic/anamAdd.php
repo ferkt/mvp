@@ -79,10 +79,8 @@
   }
 
   if($controle == true){
-    echo 'ok';
-    //header('Location: infopac.php?mess=addOk');
+    header('Location: infopac.php?mess=anaAddOk&id_pac='.$id_pac.'');
   }else{
-    echo 'erro';
-    //header('Location: infopac.php?mess=addErro');
+    header('Location: infopac.php?mess=anaAddErro&id_pac='.$id_pac.'');
   }
 ?>
