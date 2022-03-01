@@ -236,8 +236,9 @@
 		<section class="content">
 		  	<div class="row">
 				<div class="col-12">
-				<form action="#.php" method="POST" name="formAdd">
-					<input type="hidden" name="id_prof" value='<?php echo $_GET['id']?>'>
+				<form action="diagAdd.php" method="POST" name="formAdd">
+					<input type="hidden" name="id_prof" value='<?php echo $_GET['id_prof']?>'>
+					<input type="hidden" name="id_pac" value='<?php echo $_GET['id_pac']?>'>
 					<div class="box">
 						<div class="box-body">
 							<div class="form-group">
@@ -270,9 +271,16 @@
 								<label class="form-label">Descrição:</label>
 								<div class="row">
 									<div class="col-md-12">
-										<textarea name="descDiag" id="textarea" value=""class="form-control" required="" placeholder="Texto da área de texto" _mstplaceholder="410475" aria-invalid="false" style="height: 96px;">Atesto para os devidos fins a pedido do interessado que Nome_Paciente_PHP, portador do documento de identidade rg_ou_cpf_paciente, foi submetido à consulta médica nesta data.
+										<textarea name="descDiag" id="textarea" value=""class="form-control" required="" placeholder="Texto da área de texto" _mstplaceholder="410475" aria-invalid="false""></textarea>
+									</div>
+								</div>	
+							</div>
 
-Em decorrência, deverá permanecer afastado de suas atividades laborativas por um período de _ dias a partir desta data.</textarea>
+							<div class="form-group">
+								<label class="form-label">Observação:</label>
+								<div class="row">
+									<div class="col-md-12">
+										<textarea name="obsDiag" id="textarea" value=""class="form-control" required="" placeholder="Texto da área de texto" _mstplaceholder="410475" aria-invalid="false"></textarea>
 									</div>
 								</div>	
 							</div>
