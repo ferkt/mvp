@@ -282,6 +282,7 @@
 												if($consulta->num_rows>0){
 													while($linha=$consulta->fetch_array(MYSQLI_ASSOC)){
 														echo '<tr>
+																<td>'.$linha['id_paciente'].'</td>
 																<td>'.$linha['nome_paciente'].'</td>
 																<td>'.$linha['cpf'].'</td>
 																<td>'.$linha['sus'].'</td>
