@@ -259,26 +259,7 @@
 								<div>
 									<div class="d-flex justify-content-between align-items-start">
 										<div>
-											<a class="text-muted hover-primary"><i class="fa fa-link"></i> Dr. Alexandre Magno</a>
-											<h5 class="my-5">Covid-19</h5>
-											<p class="my-5">O paciente estava tendo sintomas de como: febre alta, tosse, falta de ar.</p>
-										</div>
-										<div>
-											<button title="Detalhes" href="#" class="waves-effect waves-light btn btn-info mb-5" data-bs-toggle="modal" data-bs-target="#modal-center"><i class="fa fa-eye" aria-hidden="true"></i> Detalhes</button>
-										</div>
-									</div>
-									<div class="d-flex justify-content-between align-items-end mb-15 py-10 bb-dashed border-bottom">
-										<div>
-											<p class="mb-0 text-muted"><i class="fa fa-clock-o"></i> Segunda-Feira, 16 de Maio</p>
-										</div>
-										<div>
-											
-										</div>
-									</div>
-								</div>
-								<div>
-									<div class="d-flex justify-content-between align-items-start">
-										<div>
+											<h3>Anamnesia</h3>
 											<a class="text-muted hover-primary"><i class="fa fa-link"></i> Dr. Alexandre Magno</a>
 											<h5 class="my-5">Alergia</h5>
 											<p class="my-5">Sintomas: coceira ao redor dos olhos, irritação na pele..,</p>
@@ -291,8 +272,113 @@
 										<div>
 											<p class="mb-0 text-muted"><i class="fa fa-clock-o"></i> Segunda-Feira, 16 de Maio</p>
 										</div>
+									</div>
+								</div>
+								<div>
+									<div class="d-flex justify-content-between align-items-start">
 										<div>
-											
+											<h3>Exame Físico</h3>
+											<a class="text-muted hover-primary"><i class="fa fa-link"></i> Dr. Alexandre Magno</a>
+											<h5 class="my-5">Alergia</h5>
+											<p class="my-5">Sintomas: coceira ao redor dos olhos, irritação na pele..,</p>
+										</div>
+										<div>
+											<button title="Detalhes" href="#" class="waves-effect waves-light btn btn-info mb-5" data-bs-toggle="modal" data-bs-target="#modal-center"><i class="fa fa-eye" aria-hidden="true"></i> Detalhes</button>
+										</div>
+									</div>
+									<div class="d-flex justify-content-between align-items-end mb-15 py-10 bb-dashed border-bottom">
+										<div>
+											<p class="mb-0 text-muted"><i class="fa fa-clock-o"></i> Segunda-Feira, 16 de Maio</p>
+										</div>
+									</div>
+								</div>
+								<div>
+									<div class="d-flex justify-content-between align-items-start">
+										<div>
+											<h3>Hipótese Diagnóstica</h3>
+											<a class="text-muted hover-primary"><i class="fa fa-link"></i> Dr. Alexandre Magno</a>
+											<h5 class="my-5">Alergia</h5>
+											<p class="my-5">Sintomas: coceira ao redor dos olhos, irritação na pele..,</p>
+										</div>
+										<div>
+											<button title="Detalhes" href="#" class="waves-effect waves-light btn btn-info mb-5" data-bs-toggle="modal" data-bs-target="#modal-center"><i class="fa fa-eye" aria-hidden="true"></i> Detalhes</button>
+										</div>
+									</div>
+									<div class="d-flex justify-content-between align-items-end mb-15 py-10 bb-dashed border-bottom">
+										<div>
+											<p class="mb-0 text-muted"><i class="fa fa-clock-o"></i> Segunda-Feira, 16 de Maio</p>
+										</div>
+									</div>
+								</div>
+								<div>
+									<div class="d-flex justify-content-between align-items-start">
+										<div>
+											<h3>Conduta</h3>
+											<a class="text-muted hover-primary"><i class="fa fa-link"></i> Dr. Alexandre Magno</a>
+											<h5 class="my-5">Alergia</h5>
+											<p class="my-5">Sintomas: coceira ao redor dos olhos, irritação na pele..,</p>
+										</div>
+										<div>
+											<button title="Detalhes" href="#" class="waves-effect waves-light btn btn-info mb-5" data-bs-toggle="modal" data-bs-target="#modal-center"><i class="fa fa-eye" aria-hidden="true"></i> Detalhes</button>
+										</div>
+									</div>
+									<div class="d-flex justify-content-between align-items-end mb-15 py-10 bb-dashed border-bottom">
+										<div>
+											<p class="mb-0 text-muted"><i class="fa fa-clock-o"></i> Segunda-Feira, 16 de Maio</p>
+										</div>
+									</div>
+								</div>
+								<div>
+									<div class="d-flex justify-content-between align-items-start">
+										<div>
+											<h3>Prescrição</h3>
+											<a class="text-muted hover-primary"><i class="fa fa-link"></i> Dr. Alexandre Magno</a>
+											<h5 class="my-5">Alergia</h5>
+											<p class="my-5">Sintomas: coceira ao redor dos olhos, irritação na pele..,</p>
+										</div>
+										<div>
+											<button title="Detalhes" href="#" class="waves-effect waves-light btn btn-info mb-5" data-bs-toggle="modal" data-bs-target="#modal-center"><i class="fa fa-eye" aria-hidden="true"></i> Detalhes</button>
+										</div>
+									</div>
+									<div class="d-flex justify-content-between align-items-end mb-15 py-10 bb-dashed border-bottom">
+										<div>
+											<p class="mb-0 text-muted"><i class="fa fa-clock-o"></i> Segunda-Feira, 16 de Maio</p>
+										</div>
+									</div>
+								</div>
+								<div>
+									<div class="d-flex justify-content-between align-items-start">
+										<div>
+											<h3>Atestado</h3>
+											<a class="text-muted hover-primary"><i class="fa fa-link"></i> Dr. Alexandre Magno</a>
+											<h5 class="my-5">Alergia</h5>
+											<p class="my-5">Sintomas: coceira ao redor dos olhos, irritação na pele..,</p>
+										</div>
+										<div>
+											<button title="Detalhes" href="#" class="waves-effect waves-light btn btn-info mb-5" data-bs-toggle="modal" data-bs-target="#modal-center"><i class="fa fa-eye" aria-hidden="true"></i> Detalhes</button>
+										</div>
+									</div>
+									<div class="d-flex justify-content-between align-items-end mb-15 py-10 bb-dashed border-bottom">
+										<div>
+											<p class="mb-0 text-muted"><i class="fa fa-clock-o"></i> Segunda-Feira, 16 de Maio</p>
+										</div>
+									</div>
+								</div>
+								<div>
+									<div class="d-flex justify-content-between align-items-start">
+										<div>
+											<h3>Exames e Procedimentos</h3>
+											<a class="text-muted hover-primary"><i class="fa fa-link"></i> Dr. Alexandre Magno</a>
+											<h5 class="my-5">Alergia</h5>
+											<p class="my-5">Sintomas: coceira ao redor dos olhos, irritação na pele..,</p>
+										</div>
+										<div>
+											<button title="Detalhes" href="#" class="waves-effect waves-light btn btn-info mb-5" data-bs-toggle="modal" data-bs-target="#modal-center"><i class="fa fa-eye" aria-hidden="true"></i> Detalhes</button>
+										</div>
+									</div>
+									<div class="d-flex justify-content-between align-items-end mb-15 py-10 bb-dashed border-bottom">
+										<div>
+											<p class="mb-0 text-muted"><i class="fa fa-clock-o"></i> Segunda-Feira, 16 de Maio</p>
 										</div>
 									</div>
 								</div>
