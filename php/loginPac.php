@@ -4,14 +4,14 @@
     
    //criando uma variável para
    //receber o valor do email   
-   $email = $_POST['email'];
+   $cpf = $_POST['cpf'];
    $senha = $_POST['senha'];
       
      
    //criando consulta para verificar a existencia 	  
    //do usuário
-   $sql = "select * from tb_adm where email = '$email'
-		   and senha = '$senha'";
+   $sql = "select * from paciente where cpf = '$cpf'
+		   and password = '$senha'";
    
    //executando a consulta no banco
    $consulta = $conexao->query($sql);
@@ -22,13 +22,10 @@
 		   $linha = $consulta->fetch_array(MYSQLI_ASSOC);
 		   session_start();
 		   $_SESSION['login'] = 'ok';
-		   $_SESSION['nome'] = $nome;
-		    
-		   $_SESSION['tipousu'] = $linha['tipousu'];
-		   echo $_SESSION['tipousu'];
-		   header('Location: ../adm/dist/principal.php?mess=ok');
+		   $_SESSION['id_pac'] = $linha['id_paciente'];
+		   header('Location: ../main/pacient/index.php?mess=ok');
 	   }else{
-		   header('Location: ../index.php?mess=erro');
+		   header('Location: ../landing/loginPro.php?mess=erro');
 	   }
    }
    

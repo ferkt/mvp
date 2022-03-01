@@ -221,8 +221,7 @@
 				<?php
 					//conexão com o banco
 					include('../../php/banco.php');
-					$id_pac = $_GET['id_pac'];
-					$id_prof = $_SESSION['id_prof'];
+					$id_pac = $_SESSION['id_pac'];
 							
 					$sql = "SELECT * FROM paciente WHERE id_paciente = $id_pac";
 							
