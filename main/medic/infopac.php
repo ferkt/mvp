@@ -946,7 +946,7 @@
 						<a href="conduta.php?id_prof=<?php echo $id_prof;?>&id_pac=<?php echo $id_pac;?>" type="button" class="btn btn-primary">Conduta</a>
 						<a href="prescricao.php?id_prof=<?php echo $id_prof;?>&id_pac=<?php echo $id_pac;?>" type="button" class="btn btn-primary">Prescrição</a>
 						<a href="atestado.php?id_prof=<?php echo $id_prof;?>&id_pac=<?php echo $id_pac;?>" type="button" class="btn btn-primary">Atestado</a>
-						<a href="exameseproced.php?id_prof=<?php echo $id_prof;?>&id_pac=<?php echo $id_pac;?>" type="button" class="btn btn-primary">Exames e Procedimentos</a>
+						<a href="proced.php?id_prof=<?php echo $id_prof;?>&id_pac=<?php echo $id_pac;?>" type="button" class="btn btn-primary">Exames e Procedimentos</a>
 					</div>
 				</div>
 				<div class="modal-footer modal-footer-uniform">
