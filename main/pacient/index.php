@@ -147,7 +147,7 @@
 				 <a class="dropdown-item" href="#"><i class="ti-wallet text-muted me-2"></i>Minha carteira</a>
 				 <a class="dropdown-item" href="#"><i class="ti-settings text-muted me-2"></i> Configurações</a>
 				 <div class="dropdown-divider"></div>
-				 <a class="dropdown-item" href="../../php/sair.php"><i class="ti-lock text-muted me-2"></i> Sair</a>
+				 <a class="dropdown-item" href="../../php/sairP.php"><i class="ti-lock text-muted me-2"></i> Sair</a>
               </li>
             </ul>
           </li>	
@@ -260,7 +260,7 @@
 											<p class="my-5">O paciente estava tendo sintomas de como: febre alta, tosse, falta de ar.</p>
 										</div>
 										<div>
-											<button title="Detalhes" href="#" class="waves-effect waves-light btn btn-info mb-5" data-bs-toggle="modal" data-bs-target="#modal-center"><i class="fa fa-eye" aria-hidden="true"></i> Detalhes</button>
+											<button title="Detalhes" href="#" class="waves-effect waves-light btn btn-info mb-5" data-bs-toggle="modal" data-bs-target="#modal-center"><i class="fa fa-eye" aria-hidden="true"></i> Mostrar mais</button>
 										</div>
 									</div>
 									<div class="d-flex justify-content-between align-items-end mb-15 py-10 bb-dashed border-bottom">

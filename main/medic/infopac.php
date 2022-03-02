@@ -221,6 +221,7 @@
 				<?php
 					//conexão com o banco
 					include('../../php/banco.php');
+
 					$id_pac = $_GET['id_pac'];
 					$id_prof = $_SESSION['id_prof'];
 							
@@ -257,130 +258,257 @@
 						<div class="box-body">	
 							<div class="inner-user-div2">
 								<div>
-									<div class="d-flex justify-content-between align-items-start">
-										<div>
-											<h3>Anamnesia</h3>
-											<a class="text-muted hover-primary"><i class="fa fa-link"></i> Dr. Alexandre Magno</a>
-											<h5 class="my-5">Alergia</h5>
-											<p class="my-5">Sintomas: coceira ao redor dos olhos, irritação na pele..,</p>
-										</div>
-										<div>
-											<button title="Detalhes" href="#" class="waves-effect waves-light btn btn-info mb-5" data-bs-toggle="modal" data-bs-target="#modal-center"><i class="fa fa-eye" aria-hidden="true"></i> Detalhes</button>
-										</div>
-									</div>
-									<div class="d-flex justify-content-between align-items-end mb-15 py-10 bb-dashed border-bottom">
-										<div>
-											<p class="mb-0 text-muted"><i class="fa fa-clock-o"></i> Segunda-Feira, 16 de Maio</p>
-										</div>
-									</div>
+									<?php
+										$sql = "SELECT * FROM queixa WHERE id_paciente = $id_pac order by id_queixa desc LIMIT 1";
+												
+										$consulta = $conexao->query($sql);
+												
+										if($consulta == true){
+											if($consulta->num_rows>0){
+												while($linha=$consulta->fetch_array(MYSQLI_ASSOC)){
+
+													$sql1 = "SELECT nome FROM prof_saude WHERE id_prof_saude = ".$linha['id_prof_saude'];
+
+													$consulta1 = $conexao->query($sql1);
+
+													$linha1=$consulta1->fetch_array(MYSQLI_ASSOC);
+
+													echo '<div class="d-flex justify-content-between align-items-start">
+															<div>
+																<h3>Anamnesia</h3>
+																<a class="text-muted hover-primary"><i class="fa fa-link"></i> Dr. '.$linha1['nome'].'</a>
+																<p class="my-5">'.$linha['desc_queixa'].'</p>
+															</div>
+															<div>
+																<button title="Detalhes" href="anamPac.php?'.$linha['id_paciente'].'" class="waves-effect waves-light btn btn-info mb-5"><i class="fa fa-eye" aria-hidden="true"></i> Mostrar Mais</button>
+															</div>
+														</div>
+														<div class="d-flex justify-content-between align-items-end mb-15 py-10 bb-dashed border-bottom">
+															<div>
+																<p class="mb-0 text-muted"><i class="fa fa-clock-o"></i> '.$linha['data'].'</p>
+															</div>
+														</div>
+													</div>';
+												}
+											}
+										}					
+									?>
 								</div>
 								<div>
-									<div class="d-flex justify-content-between align-items-start">
-										<div>
-											<h3>Exame Físico</h3>
-											<a class="text-muted hover-primary"><i class="fa fa-link"></i> Dr. Alexandre Magno</a>
-											<h5 class="my-5">Alergia</h5>
-											<p class="my-5">Sintomas: coceira ao redor dos olhos, irritação na pele..,</p>
-										</div>
-										<div>
-											<button title="Detalhes" href="#" class="waves-effect waves-light btn btn-info mb-5" data-bs-toggle="modal" data-bs-target="#modal-center"><i class="fa fa-eye" aria-hidden="true"></i> Detalhes</button>
-										</div>
-									</div>
-									<div class="d-flex justify-content-between align-items-end mb-15 py-10 bb-dashed border-bottom">
-										<div>
-											<p class="mb-0 text-muted"><i class="fa fa-clock-o"></i> Segunda-Feira, 16 de Maio</p>
-										</div>
-									</div>
+										<?php
+											$sql = "SELECT * FROM exame_fisico WHERE id_paciente = $id_pac order by id_exame desc LIMIT 1";
+													
+											$consulta = $conexao->query($sql);
+													
+											if($consulta == true){
+												if($consulta->num_rows>0){
+													while($linha=$consulta->fetch_array(MYSQLI_ASSOC)){
+
+														$sql1 = "SELECT nome FROM prof_saude WHERE id_prof_saude = ".$linha['id_prof_saude'];
+
+														$consulta1 = $conexao->query($sql1);
+
+														$linha1=$consulta1->fetch_array(MYSQLI_ASSOC);
+
+														echo '<div class="d-flex justify-content-between align-items-start">
+																<div>
+																	<h3>Exame Físico</h3>
+																	<a class="text-muted hover-primary"><i class="fa fa-link"></i> Dr. '.$linha1['nome'].'</a>
+																	<p class="my-5">'.$linha['desc_exame'].'</p>
+																</div>
+																<div>
+																	<button title="Detalhes" href="diagPac.php?id_pac='.$linha['id_paciente'].'" class="waves-effect waves-light btn btn-info mb-5" data-bs-toggle="modal" data-bs-target="#modal-center"><i class="fa fa-eye" aria-hidden="true"></i> Mostrar Mais</button>
+																</div>
+															</div>
+															<div class="d-flex justify-content-between align-items-end mb-15 py-10 bb-dashed border-bottom">
+																<div>
+																	<p class="mb-0 text-muted"><i class="fa fa-clock-o"></i> '.$linha['data'].'</p>
+																</div>
+															</div>';
+													}
+												}
+											}					
+										?>
 								</div>
 								<div>
-									<div class="d-flex justify-content-between align-items-start">
-										<div>
-											<h3>Hipótese Diagnóstica</h3>
-											<a class="text-muted hover-primary"><i class="fa fa-link"></i> Dr. Alexandre Magno</a>
-											<h5 class="my-5">Alergia</h5>
-											<p class="my-5">Sintomas: coceira ao redor dos olhos, irritação na pele..,</p>
-										</div>
-										<div>
-											<button title="Detalhes" href="#" class="waves-effect waves-light btn btn-info mb-5" data-bs-toggle="modal" data-bs-target="#modal-center"><i class="fa fa-eye" aria-hidden="true"></i> Detalhes</button>
-										</div>
-									</div>
-									<div class="d-flex justify-content-between align-items-end mb-15 py-10 bb-dashed border-bottom">
-										<div>
-											<p class="mb-0 text-muted"><i class="fa fa-clock-o"></i> Segunda-Feira, 16 de Maio</p>
-										</div>
-									</div>
+									<?php
+											$sql = "SELECT * FROM diagnostico WHERE id_paciente = $id_pac order by id_diagnostico desc LIMIT 1";
+													
+											$consulta = $conexao->query($sql);
+													
+											if($consulta == true){
+												if($consulta->num_rows>0){
+													while($linha=$consulta->fetch_array(MYSQLI_ASSOC)){
+
+														$sql1 = "SELECT nome FROM prof_saude WHERE id_prof_saude = ".$linha['id_prof_saude'];
+
+														$consulta1 = $conexao->query($sql1);
+
+														$linha1=$consulta1->fetch_array(MYSQLI_ASSOC);
+
+														echo '<div class="d-flex justify-content-between align-items-start">
+																<div>
+																	<h3>Hipótese Diagnóstica</h3>
+																	<a class="text-muted hover-primary"><i class="fa fa-link"></i> Dr. '.$linha1['nome'].'</a>
+																	<p class="my-5">'.$linha['desc_diagnostico'].'</p>
+																</div>
+																<div>
+																	<button title="Detalhes" href="diagPac.php?id_pac='.$linha['id_paciente'].'" class="waves-effect waves-light btn btn-info mb-5" data-bs-toggle="modal" data-bs-target="#modal-center"><i class="fa fa-eye" aria-hidden="true"></i> Mostrar Mais</button>
+																</div>
+															</div>
+															<div class="d-flex justify-content-between align-items-end mb-15 py-10 bb-dashed border-bottom">
+																<div>
+																	<p class="mb-0 text-muted"><i class="fa fa-clock-o"></i> '.$linha['data'].'</p>
+																</div>
+															</div>';
+													}
+												}
+											}					
+										?>
 								</div>
 								<div>
-									<div class="d-flex justify-content-between align-items-start">
-										<div>
-											<h3>Conduta</h3>
-											<a class="text-muted hover-primary"><i class="fa fa-link"></i> Dr. Alexandre Magno</a>
-											<h5 class="my-5">Alergia</h5>
-											<p class="my-5">Sintomas: coceira ao redor dos olhos, irritação na pele..,</p>
-										</div>
-										<div>
-											<button title="Detalhes" href="#" class="waves-effect waves-light btn btn-info mb-5" data-bs-toggle="modal" data-bs-target="#modal-center"><i class="fa fa-eye" aria-hidden="true"></i> Detalhes</button>
-										</div>
-									</div>
-									<div class="d-flex justify-content-between align-items-end mb-15 py-10 bb-dashed border-bottom">
-										<div>
-											<p class="mb-0 text-muted"><i class="fa fa-clock-o"></i> Segunda-Feira, 16 de Maio</p>
-										</div>
-									</div>
+									<?php
+										$sql = "SELECT * FROM conduta WHERE id_paciente = $id_pac order by id_conduta desc LIMIT 1";
+												
+										$consulta = $conexao->query($sql);
+												
+										if($consulta == true){
+											if($consulta->num_rows>0){
+												while($linha=$consulta->fetch_array(MYSQLI_ASSOC)){
+
+													$sql1 = "SELECT nome FROM prof_saude WHERE id_prof_saude = ".$linha['id_prof_saude'];
+
+													$consulta1 = $conexao->query($sql1);
+
+													$linha1=$consulta1->fetch_array(MYSQLI_ASSOC);
+
+													echo '<div class="d-flex justify-content-between align-items-start">
+															<div>
+																<h3>Conduta</h3>
+																<a class="text-muted hover-primary"><i class="fa fa-link"></i> Dr. '.$linha1['nome'].'</a>
+																<p class="my-5">'.$linha['desc_conduta'].'</p>
+															</div>
+															<div>
+																<button title="Detalhes" href="condPac.php?'.$linha['id_paciente'].'" class="waves-effect waves-light btn btn-info mb-5" data-bs-toggle="modal" data-bs-target="#modal-center"><i class="fa fa-eye" aria-hidden="true"></i> Mostrar Mais</button>
+															</div>
+														</div>
+														<div class="d-flex justify-content-between align-items-end mb-15 py-10 bb-dashed border-bottom">
+															<div>
+																<p class="mb-0 text-muted"><i class="fa fa-clock-o"></i> '.$linha['data'].'</p>
+															</div>
+														</div>';
+												}
+											}
+										}					
+										?>
 								</div>
 								<div>
-									<div class="d-flex justify-content-between align-items-start">
-										<div>
-											<h3>Prescrição</h3>
-											<a class="text-muted hover-primary"><i class="fa fa-link"></i> Dr. Alexandre Magno</a>
-											<h5 class="my-5">Alergia</h5>
-											<p class="my-5">Sintomas: coceira ao redor dos olhos, irritação na pele..,</p>
-										</div>
-										<div>
-											<button title="Detalhes" href="#" class="waves-effect waves-light btn btn-info mb-5" data-bs-toggle="modal" data-bs-target="#modal-center"><i class="fa fa-eye" aria-hidden="true"></i> Detalhes</button>
-										</div>
-									</div>
-									<div class="d-flex justify-content-between align-items-end mb-15 py-10 bb-dashed border-bottom">
-										<div>
-											<p class="mb-0 text-muted"><i class="fa fa-clock-o"></i> Segunda-Feira, 16 de Maio</p>
-										</div>
-									</div>
+									<?php
+										$sql = "SELECT * FROM prescricao WHERE id_paciente = $id_pac order by id_prescricao desc LIMIT 1";
+												
+										$consulta = $conexao->query($sql);
+												
+										if($consulta == true){
+											if($consulta->num_rows>0){
+												while($linha=$consulta->fetch_array(MYSQLI_ASSOC)){
+
+													$sql1 = "SELECT nome FROM prof_saude WHERE id_prof_saude = ".$linha['id_prof_saude'];
+
+													$consulta1 = $conexao->query($sql1);
+
+													$linha1=$consulta1->fetch_array(MYSQLI_ASSOC);
+
+													echo '<div class="d-flex justify-content-between align-items-start">
+															<div>
+																<h3>Prescrição</h3>
+																<a class="text-muted hover-primary"><i class="fa fa-link"></i> Dr. '.$linha1['nome'].'</a>
+																<p class="my-5">'.$linha['desc_prescricao'].'</p>
+															</div>
+															<div>
+																<button title="Detalhes" href="prescPac.php?'.$linha['id_paciente'].'" class="waves-effect waves-light btn btn-info mb-5" data-bs-toggle="modal" data-bs-target="#modal-center"><i class="fa fa-eye" aria-hidden="true"></i> Mostrar Mais</button>
+															</div>
+														</div>
+														<div class="d-flex justify-content-between align-items-end mb-15 py-10 bb-dashed border-bottom">
+															<div>
+																<p class="mb-0 text-muted"><i class="fa fa-clock-o"></i> '.$linha['data'].'</p>
+															</div>
+														</div>';
+												}
+											}
+										}					
+									?>
 								</div>
 								<div>
-									<div class="d-flex justify-content-between align-items-start">
-										<div>
-											<h3>Atestado</h3>
-											<a class="text-muted hover-primary"><i class="fa fa-link"></i> Dr. Alexandre Magno</a>
-											<h5 class="my-5">Alergia</h5>
-											<p class="my-5">Sintomas: coceira ao redor dos olhos, irritação na pele..,</p>
-										</div>
-										<div>
-											<button title="Detalhes" href="#" class="waves-effect waves-light btn btn-info mb-5" data-bs-toggle="modal" data-bs-target="#modal-center"><i class="fa fa-eye" aria-hidden="true"></i> Detalhes</button>
-										</div>
-									</div>
-									<div class="d-flex justify-content-between align-items-end mb-15 py-10 bb-dashed border-bottom">
-										<div>
-											<p class="mb-0 text-muted"><i class="fa fa-clock-o"></i> Segunda-Feira, 16 de Maio</p>
-										</div>
-									</div>
+									<?php
+										$sql = "SELECT * FROM atestado WHERE id_paciente = $id_pac order by id_atestado desc LIMIT 1";
+												
+										$consulta = $conexao->query($sql);
+												
+										if($consulta == true){
+											if($consulta->num_rows>0){
+												while($linha=$consulta->fetch_array(MYSQLI_ASSOC)){
+
+													$sql1 = "SELECT nome FROM prof_saude WHERE id_prof_saude = ".$linha['id_prof_saude'];
+
+													$consulta1 = $conexao->query($sql1);
+
+													$linha1=$consulta1->fetch_array(MYSQLI_ASSOC);
+
+													echo '<div class="d-flex justify-content-between align-items-start">
+															<div>
+																<h3>Atestado</h3>
+																<a class="text-muted hover-primary"><i class="fa fa-link"></i> Dr. '.$linha1['nome'].'</a>
+																<h5 class="my-5">'.$linha['tipo'].'</h5>
+															</div>
+															<div>
+																<button title="Detalhes" href="atestPac.php?'.$linha['id_paciente'].'" class="waves-effect waves-light btn btn-info mb-5" data-bs-toggle="modal" data-bs-target="#modal-center"><i class="fa fa-eye" aria-hidden="true"></i> Mostrar Mais</button>
+															</div>
+														</div>
+														<div class="d-flex justify-content-between align-items-end mb-15 py-10 bb-dashed border-bottom">
+															<div>
+																<p class="mb-0 text-muted"><i class="fa fa-clock-o"></i> '.$linha['data'].'</p>
+															</div>
+														</div>';
+												}
+											}
+										}					
+									?>
 								</div>
 								<div>
-									<div class="d-flex justify-content-between align-items-start">
-										<div>
-											<h3>Exames e Procedimentos</h3>
-											<a class="text-muted hover-primary"><i class="fa fa-link"></i> Dr. Alexandre Magno</a>
-											<h5 class="my-5">Alergia</h5>
-											<p class="my-5">Sintomas: coceira ao redor dos olhos, irritação na pele..,</p>
-										</div>
-										<div>
-											<button title="Detalhes" href="#" class="waves-effect waves-light btn btn-info mb-5" data-bs-toggle="modal" data-bs-target="#modal-center"><i class="fa fa-eye" aria-hidden="true"></i> Detalhes</button>
-										</div>
-									</div>
-									<div class="d-flex justify-content-between align-items-end mb-15 py-10 bb-dashed border-bottom">
-										<div>
-											<p class="mb-0 text-muted"><i class="fa fa-clock-o"></i> Segunda-Feira, 16 de Maio</p>
-										</div>
-									</div>
+								<?php
+										$sql = "SELECT * FROM procedimento WHERE id_paciente = $id_pac order by id_procedimento desc LIMIT 1";
+												
+										$consulta = $conexao->query($sql);
+												
+										if($consulta == true){
+											if($consulta->num_rows>0){
+												while($linha=$consulta->fetch_array(MYSQLI_ASSOC)){
+
+													$sql1 = "SELECT nome FROM prof_saude WHERE id_prof_saude = ".$linha['id_prof_saude'];
+
+													$consulta1 = $conexao->query($sql1);
+
+													$linha1=$consulta1->fetch_array(MYSQLI_ASSOC);
+
+													echo '<div class="d-flex justify-content-between align-items-start">
+															<div>
+																<h3>Exames e Procedimentos</h3>
+																<a class="text-muted hover-primary"><i class="fa fa-link"></i> Dr. '.$linha1['nome'].'</a>
+																<p class="my-5">'.$linha['desc_procedimento'].'</p>
+															</div>
+															<div>
+																<button title="Detalhes" href="atestPac.php?'.$linha['id_paciente'].'" class="waves-effect waves-light btn btn-info mb-5" data-bs-toggle="modal" data-bs-target="#modal-center"><i class="fa fa-eye" aria-hidden="true"></i> Mostrar Mais</button>
+															</div>
+														</div>
+														<div class="d-flex justify-content-between align-items-end mb-15 py-10 bb-dashed border-bottom">
+															<div>
+																<p class="mb-0 text-muted"><i class="fa fa-clock-o"></i> '.$linha['data'].'</p>
+															</div>
+														</div>';
+												}
+											}
+										}					
+									?>
 								</div>
 							</div>
 						</div>
