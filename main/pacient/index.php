@@ -147,7 +147,7 @@
 				 <a class="dropdown-item" href="#"><i class="ti-wallet text-muted me-2"></i>Minha carteira</a>
 				 <a class="dropdown-item" href="#"><i class="ti-settings text-muted me-2"></i> Configurações</a>
 				 <div class="dropdown-divider"></div>
-				 <a class="dropdown-item" href="../../php/sair.php"><i class="ti-lock text-muted me-2"></i> Sair</a>
+				 <a class="dropdown-item" href="../../php/sairP.php"><i class="ti-lock text-muted me-2"></i> Sair</a>
               </li>
             </ul>
           </li>	
@@ -221,9 +221,7 @@
 				<?php
 					//conexão com o banco
 					include('../../php/banco.php');
-
-					$id_pac = $_GET['id_pac'];
-					$id_prof = $_SESSION['id_prof'];
+					$id_pac = $_SESSION['id_pac'];
 							
 					$sql = "SELECT * FROM paciente WHERE id_paciente = $id_pac";
 							
@@ -943,7 +941,7 @@
 						<a href="conduta.php?id_prof=<?php echo $id_prof;?>&id_pac=<?php echo $id_pac;?>" type="button" class="btn btn-primary">Conduta</a>
 						<a href="prescricao.php?id_prof=<?php echo $id_prof;?>&id_pac=<?php echo $id_pac;?>" type="button" class="btn btn-primary">Prescrição</a>
 						<a href="atestado.php?id_prof=<?php echo $id_prof;?>&id_pac=<?php echo $id_pac;?>" type="button" class="btn btn-primary">Atestado</a>
-						<a href="exameseproced.php?id_prof=<?php echo $id_prof;?>&id_pac=<?php echo $id_pac;?>" type="button" class="btn btn-primary">Exames e Procedimentos</a>
+						<a href="proced.php?id_prof=<?php echo $id_prof;?>&id_pac=<?php echo $id_pac;?>" type="button" class="btn btn-primary">Exames e Procedimentos</a>
 					</div>
 				</div>
 				<div class="modal-footer modal-footer-uniform">
