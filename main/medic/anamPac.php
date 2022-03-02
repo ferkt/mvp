@@ -231,7 +231,7 @@
 			<div class="row">
 				<div class="col-xl-12 col-12">						
 					<div class="box">
-						<div class="box-header">
+						<div class="box-body">
 							<h2 class="box-title">Histórico de Anamnesias</h2>
 						</div>
 						<div class="box-body">	

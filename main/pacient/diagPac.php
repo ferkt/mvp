@@ -214,7 +214,7 @@
 	  <div class="container-full">
 		<!-- Main content -->
 		<section class="content">
-			<div class="box-header">
+			<div class="box-body">
 				<input type="hidden" name="id_pac" value='<?php echo $_GET['id_pac']?>'>
 				<div class="infopac-body">
 				<?php
@@ -231,14 +231,14 @@
 			<div class="row">
 				<div class="col-xl-12 col-12">						
 					<div class="box">
-						<div class="box-body">
-							<h2 class="box-title">Histórico de Condutas</h2>
+						<div class="box-header">
+							<h2 class="box-title">Histórico de Hipóteses Diagnósticas</h2>
 						</div>
 						<div class="box-body">	
 							<div class="inner-user-div2">
 								<div>
 									<?php
-										$sql = "SELECT * FROM conduta WHERE id_paciente = $id_pac order by id_conduta desc";
+										$sql = "SELECT * FROM diagnostico WHERE id_paciente = $id_pac order by id_diagnostico desc";
 												
 										$consulta = $conexao->query($sql);
 												
@@ -254,9 +254,10 @@
 
 													echo '	<div class="d-flex justify-content-between align-items-start">
 																<div>
-																	<h3>Conduta</h3>
+																	<h3>Hipótese Diagnóstica</h3>
 																	<a class="text-muted hover-primary"><i class="fa fa-link"></i> Dr. '.$linha1['nome'].'</a>
-																	<p class="my-5">'.$linha['desc_conduta'].'</p>
+																	<p class="my-5">'.$linha['desc_diagnostico'].'</p>
+																	<p class="my-5">'.$linha['obs'].'</p>
 																</div>
 															</div>
 															<div class="d-flex justify-content-between align-items-end mb-15 py-10 bb-dashed border-bottom">

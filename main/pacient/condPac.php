@@ -214,7 +214,7 @@
 	  <div class="container-full">
 		<!-- Main content -->
 		<section class="content">
-			<div class="box-header">
+			<div class="box-body">
 				<input type="hidden" name="id_pac" value='<?php echo $_GET['id_pac']?>'>
 				<div class="infopac-body">
 				<?php
@@ -231,7 +231,7 @@
 			<div class="row">
 				<div class="col-xl-12 col-12">						
 					<div class="box">
-						<div class="box-body">
+						<div class="box-header">
 							<h2 class="box-title">Histórico de Condutas</h2>
 						</div>
 						<div class="box-body">	

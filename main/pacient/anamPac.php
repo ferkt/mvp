@@ -214,7 +214,7 @@
 	  <div class="container-full">
 		<!-- Main content -->
 		<section class="content">
-			<div class="box-header">
+			<div class="box-body">
 				<input type="hidden" name="id_pac" value='<?php echo $_GET['id_pac']?>'>
 				<div class="infopac-body">
 				<?php
@@ -231,14 +231,14 @@
 			<div class="row">
 				<div class="col-xl-12 col-12">						
 					<div class="box">
-						<div class="box-body">
-							<h2 class="box-title">Histórico de Condutas</h2>
+						<div class="box-header">
+							<h2 class="box-title">Histórico de Anamnesias</h2>
 						</div>
 						<div class="box-body">	
 							<div class="inner-user-div2">
 								<div>
 									<?php
-										$sql = "SELECT * FROM conduta WHERE id_paciente = $id_pac order by id_conduta desc";
+										$sql = "SELECT * FROM queixa WHERE id_paciente = $id_pac order by id_queixa desc";
 												
 										$consulta = $conexao->query($sql);
 												
@@ -254,9 +254,316 @@
 
 													echo '	<div class="d-flex justify-content-between align-items-start">
 																<div>
-																	<h3>Conduta</h3>
+																	<h3>Queixa</h3>
 																	<a class="text-muted hover-primary"><i class="fa fa-link"></i> Dr. '.$linha1['nome'].'</a>
-																	<p class="my-5">'.$linha['desc_conduta'].'</p>
+																	<p class="my-5">'.$linha['desc_queixa'].'</p>
+																</div>
+															</div>
+															<div class="d-flex justify-content-between align-items-end mb-15 py-10 bb-dashed border-bottom">
+																<div>
+																	<p class="mb-0 text-muted"><i class="fa fa-clock-o"></i> '.$linha['data'].'</p>
+																</div>
+															</div>
+													';
+												}
+											}
+										}					
+									?>
+								</div><hr>
+								<div>
+									<?php
+										$sql = "SELECT * FROM rev_sistema WHERE id_paciente = $id_pac order by id_rev_sistema desc";
+												
+										$consulta = $conexao->query($sql);
+												
+										if($consulta == true){
+											if($consulta->num_rows>0){
+												while($linha=$consulta->fetch_array(MYSQLI_ASSOC)){
+
+													$sql1 = "SELECT nome FROM prof_saude WHERE id_prof_saude = ".$linha['id_prof_saude'];
+
+													$consulta1 = $conexao->query($sql1);
+
+													$linha1=$consulta1->fetch_array(MYSQLI_ASSOC);
+
+													echo '	<div class="d-flex justify-content-between align-items-start">
+																<div>
+																	<h3>Revisão de Sistemas</h3>
+																	<a class="text-muted hover-primary"><i class="fa fa-link"></i> Dr. '.$linha1['nome'].'</a>
+																	<p class="my-5">'.$linha['desc_rev_sistema'].'</p>
+																	<p class="my-5">'.$linha['tipo'].'</p>
+																</div>
+															</div>
+															<div class="d-flex justify-content-between align-items-end mb-15 py-10 bb-dashed border-bottom">
+																<div>
+																	<p class="mb-0 text-muted"><i class="fa fa-clock-o"></i> '.$linha['data'].'</p>
+																</div>
+															</div>
+													';
+												}
+											}
+										}					
+									?>
+								</div><hr>
+								<div>
+									<?php
+										$sql = "SELECT * FROM h_molestia WHERE id_paciente = $id_pac order by id_h_molestia desc";
+												
+										$consulta = $conexao->query($sql);
+												
+										if($consulta == true){
+											if($consulta->num_rows>0){
+												while($linha=$consulta->fetch_array(MYSQLI_ASSOC)){
+
+													$sql1 = "SELECT nome FROM prof_saude WHERE id_prof_saude = ".$linha['id_prof_saude'];
+
+													$consulta1 = $conexao->query($sql1);
+
+													$linha1=$consulta1->fetch_array(MYSQLI_ASSOC);
+
+													echo '	<div class="d-flex justify-content-between align-items-start">
+																<div>
+																	<h3>História da Molestia</h3>
+																	<a class="text-muted hover-primary"><i class="fa fa-link"></i> Dr. '.$linha1['nome'].'</a>
+																	<p class="my-5">'.$linha['desc_h_molestia'].'</p>
+																</div>
+															</div>
+															<div class="d-flex justify-content-between align-items-end mb-15 py-10 bb-dashed border-bottom">
+																<div>
+																	<p class="mb-0 text-muted"><i class="fa fa-clock-o"></i> '.$linha['data'].'</p>
+																</div>
+															</div>
+													';
+												}
+											}
+										}					
+									?>
+								</div><hr>
+								<div>
+									<?php
+										$sql = "SELECT * FROM h_doenca WHERE id_paciente = $id_pac order by id_h_doenca desc";
+												
+										$consulta = $conexao->query($sql);
+												
+										if($consulta == true){
+											if($consulta->num_rows>0){
+												while($linha=$consulta->fetch_array(MYSQLI_ASSOC)){
+
+													$sql1 = "SELECT nome FROM prof_saude WHERE id_prof_saude = ".$linha['id_prof_saude'];
+
+													$consulta1 = $conexao->query($sql1);
+
+													$linha1=$consulta1->fetch_array(MYSQLI_ASSOC);
+
+													echo '	<div class="d-flex justify-content-between align-items-start">
+																<div>
+																	<h3>Histórico de Doenças</h3>
+																	<a class="text-muted hover-primary"><i class="fa fa-link"></i> Dr. '.$linha1['nome'].'</a>
+																	<p class="my-5">'.$linha['desc_h_doenca'].'</p>
+																</div>
+															</div>
+															<div class="d-flex justify-content-between align-items-end mb-15 py-10 bb-dashed border-bottom">
+																<div>
+																	<p class="mb-0 text-muted"><i class="fa fa-clock-o"></i> '.$linha['data'].'</p>
+																</div>
+															</div>
+													';
+												}
+											}
+										}					
+									?>
+								</div><hr>
+								<div>
+									<?php
+										$sql = "SELECT * FROM medic_uso WHERE id_paciente = $id_pac order by id_medic_uso desc";
+												
+										$consulta = $conexao->query($sql);
+												
+										if($consulta == true){
+											if($consulta->num_rows>0){
+												while($linha=$consulta->fetch_array(MYSQLI_ASSOC)){
+
+													$sql1 = "SELECT nome FROM prof_saude WHERE id_prof_saude = ".$linha['id_prof_saude'];
+
+													$consulta1 = $conexao->query($sql1);
+
+													$linha1=$consulta1->fetch_array(MYSQLI_ASSOC);
+
+													echo '	<div class="d-flex justify-content-between align-items-start">
+																<div>
+																	<h3>Medicações em Uso</h3>
+																	<a class="text-muted hover-primary"><i class="fa fa-link"></i> Dr. '.$linha1['nome'].'</a>
+																	<p class="my-5">'.$linha['desc_medic_uso'].'</p>
+																</div>
+															</div>
+															<div class="d-flex justify-content-between align-items-end mb-15 py-10 bb-dashed border-bottom">
+																<div>
+																	<p class="mb-0 text-muted"><i class="fa fa-clock-o"></i> '.$linha['data'].'</p>
+																</div>
+															</div>
+													';
+												}
+											}
+										}					
+									?>
+								</div><hr>
+								<div>
+									<?php
+										$sql = "SELECT * FROM hospitalizacao WHERE id_paciente = $id_pac order by id_hospitalizacao desc";
+												
+										$consulta = $conexao->query($sql);
+												
+										if($consulta == true){
+											if($consulta->num_rows>0){
+												while($linha=$consulta->fetch_array(MYSQLI_ASSOC)){
+
+													$sql1 = "SELECT nome FROM prof_saude WHERE id_prof_saude = ".$linha['id_prof_saude'];
+
+													$consulta1 = $conexao->query($sql1);
+
+													$linha1=$consulta1->fetch_array(MYSQLI_ASSOC);
+
+													echo '	<div class="d-flex justify-content-between align-items-start">
+																<div>
+																	<h3>Hospitalizações</h3>
+																	<a class="text-muted hover-primary"><i class="fa fa-link"></i> Dr. '.$linha1['nome'].'</a>
+																	<p class="my-5">'.$linha['desc_hospitalizacao'].'</p>
+																</div>
+															</div>
+															<div class="d-flex justify-content-between align-items-end mb-15 py-10 bb-dashed border-bottom">
+																<div>
+																	<p class="mb-0 text-muted"><i class="fa fa-clock-o"></i> '.$linha['data'].'</p>
+																</div>
+															</div>
+													';
+												}
+											}
+										}					
+									?>
+								</div><hr>
+								<div>
+									<?php
+										$sql = "SELECT * FROM doenca_mental WHERE id_paciente = $id_pac order by id_doenca_mental desc";
+												
+										$consulta = $conexao->query($sql);
+												
+										if($consulta == true){
+											if($consulta->num_rows>0){
+												while($linha=$consulta->fetch_array(MYSQLI_ASSOC)){
+
+													$sql1 = "SELECT nome FROM prof_saude WHERE id_prof_saude = ".$linha['id_prof_saude'];
+
+													$consulta1 = $conexao->query($sql1);
+
+													$linha1=$consulta1->fetch_array(MYSQLI_ASSOC);
+
+													echo '	<div class="d-flex justify-content-between align-items-start">
+																<div>
+																	<h3>Doença Mental</h3>
+																	<a class="text-muted hover-primary"><i class="fa fa-link"></i> Dr. '.$linha1['nome'].'</a>
+																	<p class="my-5">'.$linha['desc_doenca_mental'].'</p>
+																</div>
+															</div>
+															<div class="d-flex justify-content-between align-items-end mb-15 py-10 bb-dashed border-bottom">
+																<div>
+																	<p class="mb-0 text-muted"><i class="fa fa-clock-o"></i> '.$linha['data'].'</p>
+																</div>
+															</div>
+													';
+												}
+											}
+										}					
+									?>
+								</div><hr>
+								<div>
+									<?php
+										$sql = "SELECT * FROM alergia_himunizacao WHERE id_paciente = $id_pac order by id_alergia_himunizacao desc";
+												
+										$consulta = $conexao->query($sql);
+												
+										if($consulta == true){
+											if($consulta->num_rows>0){
+												while($linha=$consulta->fetch_array(MYSQLI_ASSOC)){
+
+													$sql1 = "SELECT nome FROM prof_saude WHERE id_prof_saude = ".$linha['id_prof_saude'];
+
+													$consulta1 = $conexao->query($sql1);
+
+													$linha1=$consulta1->fetch_array(MYSQLI_ASSOC);
+
+													echo '	<div class="d-flex justify-content-between align-items-start">
+																<div>
+																	<h3>Alergias e Himunizações</h3>
+																	<a class="text-muted hover-primary"><i class="fa fa-link"></i> Dr. '.$linha1['nome'].'</a>
+																	<p class="my-5">'.$linha['desc_alergia_himunizacao'].'</p>
+																</div>
+															</div>
+															<div class="d-flex justify-content-between align-items-end mb-15 py-10 bb-dashed border-bottom">
+																<div>
+																	<p class="mb-0 text-muted"><i class="fa fa-clock-o"></i> '.$linha['data'].'</p>
+																</div>
+															</div>
+													';
+												}
+											}
+										}					
+									?>
+								</div><hr>
+								<div>
+									<?php
+										$sql = "SELECT * FROM h_familiar WHERE id_paciente = $id_pac order by id_h_familiar desc";
+												
+										$consulta = $conexao->query($sql);
+												
+										if($consulta == true){
+											if($consulta->num_rows>0){
+												while($linha=$consulta->fetch_array(MYSQLI_ASSOC)){
+
+													$sql1 = "SELECT nome FROM prof_saude WHERE id_prof_saude = ".$linha['id_prof_saude'];
+
+													$consulta1 = $conexao->query($sql1);
+
+													$linha1=$consulta1->fetch_array(MYSQLI_ASSOC);
+
+													echo '	<div class="d-flex justify-content-between align-items-start">
+																<div>
+																	<h3>Histórico Familiar</h3>
+																	<a class="text-muted hover-primary"><i class="fa fa-link"></i> Dr. '.$linha1['nome'].'</a>
+																	<p class="my-5">'.$linha['desc_h_familiar'].'</p>
+																</div>
+															</div>
+															<div class="d-flex justify-content-between align-items-end mb-15 py-10 bb-dashed border-bottom">
+																<div>
+																	<p class="mb-0 text-muted"><i class="fa fa-clock-o"></i> '.$linha['data'].'</p>
+																</div>
+															</div>
+													';
+												}
+											}
+										}					
+									?>
+								</div><hr>
+								<div>
+									<?php
+										$sql = "SELECT * FROM h_ocupacional WHERE id_paciente = $id_pac order by id_h_ocupacional desc";
+												
+										$consulta = $conexao->query($sql);
+												
+										if($consulta == true){
+											if($consulta->num_rows>0){
+												while($linha=$consulta->fetch_array(MYSQLI_ASSOC)){
+
+													$sql1 = "SELECT nome FROM prof_saude WHERE id_prof_saude = ".$linha['id_prof_saude'];
+
+													$consulta1 = $conexao->query($sql1);
+
+													$linha1=$consulta1->fetch_array(MYSQLI_ASSOC);
+
+													echo '	<div class="d-flex justify-content-between align-items-start">
+																<div>
+																	<h3>Histórico Ocupacional</h3>
+																	<a class="text-muted hover-primary"><i class="fa fa-link"></i> Dr. '.$linha1['nome'].'</a>
+																	<p class="my-5">'.$linha['desc_h_ocupacional'].'</p>
 																</div>
 															</div>
 															<div class="d-flex justify-content-between align-items-end mb-15 py-10 bb-dashed border-bottom">
