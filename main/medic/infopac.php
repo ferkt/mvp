@@ -497,7 +497,7 @@
 																<p class="my-5">'.$linha['desc_procedimento'].'</p>
 															</div>
 															<div>
-																<a title="Detalhes" href="atestPac.php?id_pac='.$linha['id_paciente'].'" class="waves-effect waves-light btn btn-info mb-5"><i class="fa fa-eye" aria-hidden="true"></i> Mostrar Mais</a>
+																<a title="Detalhes" href="procedPac.php?id_pac='.$linha['id_paciente'].'" class="waves-effect waves-light btn btn-info mb-5"><i class="fa fa-eye" aria-hidden="true"></i> Mostrar Mais</a>
 															</div>
 														</div>
 														<div class="d-flex justify-content-between align-items-end mb-15 py-10 bb-dashed border-bottom">
