@@ -25,7 +25,7 @@
 		   $_SESSION['id_pac'] = $linha['id_paciente'];
 		   header('Location: ../main/pacient/index.php?mess=ok&id_pac='.$linha['id_paciente']);
 	   }else{
-		   header('Location: ../landing/loginPro.php?mess=erro');
+		   header('Location: ../landing/loginPac.php?mess=erro');
 	   }
    }
    
