@@ -269,7 +269,7 @@
 											}
 										}					
 									?>
-								</div><hr>
+								</div>
 								<div>
 									<?php
 										$sql = "SELECT * FROM rev_sistema WHERE id_paciente = $id_pac order by id_rev_sistema desc";
@@ -304,7 +304,7 @@
 											}
 										}					
 									?>
-								</div><hr>
+								</div>
 								<div>
 									<?php
 										$sql = "SELECT * FROM h_molestia WHERE id_paciente = $id_pac order by id_h_molestia desc";
@@ -338,7 +338,7 @@
 											}
 										}					
 									?>
-								</div><hr>
+								</div>
 								<div>
 									<?php
 										$sql = "SELECT * FROM h_doenca WHERE id_paciente = $id_pac order by id_h_doenca desc";
@@ -372,7 +372,7 @@
 											}
 										}					
 									?>
-								</div><hr>
+								</div>
 								<div>
 									<?php
 										$sql = "SELECT * FROM medic_uso WHERE id_paciente = $id_pac order by id_medic_uso desc";
@@ -406,7 +406,7 @@
 											}
 										}					
 									?>
-								</div><hr>
+								</div>
 								<div>
 									<?php
 										$sql = "SELECT * FROM hospitalizacao WHERE id_paciente = $id_pac order by id_hospitalizacao desc";
@@ -440,7 +440,7 @@
 											}
 										}					
 									?>
-								</div><hr>
+								</div>
 								<div>
 									<?php
 										$sql = "SELECT * FROM doenca_mental WHERE id_paciente = $id_pac order by id_doenca_mental desc";
@@ -474,7 +474,7 @@
 											}
 										}					
 									?>
-								</div><hr>
+								</div>
 								<div>
 									<?php
 										$sql = "SELECT * FROM alergia_himunizacao WHERE id_paciente = $id_pac order by id_alergia_himunizacao desc";
@@ -508,7 +508,7 @@
 											}
 										}					
 									?>
-								</div><hr>
+								</div>
 								<div>
 									<?php
 										$sql = "SELECT * FROM h_familiar WHERE id_paciente = $id_pac order by id_h_familiar desc";
@@ -542,7 +542,7 @@
 											}
 										}					
 									?>
-								</div><hr>
+								</div>
 								<div>
 									<?php
 										$sql = "SELECT * FROM h_ocupacional WHERE id_paciente = $id_pac order by id_h_ocupacional desc";
