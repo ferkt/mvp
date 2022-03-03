@@ -280,7 +280,7 @@
 																<p class="my-5">'.$linha['desc_queixa'].'</p>
 															</div>
 															<div>
-																<button title="Detalhes" href="anamPac.php?'.$linha['id_paciente'].'" class="waves-effect waves-light btn btn-info mb-5"><i class="fa fa-eye" aria-hidden="true"></i> Mostrar Mais</button>
+																<a title="Detalhes" href="anamPac.php?'.$linha['id_paciente'].'" class="waves-effect waves-light btn btn-info mb-5"><i class="fa fa-eye" aria-hidden="true"></i> Mostrar Mais</a>
 															</div>
 														</div>
 														<div class="d-flex justify-content-between align-items-end mb-15 py-10 bb-dashed border-bottom">
