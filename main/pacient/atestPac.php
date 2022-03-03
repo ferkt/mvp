@@ -258,7 +258,6 @@
 																	<a class="text-muted hover-primary"><i class="fa fa-link"></i> Dr. '.$linha1['nome'].'</a>
 																	<p class="my-5">'.$linha['desc_atestado'].'</p>
 																	<p class="my-5">'.$linha['tipo'].'</p>
-																	<p class="my-5">'.$linha['obs'].'</p>
 																</div>
 															</div>
 															<div class="d-flex justify-content-between align-items-end mb-15 py-10 bb-dashed border-bottom">

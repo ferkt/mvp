@@ -223,6 +223,24 @@
 
 					$id_pac = $_GET['id_pac'];
 					$id_prof = $_SESSION['id_prof'];
+
+					$sql = "SELECT * FROM paciente WHERE id_paciente = $id_pac";
+							
+					$consulta = $conexao->query($sql);
+							
+					if($consulta == true){
+						if($consulta->num_rows>0){
+							while($linha=$consulta->fetch_array(MYSQLI_ASSOC)){
+								echo '
+									<h4>'.$linha['nome_paciente'].'</h4>
+									<p>Data de Nascimento: '.$linha['data_nascimento'].'</p>
+									<p>Sexo: '.$linha['sexo'].'</p>
+									<p>Raça: '.$linha['raça'].'</p>
+									<p>Profissão: '.$linha['profissao'].'</p>
+								';
+							}
+						}
+					}
 					
 				?>
 				</div>
@@ -231,7 +249,7 @@
 			<div class="row">
 				<div class="col-xl-12 col-12">						
 					<div class="box">
-						<div class="box-body">
+						<div class="box-header">
 							<h2 class="box-title">Histórico de Hipóteses Diagnósticas</h2>
 						</div>
 						<div class="box-body">	
