@@ -476,8 +476,7 @@
 								</div>
 								<div>
 								<?php
-										$sql = "SELECT * FROM 
-imento WHERE id_paciente = $id_pac order by id_procedimento desc LIMIT 1";
+										$sql = "SELECT * FROM procedimento WHERE id_paciente = $id_pac order by id_procedimento desc LIMIT 1";
 												
 										$consulta = $conexao->query($sql);
 												
