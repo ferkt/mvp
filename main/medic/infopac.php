@@ -353,7 +353,7 @@
 																	<p class="my-5">'.$linha['desc_diagnostico'].'</p>
 																</div>
 																<div>
-																	<button title="Detalhes" href="diagPac.php?id_pac='.$linha['id_paciente'].'" class="waves-effect waves-light btn btn-info mb-5" data-bs-toggle="modal" data-bs-target="#modal-center"><i class="fa fa-eye" aria-hidden="true"></i> Mostrar Mais</button>
+																	<a title="Detalhes" href="diagPac.php?id_pac='.$linha['id_paciente'].'" class="waves-effect waves-light btn btn-info mb-5"><i class="fa fa-eye" aria-hidden="true"></i> Mostrar Mais</a>
 																</div>
 															</div>
 															<div class="d-flex justify-content-between align-items-end mb-15 py-10 bb-dashed border-bottom">
@@ -389,7 +389,7 @@
 																<p class="my-5">'.$linha['desc_conduta'].'</p>
 															</div>
 															<div>
-																<button title="Detalhes" href="condPac.php?'.$linha['id_paciente'].'" class="waves-effect waves-light btn btn-info mb-5" data-bs-toggle="modal" data-bs-target="#modal-center"><i class="fa fa-eye" aria-hidden="true"></i> Mostrar Mais</button>
+																<a title="Detalhes" href="condPac.php?'.$linha['id_paciente'].'" class="waves-effect waves-light btn btn-info mb-5"><i class="fa fa-eye" aria-hidden="true"></i> Mostrar Mais</a>
 															</div>
 														</div>
 														<div class="d-flex justify-content-between align-items-end mb-15 py-10 bb-dashed border-bottom">
@@ -425,7 +425,7 @@
 																<p class="my-5">'.$linha['desc_prescricao'].'</p>
 															</div>
 															<div>
-																<button title="Detalhes" href="prescPac.php?'.$linha['id_paciente'].'" class="waves-effect waves-light btn btn-info mb-5" data-bs-toggle="modal" data-bs-target="#modal-center"><i class="fa fa-eye" aria-hidden="true"></i> Mostrar Mais</button>
+																<a title="Detalhes" href="prescPac.php?'.$linha['id_paciente'].'" class="waves-effect waves-light btn btn-info mb-5"><i class="fa fa-eye" aria-hidden="true"></i> Mostrar Mais</a>
 															</div>
 														</div>
 														<div class="d-flex justify-content-between align-items-end mb-15 py-10 bb-dashed border-bottom">
@@ -461,7 +461,7 @@
 																<h5 class="my-5">'.$linha['tipo'].'</h5>
 															</div>
 															<div>
-																<button title="Detalhes" href="atestPac.php?'.$linha['id_paciente'].'" class="waves-effect waves-light btn btn-info mb-5" data-bs-toggle="modal" data-bs-target="#modal-center"><i class="fa fa-eye" aria-hidden="true"></i> Mostrar Mais</button>
+																<a title="Detalhes" href="atestPac.php?'.$linha['id_paciente'].'" class="waves-effect waves-light btn btn-info mb-5"><i class="fa fa-eye" aria-hidden="true"></i> Mostrar Mais</a>
 															</div>
 														</div>
 														<div class="d-flex justify-content-between align-items-end mb-15 py-10 bb-dashed border-bottom">
@@ -497,7 +497,7 @@
 																<p class="my-5">'.$linha['desc_procedimento'].'</p>
 															</div>
 															<div>
-																<button title="Detalhes" href="atestPac.php?'.$linha['id_paciente'].'" class="waves-effect waves-light btn btn-info mb-5" data-bs-toggle="modal" data-bs-target="#modal-center"><i class="fa fa-eye" aria-hidden="true"></i> Mostrar Mais</button>
+																<a title="Detalhes" href="atestPac.php?'.$linha['id_paciente'].'" class="waves-effect waves-light btn btn-info mb-5"><i class="fa fa-eye" aria-hidden="true"></i> Mostrar Mais</a>
 															</div>
 														</div>
 														<div class="d-flex justify-content-between align-items-end mb-15 py-10 bb-dashed border-bottom">
