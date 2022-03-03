@@ -1,5 +1,5 @@
 <?php
-  $conexao = new mysqli('localhost','root','','bd_alpha');
+  $conexao = new mysqli('localhost','u789179617_fer','Meuhubsaude1.','u789179617_bd_alpha');
    
    //verificando conexão com a base de dados
    if(mysqli_connect_errno()) 
