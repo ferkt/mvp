@@ -135,8 +135,8 @@
             <a href="#" class="waves-effect waves-light dropdown-toggle w-auto l-h-12 bg-transparent py-0 no-shadow" data-bs-toggle="dropdown" title="User">
 				<div class="d-flex pt-5">
 					<div class="text-end me-10">
-						<p class="pt-5 fs-14 mb-0 fw-700 text-primary">Nome do Médico</p>
-						<small class="fs-10 mb-0 text-uppercase text-mute">Profissional</small>
+						<p class="pt-5 fs-14 mb-0 fw-700 text-primary"><?php echo $_SESSION['nome_paciente'] ?></p>
+						<small class="fs-10 mb-0 text-uppercase text-mute">Paciente</small>
 					</div>
 					<img src="../../images/avatar/avatar-8.png" class="avatar rounded-10 bg-primary-light h-40 w-40" alt="" />
 				</div>
