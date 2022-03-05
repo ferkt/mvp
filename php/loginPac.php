@@ -23,6 +23,7 @@
 		   session_start();
 		   $_SESSION['login'] = 'ok';
 		   $_SESSION['id_pac'] = $linha['id_paciente'];
+		$_SESSION['nome_paciente'] = $linha['nome_paciente'];
 		   header('Location: ../main/pacient/index.php?mess=ok&id_pac='.$linha['id_paciente']);
 	   }else{
 		   header('Location: ../landing/loginPac.php?mess=erro');
