@@ -250,7 +250,7 @@ nav {
   text-align: center;
 }
 
-/* alguns styles p4 */
+/* alguns styles p4
 
 .sec-cta {
   display: flex;
@@ -281,6 +281,7 @@ nav {
   color: #1A374D;
   border: solid 2px #1A374D;
 }
+*/
 
 /* styles p6*/
 
@@ -434,7 +435,7 @@ footer {
     width: 32px;
   }
 
-  /* responsividade p4 */
+  /* responsividade p4 
 
   .sec-cta {
     gap: 30px;
@@ -448,6 +449,7 @@ footer {
     font-size: 10px;
     padding: 8px;
   }
+  */
 
   /* responsividade p5: é a msm do 3 */
 

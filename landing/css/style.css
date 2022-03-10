@@ -25877,6 +25877,7 @@ header a, header button, header input {
   margin-bottom: 70px; }
 
 /* Cookie Dialog */
+/*
 #gdpr-cookie-message {
   position: fixed;
   bottom: 0px;
@@ -25952,6 +25953,7 @@ button#gdpr-cookie-advanced {
 
   #gdpr-cookie-message p:last-child {
     margin-top: 10px; } }
+*/
 /*---Pages Layout---*/
 /*---Page Content Header & Breadcrumb ---*/
 .content-header {

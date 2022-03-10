@@ -45,7 +45,7 @@
 
 								}	
 							?>
-							<h2 class="text-primary">Médico Login</h2>	
+							<h2 class="text-primary">Profissional Login</h2>	
 							<p class="mb-0">Faça login para continuar no Hub Saúde.</p>						
 						</div>
 						<div class="p-40">

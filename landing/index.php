@@ -147,13 +147,13 @@
         </div>
       </section>
 
-      <!-- section de cta -->
+      <!-- section de cta
       <section class="p4">
         <div class="sec-cta">
           <p>Clique aqui e nos ajude a validar essa ideia.</p>
           <a href="#" class="btn-sec-cta">Quero Participar</a>
         </div>
-      </section>
+      </section> -->
 
       <!-- section de depoimentos -->
       <section class="p5" id="depoimentos">
