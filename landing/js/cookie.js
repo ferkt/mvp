@@ -1,4 +1,4 @@
-var options = {
+/*var options = {
 	title: '&#x1F36A; Accept Cookies & Privacy Policy?',
 	message: 'There are no cookies used on this site, but if there were this message could be customised to provide more details. Click the <strong>accept</strong> button below to see the optional callback in action...',
 	delay: 600,
@@ -28,3 +28,4 @@ $(document).ready(function() {
 		$('body').ihavecookies(options, 'reinit');
 	});
 });
+*/
