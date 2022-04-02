@@ -239,14 +239,14 @@
 			<input type="hidden" name="id_prof" value='<?php echo $_GET['id']?>'>
 					<div class="box">
 						<div class="box-body">
-							<div class="form-group">
+							<!--<div class="form-group">
 								<label class="form-label">Data:</label>
 								<div class="row">
 									<div class="col-md-12">
 										<input class="form-control" type="date" name="dataCond">
 									</div>
 								</div>
-							</div>
+							</div>-->
 
 							<div class="form-group">
 								<label class="form-label">Descrição:</label>

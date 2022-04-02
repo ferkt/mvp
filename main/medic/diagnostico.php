@@ -258,14 +258,14 @@
 								</div>
 							</div>
 
-							<div class="form-group">
+							<!--<div class="form-group">
 								<label class="form-label">Data:</label>
 								<div class="row">
 									<div class="col-md-12">
 										<input class="form-control" type="date" name="dataDiag">
 									</div>
 								</div>
-							</div>
+							</div>-->
 
 							<div class="form-group">
 								<label class="form-label">Descrição:</label>
