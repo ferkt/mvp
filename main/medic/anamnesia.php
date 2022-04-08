@@ -246,14 +246,14 @@
 			</div>
 			<div class="box-body">
 				<!-- Date dd/mm/yyyy -->
-				<div class="form-group">
+				<!--<div class="form-group">
 				<label class="form-label">Data:</label>
 				<div class="row">
 					<div class="col-md-12">
 						<input class="form-control" type="date" name="dataQ">
 					</div>
 				</div>
-				</div>
+				</div>-->
 
 				<div class="form-group">
 					<label class="form-label">Descrição:</label>
@@ -285,14 +285,14 @@
 					</div>
 				</div>
 
-				<div class="form-group">
+				<!--<div class="form-group">
 					<label class="form-label">Data:</label>
 					<div class="row">
 						<div class="col-md-12">
 							<input class="form-control" type="date" name="dataS">
 						</div>
 					</div>
-				</div>
+				</div>-->
 
 				<div class="form-group">
 					<label class="form-label">Descrição:</label>
@@ -309,14 +309,14 @@
 				<h4 class="box-title">História da Moléstia</h4>
 			</div>
 			<div class="box-body">
-				<div class="form-group">
+				<!--<div class="form-group">
 					<label class="form-label">Data:</label>
 					<div class="row">
 						<div class="col-md-12">
 						<input class="form-control" type="date" name="dataM">
 						</div>
 					</div>
-				</div>
+				</div>-->
 
 				<div class="form-group">
 					<label class="form-label">Descrição:</label>
@@ -333,14 +333,14 @@
 				<h4 class="box-title">Histórico de Doenças</h4>
 			</div>
 			<div class="box-body">
-				<div class="form-group">
+				<!--<div class="form-group">
 					<label class="form-label">Data:</label>
 					<div class="row">
 						<div class="col-md-12">
 							<input class="form-control" type="date" name="dataD">
 						</div>
 					</div>
-				</div>
+				</div>-->
 
 				<div class="form-group">
 					<label class="form-label">Descrição:</label>
@@ -356,14 +356,14 @@
 				<h4 class="box-title">Medicações em uso</h4>
 			</div>
 			<div class="box-body">
-				<div class="form-group">
+				<!--<div class="form-group">
 					<label class="form-label">Data:</label>
 					<div class="row">
 						<div class="col-md-12">
 							<input class="form-control" type="date" name="dataMed">
 						</div>
 					</div>
-				</div>
+				</div>-->
 
 				<div class="form-group">
 					<label class="form-label">Descrição:</label>
@@ -393,14 +393,14 @@
 							</div>	
 						</div>
 				</div>
-				<div class="form-group">
+				<!--<div class="form-group">
 					<label class="form-label">Data:</label>
 					<div class="row">
 						<div class="col-md-12">
 							<input class="form-control" type="date" name="dataH">
 						</div>
 					</div>
-				</div>
+				</div>-->
 
 				<div class="form-group">
 					<label class="form-label">Descrição:</label>
@@ -416,14 +416,14 @@
 				<h4 class="box-title">Doenças Mentais</h4>
 			</div>
 			<div class="box-body">
-				<div class="form-group">
+				<!--<div class="form-group">
 					<label class="form-label">Data:</label>
 					<div class="row">
 						<div class="col-md-12">
 							<input class="form-control" type="date" name="dataDm">
 						</div>
 					</div>
-				</div>
+				</div>-->
 
 				<div class="form-group">
 					<label class="form-label">Descrição:</label>
@@ -453,14 +453,14 @@
 							</div>	
 						</div>
 				</div>
-				<div class="form-group">
+				<!--<div class="form-group">
 					<label class="form-label">Data:</label>
 					<div class="row">
 						<div class="col-md-12">
 							<input class="form-control" type="date" name="dataAi">
 						</div>
 					</div>
-				</div>
+				</div>-->
 
 				<div class="form-group">
 					<label class="form-label">Descrição:</label>
@@ -476,14 +476,14 @@
 				<h4 class="box-title">Histórico Familiar</h4>
 			</div>
 			<div class="box-body">
-				<div class="form-group">
+				<!--<div class="form-group">
 					<label class="form-label">Data:</label>
 					<div class="row">
 						<div class="col-md-12">
 							<input class="form-control" type="date" name="dataHf">
 						</div>
 					</div>
-				</div>
+				</div>-->
 
 				<div class="form-group">
 					<label class="form-label">Descrição:</label>
@@ -513,14 +513,14 @@
 							</div>	
 						</div>
 				</div>
-				<div class="form-group">
+				<!--<div class="form-group">
 					<label class="form-label">Data:</label>
 					<div class="row">
 						<div class="col-md-12">
 							<input class="form-control" type="date" name="dataHo">
 						</div>
 					</div>
-				</div>
+				</div>-->
 
 				<div class="form-group">
 					<label class="form-label">Descrição:</label>
