@@ -1,5 +1,10 @@
 <?php
 	include("../../php/testasessao.php");
+	if(!isset($_GET['btn'])){
+		echo'<script>
+				alert("UOPWWWWWWW");
+			 </script>';
+	}
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">

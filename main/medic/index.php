@@ -245,7 +245,7 @@
 				<div class="controls">
 					<div class="input-group">
 						<input type="text" name="texto" class="form-control" placeholder="Nome, CPF, Nº do SUS ou Prontuário" required> 
-						<button class="btn btn-primary btn-sm" type="submit"><i data-feather="search"></i></button> 
+						<button class="btn btn-primary btn-sm" type="submit" onclick="history.replaceState({}, '', 'index.php');"><i data-feather="search"></i></button> 
 					</div>
 				</div>
 			</form>
@@ -287,7 +287,7 @@
 																<td>'.$linha['cpf'].'</td>
 																<td>'.$linha['sus'].'</td>
 																<td>'.$linha['profissao'].'</td>
-																<td><a title="Detalhes" href="infopac.php?id_pac='.$linha['id_paciente'].'" class="btn btn-primary"><i class="fa fa-address-card"></i></a></td>
+																<td><a title="Detalhes" href="infopac.php?id_pac='.$linha['id_paciente'].'&btn=ok" class="btn btn-primary"><i class="fa fa-address-card"></i></a></td>
 															  </tr>';
 													}
 												}
