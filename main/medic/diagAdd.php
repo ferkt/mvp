@@ -10,7 +10,7 @@
   $id_pac = $_POST['id_pac'];
   
   $sql = "insert into diagnostico (id_diagnostico,id_prof_saude,id_paciente,data,desc_diagnostico,obs)
-							values (null,'$id_prof','$id_pac','$dataDiag','$descDiag','$obsDiag');";
+							values (null,'$id_prof','$id_pac',NOW(),'$descDiag','$obsDiag');";
 					  
   //executando o insert
   $consulta = $conexao->query($sql);

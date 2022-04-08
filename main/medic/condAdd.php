@@ -8,7 +8,7 @@
   $id_prof = $_POST['id_prof'];
   
   $sql = "insert into conduta (id_conduta,id_prof_saude,id_paciente,data,desc_conduta)
-							values (null,'$id_prof',null,'$dataCond','$descCond');";
+							values (null,'$id_prof',null,NOW(),'$descCond');";
 					  
   //executando o insert
   $consulta = $conexao->query($sql);

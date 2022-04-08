@@ -9,7 +9,7 @@
   $id_prof = $_POST['id_prof'];
   
   $sql = "insert into atestado (id_atestado,id_prof_saude,id_paciente,data,tipo,desc_atestado)
-							values (null,'$id_prof',null,'$dataAtest','$tipoAtest','$descAtest');";
+							values (null,'$id_prof',null,NOW(),'$tipoAtest','$descAtest');";
 					  
   //executando o insert
   $consulta = $conexao->query($sql);
