@@ -3,7 +3,6 @@
   include('../../php/banco.php');  
   
   //receber os dados por POST
-  $data = date('d/m/Y'); 
   $descQ = $_POST['descQ'];
   $tipoS = $_POST['tipoS'];
   $descS = $_POST['descS'];
@@ -24,7 +23,7 @@
   $sql = [];
   //insert's
   $sql[0] = "insert into queixa (id_queixa, id_prof_saude, id_paciente, data, desc_queixa) 
-            values (null, '$id_prof', '$id_pac', NOW() '$descQ')";
+            values (null, '$id_prof', '$id_pac', NOW(), '$descQ')";
 
   $sql[1] = "insert into rev_sistema (id_rev_sistema, id_prof_saude, id_paciente, tipo, data, desc_rev_sistema) 
             values (null, '$id_prof', '$id_pac', '$tipoS', NOW(), '$descS')";
