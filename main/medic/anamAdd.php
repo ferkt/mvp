@@ -27,7 +27,7 @@
             values (null, '$id_prof', '$id_pac', '$data', '$descQ')";
 
   $sql[1] = "insert into rev_sistema (id_rev_sistema, id_prof_saude, id_paciente, data, tipo, desc_rev_sistema) 
-            values (null, '$id_prof', '$id_pac', '$tipoS', '$data', '$descS')";
+            values (null, '$id_prof', '$id_pac', '$tipoS', NOW(), '$descS')";
 
   $sql[2] = "insert into h_molestia (id_h_molestia, id_prof_saude, id_paciente, data, desc_h_molestia) 
             values (null, '$id_prof', '$id_pac', '$data', '$descM')";
