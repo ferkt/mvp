@@ -9,7 +9,7 @@
   $id_pac = $_POST['id_pac'];
   
   $sql = "insert into procedimento (id_procedimento,id_prof_saude,id_paciente,data,desc_procedimento,obs)
-							values (null,'$id_prof', '$id_pac',NOW(),'$descProced','$obsProced')";
+							values (null,'$id_prof', '$id_pac', NOW() ,'$descProced','$obsProced')";
 					  
   //executando o insert
   $consulta = $conexao->query($sql);
