@@ -3,12 +3,12 @@
   include('../../php/banco.php');  
   
   //receber os dados por POST
-  $dataCond = $_POST['dataCond']; 
   $descCond= $_POST['descCond'];
   $id_prof = $_POST['id_prof'];
+  $id_pac = $_POST['id_pac'];
   
   $sql = "insert into conduta (id_conduta,id_prof_saude,id_paciente,data,desc_conduta)
-							values (null,'$id_prof',null,NOW(),'$descCond');";
+							values (null,'$id_prof', '$id_pac' ,NOW(),'$descCond');";
 					  
   //executando o insert
   $consulta = $conexao->query($sql);

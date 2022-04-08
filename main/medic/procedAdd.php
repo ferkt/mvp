@@ -3,7 +3,6 @@
   include('../../php/banco.php');  
   
   //receber os dados por POST
-  $dataProced = $_POST['dataProced']; 
   $descProced= $_POST['descProced'];
   $obsProced= $_POST['obsProced'];
   $id_prof = $_POST['id_prof'];

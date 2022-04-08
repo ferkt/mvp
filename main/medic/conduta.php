@@ -235,8 +235,9 @@
 		<section class="content">
 		  	<div class="row">
 				<div class="col-12">
-				<form action="condAdd.php" method="POST" name="formAdd">
-			<input type="hidden" name="id_prof" value='<?php echo $_GET['id']?>'>
+				<form action="condAdd.php?" method="POST" name="formAdd">
+				<input type="hidden" name="id_pac" value='<?php echo $_GET['id_pac']?>'>
+				<input type="hidden" name="id_prof" value='<?php echo $_GET['id_prof']?>'>
 					<div class="box">
 						<div class="box-body">
 							<!--<div class="form-group">
