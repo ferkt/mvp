@@ -29,7 +29,7 @@
 	<header class="main-header">
 	<div class="d-flex align-items-center logo-box justify-content-start">	
 		<!-- Logo -->
-		<a href="index.html" class="logo">
+		<a href="index.php" class="logo">
 		  <!-- logo-->
 		  <div class="logo-mini w-50">
 			  <span class="light-logo"><img src="../../images/logo-letter.png" alt="logo"></span>
@@ -220,7 +220,7 @@
 					<div class="d-inline-block align-items-center">
 						<nav>
 							<ol class="breadcrumb">
-								<li class="breadcrumb-item"><a href="#"><i class="mdi mdi-home-outline"></i></a></li>
+								<li class="breadcrumb-item"><a href="index.php"><i class="mdi mdi-home-outline"></i></a></li>
 								<li class="breadcrumb-item" aria-current="page">Iniciar Consulta</li>
 								<li class="breadcrumb-item active" aria-current="page">Anamnesia</li>
 							</ol>
@@ -275,11 +275,14 @@
 					<div class="row">
 						<div class="col-md-12">
 							<select class="form-control select2" name="tipoS"style="width: 100%;">
-							<option selected="selected">Alabama</option>
-							<option>Alaska</option>
-							<option>California</option>
-							<option>Delaware</option>
-							<option>Tennessee</option>
+							<option selected="selected">Sistema respiratório</option>
+							<option>Sistema cardiovascular</option>
+							<option>Sistema digestório</option>
+							<option>Sistema genito-urinário</option>
+							<option>Sistema linfo-hematopoletico</option>
+							<option>Sistema endócrino-metabólico</option>
+							<option>Neuro-psíquico</option>
+							<option>Sistema locomotor</option>
 							</select>
 						</div>	
 					</div>
@@ -384,11 +387,9 @@
 						<div class="row">
 							<div class="col-md-12">
 									<select class="form-control select2" name="tipoH" style="width: 100%;">
-									<option selected="selected">Alabama</option>
-									<option>Alaska</option>
-									<option>California</option>
-									<option>Delaware</option>
-									<option>Tennessee</option>
+									<option selected="selected">Internação voluntária</option>
+									<option>Internação involuntária</option>
+									<option>Internação compulsória</option>
 									</select>
 							</div>	
 						</div>
@@ -439,20 +440,6 @@
 				<h4 class="box-title">Alergias, Imunização</h4>
 			</div>
 			<div class="box-body">
-				<div class="form-group">
-						<label class="form-label">Tipo:</label>
-						<div class="row">
-							<div class="col-md-12">
-									<select class="form-control select2" name="tipoAi" style="width: 100%;">
-									<option selected="selected">Alabama</option>
-									<option>Alaska</option>
-									<option>California</option>
-									<option>Delaware</option>
-									<option>Tennessee</option>
-									</select>
-							</div>	
-						</div>
-				</div>
 				<!--<div class="form-group">
 					<label class="form-label">Data:</label>
 					<div class="row">
@@ -504,11 +491,13 @@
 						<div class="row">
 							<div class="col-md-12">
 									<select class="form-control select2" name="tipoHo" style="width: 100%;">
-									<option selected="selected">Alabama</option>
-									<option>Alaska</option>
-									<option>California</option>
-									<option>Delaware</option>
-									<option>Tennessee</option>
+									<option selected="selected">HAS</option>
+									<option>DM</option>
+									<option>Trombose</option>
+									<option>Dislipidemia</option>
+									<option>Câncer</option>
+									<option>Auto-imune</option>
+									<option>Outra</option>
 									</select>
 							</div>	
 						</div>

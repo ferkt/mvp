@@ -30,7 +30,7 @@
   <header class="main-header">
 	<div class="d-flex align-items-center logo-box justify-content-start">	
 		<!-- Logo -->
-		<a href="index.html" class="logo">
+		<a href="index.php" class="logo">
 		  <!-- logo-->
 		  <div class="logo-mini w-50">
 			  <span class="light-logo"><img src="../../images/logo-letter.png" alt="logo"></span>
@@ -254,6 +254,42 @@
 							<div class="inner-user-div2">
 								<div>
 									<?php
+										$sql = "SELECT * FROM conduta WHERE id_paciente = $id_pac order by id_conduta desc LIMIT 1";
+												
+										$consulta = $conexao->query($sql);
+												
+										if($consulta == true){
+											if($consulta->num_rows>0){
+												while($linha=$consulta->fetch_array(MYSQLI_ASSOC)){
+
+													$sql1 = "SELECT nome FROM prof_saude WHERE id_prof_saude = ".$linha['id_prof_saude'];
+
+													$consulta1 = $conexao->query($sql1);
+
+													$linha1=$consulta1->fetch_array(MYSQLI_ASSOC);
+
+													echo '<div class="d-flex justify-content-between align-items-start">
+															<div>
+																<h3>Conduta</h3>
+																<a class="text-muted hover-primary"><i class="fa fa-link"></i> Dr. '.$linha1['nome'].'</a>
+																<p class="my-5">'.$linha['desc_conduta'].'</p>
+															</div>
+															<div>
+																<a title="Detalhes" href="condPac.php?id_pac='.$linha['id_paciente'].'" class="waves-effect waves-light btn btn-info mb-5"><i class="fa fa-eye" aria-hidden="true"></i> Mostrar Mais</a>
+															</div>
+														</div>
+														<div class="d-flex justify-content-between align-items-end mb-15 py-10 bb-dashed border-bottom">
+															<div>
+																<p class="mb-0 text-muted"><i class="fa fa-clock-o"></i> '.$linha['data'].'</p>
+															</div>
+														</div>';
+												}
+											}
+										}					
+										?>
+								</div>
+								<div>
+									<?php
 										$sql = "SELECT * FROM queixa WHERE id_paciente = $id_pac order by id_queixa desc LIMIT 1";
 												
 										$consulta = $conexao->query($sql);
@@ -359,42 +395,6 @@
 													}
 												}
 											}					
-										?>
-								</div>
-								<div>
-									<?php
-										$sql = "SELECT * FROM conduta WHERE id_paciente = $id_pac order by id_conduta desc LIMIT 1";
-												
-										$consulta = $conexao->query($sql);
-												
-										if($consulta == true){
-											if($consulta->num_rows>0){
-												while($linha=$consulta->fetch_array(MYSQLI_ASSOC)){
-
-													$sql1 = "SELECT nome FROM prof_saude WHERE id_prof_saude = ".$linha['id_prof_saude'];
-
-													$consulta1 = $conexao->query($sql1);
-
-													$linha1=$consulta1->fetch_array(MYSQLI_ASSOC);
-
-													echo '<div class="d-flex justify-content-between align-items-start">
-															<div>
-																<h3>Conduta</h3>
-																<a class="text-muted hover-primary"><i class="fa fa-link"></i> Dr. '.$linha1['nome'].'</a>
-																<p class="my-5">'.$linha['desc_conduta'].'</p>
-															</div>
-															<div>
-																<a title="Detalhes" href="condPac.php?id_pac='.$linha['id_paciente'].'" class="waves-effect waves-light btn btn-info mb-5"><i class="fa fa-eye" aria-hidden="true"></i> Mostrar Mais</a>
-															</div>
-														</div>
-														<div class="d-flex justify-content-between align-items-end mb-15 py-10 bb-dashed border-bottom">
-															<div>
-																<p class="mb-0 text-muted"><i class="fa fa-clock-o"></i> '.$linha['data'].'</p>
-															</div>
-														</div>';
-												}
-											}
-										}					
 										?>
 								</div>
 								<div>

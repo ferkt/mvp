@@ -30,7 +30,7 @@
   <header class="main-header">
 	<div class="d-flex align-items-center logo-box justify-content-start">	
 		<!-- Logo -->
-		<a href="index.html" class="logo">
+		<a href="index.php" class="logo">
 		  <!-- logo-->
 		  <div class="logo-mini w-50">
 			  <span class="light-logo"><img src="../../images/logo-letter.png" alt="logo"></span>

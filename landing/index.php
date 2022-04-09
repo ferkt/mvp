@@ -17,6 +17,7 @@
     <header>
       <nav>
         <a class="logo" href="#"><img src="../images/logo-dark-text.png" alt=""></a>
+        <!--<a class="logo" href="#"><img src="../images/logo-letter.png" alt=""></a>-->
         <div class="mobile-menu">
           <div class="line1"></div>
           <div class="line2"></div>
@@ -25,10 +26,10 @@
         <ul class="nav-list">
           <li><a href="#inicio">Início</a></li>
           <li><a href="#plataforma">Plataforma</a></li>
-          <li><a href="#problemas">Problemas Sanados</a></li>
-          <li><a href="#depoimentos">Depoimentos</a></li>
-          <li><a href="#contato">Contato</a></li>
+          <!--<li><a href="#problemas">Problemas Sanados</a></li>
+          <li><a href="#depoimentos">Depoimentos</a></li>-->
           <li><a href="#acesso">Acessar como</a></li>
+          <li><a href="#contato">Contato</a></li>
         </ul>
       </nav>
     </header>
@@ -81,9 +82,9 @@
       </section>
 
       <!-- section de problemas -->
-      <section class="p3" id="problemas">
+      <!--<section class="p3" id="problemas">-->
         <!-- div de titulos -->
-        <div class="top-p3">
+      <!--  <div class="top-p3">
           <div class="title-p2">Problemas Sanados</div>
           <div class="subtitle-p2">Adversidades tratadas na plataforma em sua versão final</div>
         </div>
@@ -145,7 +146,7 @@
               e não clínicas.</p>
           </div>
         </div>
-      </section>
+      </section>-->
 
       <!-- section de cta
       <section class="p4">
@@ -156,10 +157,10 @@
       </section> -->
 
       <!-- section de depoimentos -->
-      <section class="p5" id="depoimentos">
-        <div class="feedback">
+      <!--<section class="p5" id="depoimentos">
+        <div class="feedback">-->
           <!-- div de titulos -->
-          <div class="top-p3">
+        <!--  <div class="top-p3">
             <div class="title-p2">Depoimentos</div>
             <div class="subtitle-p2">Alguns dos usuários que participaram da nossa causa</div>
           </div>
@@ -193,6 +194,27 @@
             </div>
           </div>
         </div>
+      </section>-->
+
+      <!-- section de acesso -->
+      <section class="p7" id="acesso">
+        <div class="linha">
+          <div class="card">
+            <p>Paciente</p>
+            <img src="img/pat.png" alt="">
+            <a href="loginPac.php" class="btn-login"> Acessar </a>
+          </div>
+          <div class="card">
+            <p>Profissional</p>
+            <img src="img/doc.png" alt="">
+            <a href="loginPro.php" class="btn-login"> Acessar </a>
+          </div>
+          <div class="card">
+            <p>Administração</p>
+            <img src="img/hos.png" alt="">
+            <a href="loginAdm.php" class="btn-login"> Acessar </a>
+          </div>
+        </div>
       </section>
 
       <!-- section de contato -->
@@ -214,27 +236,6 @@
           <a href="#"><i class="fa fa-youtube"></i></a>
           <a href="#"><i class="fa fa-instagram"></i></a>
           <a href="#"><i class="fa fa-twitter"></i></a>
-        </div>
-      </section>
-
-      <!-- section de acesso -->
-      <section class="p7" id="acesso">
-        <div class="linha">
-          <div class="card">
-            <p>Paciente</p>
-            <img src="img/pat.png" alt="">
-            <a href="loginPac.php" class="btn-login"> Acessar </a>
-          </div>
-          <div class="card">
-            <p>Profissional</p>
-            <img src="img/doc.png" alt="">
-            <a href="loginPro.php" class="btn-login"> Acessar </a>
-          </div>
-          <div class="card">
-            <p>Administração</p>
-            <img src="img/hos.png" alt="">
-            <a href="loginAdm.php" class="btn-login"> Acessar </a>
-          </div>
         </div>
       </section>
 

@@ -30,7 +30,7 @@
 	<header class="main-header">
 	<div class="d-flex align-items-center logo-box justify-content-start">	
 		<!-- Logo -->
-		<a href="index.html" class="logo">
+		<a href="index.php" class="logo">
 		  <!-- logo-->
 		  <div class="logo-mini w-50">
 			  <span class="light-logo"><img src="../../images/logo-letter.png" alt="logo"></span>
@@ -221,7 +221,7 @@
 					<div class="d-inline-block align-items-center">
 						<nav>
 							<ol class="breadcrumb">
-								<li class="breadcrumb-item"><a href="#"><i class="mdi mdi-home-outline"></i></a></li>
+								<li class="breadcrumb-item"><a href="index.php"><i class="mdi mdi-home-outline"></i></a></li>
 								<li class="breadcrumb-item" aria-current="page">Iniciar Consulta</li>
 								<li class="breadcrumb-item active" aria-current="page">Hipótese Diagnóstica</li>
 							</ol>
@@ -242,17 +242,30 @@
 					<div class="box">
 						<div class="box-body">
 							<div class="form-group">
-								<label class="form-label">Tipo:</label>
+								<label class="form-label">Categoria</label>
 								<div class="row">
 									<div class="col-md-12">
 										<select id="tipo" name="tipoDiag" class="form-control select2" style="width: 100%;">
-											<option value="1" selected>Aparelho Locomotor</option>
-											<option>Cabeça e Pescoço</option>
-											<option>Sistema Nervoso</option>
-											<option>Aparelho Respiratório</option>
-											<option>Aparelho Reprodutor</option>
-											<option>Aparelho Cardiovascular</option>
-											<option>Abdômen</option>
+											<option value="1" selected>A000 - Cólera devida a Vibrio cholerae 01, biotipo cholerae</option>
+											<option>A001 - Cólera devida a Vibrio cholerae 01, biotipo El Tor</option>
+											<option>A009 - Cólera não especificada</option>
+											<option>A010 - Febre tifóide</option>
+											<option>B005 - Afecções oculares devida ao vírus do herpes</option>
+											<option>B007 - Doença disseminada devida ao vírus do herpes</option>
+											<option>B008 - Outras formas de infecção devida ao vírus do herpes</option>
+											<option>C040 - Neoplasia maligna do assoalho anterior da boca</option>
+											<option>C041 - Neoplasia maligna do assoalho lateral da boca</option>
+											<option>C048 - Neoplasia maligna do assoalho da boca com lesão invasiva</option>
+											<option>C048 - Neoplasia maligna do assoalho da boca, não especificada</option>
+											<option>D022 - Carcinoma in situ dos brônquios e pulmões</option>
+											<option>D023 - Carcinoma in situ de outras partes do aparelho respiratório</option>
+											<option>D029 - Carcinoma in situ do aparelho respiratório, não especificado</option>
+											<option>D030 - Melanoma in situ do lábio</option>
+											<option>D031 - Melanoma in situ da pálpebra, incluindo o canto</option>
+											<option>E041 - Bócio não-tóxico uninodular</option>
+											<option>E042 - Bócio não-tóxico multinodular</option>
+											<option>E048 - Outro bócio não-tóxico especificado</option>
+											<option>E049 - Bócio não-tóxico, não especificado</option>
 										</select>
 									</div>	
 								</div>
