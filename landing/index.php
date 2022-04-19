@@ -17,7 +17,7 @@
     <header>
       <nav>
         <a class="logo" href="#"><img src="../images/logo-dark-text.png" alt=""></a>
-        <a class="logo" href="#"><img src="img/2.svg" alt=""></a>
+        <a class="logo" href="#"><img src="img/2.png" alt=""></a>
         <div class="mobile-menu">
           <div class="line1"></div>
           <div class="line2"></div>
@@ -39,10 +39,10 @@
       <section class="p1" id="inicio">
         <div class="p1-conteudo">
           <h1>Bem Vindo ao Hub Saúde</h1>
-          <h4> Conheça um pouco sobre a Plataforma Hub Saúde através desse vídeo</h4>
-          <div class="uniframe">
+          <h4> Conheça um pouco sobre a Plataforma Hub Saúde</h4>
+          <!--<div class="uniframe">
             <iframe width="490" height="300" src="https://www.youtube.com/embed/56A4-Z7OGrE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
+          </div>-->
         </div>
       </section>
 
