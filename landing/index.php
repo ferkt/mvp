@@ -17,7 +17,7 @@
     <header>
       <nav>
         <a class="logo" href="#"><img src="../images/logo-dark-text.png" alt=""></a>
-        <a class="logo" href="#"><img src="img/2.png" alt=""></a>
+        <!--<a class="logo" href="#"><img src="img/2.png" alt=""></a>-->
         <div class="mobile-menu">
           <div class="line1"></div>
           <div class="line2"></div>
